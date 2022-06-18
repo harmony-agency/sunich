@@ -40,6 +40,7 @@ $(document).ready(function () {
   );
 });
 
+
 (function ($) {
   $.QueryString = (function (a) {
     if (a == "") return {};
@@ -128,39 +129,37 @@ $(".copyright a").hover(
   }
 );
 
-// stickyHeader
+// stickyButton
 jQuery(function ($) {
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 100 && $(this).scrollTop() < 4300) {
-      $("header").addClass("stickyHeader");
+    if ($(this).scrollTop() > 100 && $(this).scrollTop() < 500) {
+      $(".box").addClass("stickyButton");
     } else {
-      $("header").removeClass("stickyHeader");
+      $(".box").removeClass("stickyButton");
     }
   });
 });
 
 // Aos animation
-AOS.init();
+// AOS.init();
 
 //  counter
-$(".counter").counterUp({
-  delay: 5,
-  time: 1000,
-});
-
-
+// $(".counter").counterUp({
+//   delay: 5,
+//   time: 1000,
+// });
 
 //  testimonial carousels
-var swiper = new Swiper(".mySwiper", {
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
+// var swiper = new Swiper(".mySwiper", {
+//   autoplay: {
+//     delay: 6000,
+//     disableOnInteraction: false,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });

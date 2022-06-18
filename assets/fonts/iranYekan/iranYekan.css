@@ -3,7 +3,7 @@
   font-family: iranYekan;
   font-style: normal;
   font-weight: 300;
-  src:  /* IE6-8 */ url("./iranyekanweblightfanum.woff") format("woff"),
+  src:  /* IE6-8 */ url("./iranyekanweblightfanum.woff")
 }
 
 
@@ -12,7 +12,7 @@
   font-family: iranYekan;
   font-style: normal;
   font-weight: normal;
-  src: /* IE6-8 */ url("./iranYekan/iranyekanwebregularfanum.woff") format("woff"),
+  src: /* IE6-8 */ url("./iranyekanwebregularfanum.woff")
 }
 
 /* font-weight bold */
@@ -20,6 +20,6 @@
   font-family: iranYekan;
   font-style: normal;
   font-weight: bold;
-  src: /* IE6-8 */ url("./iranYekan/iranyekanwebboldfanum.woff") format("woff"),
+  src: /* IE6-8 */ url("./iranyekanwebboldfanum.woff")
 }
 
