@@ -6,21 +6,49 @@
     <title>سن ايچ</title>
     <!-- <link rel="icon" type="icon" href="assets/images/favicon.png" /> -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/flip.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/swiper.min.css" />
-    <!-- <link rel="stylesheet" href="assets/css/aos.css" /> -->
   </head>
   <body>
     <div class="wrapper">
-      <section id="first">
-        <div class="header">
-          <h1 class="title">پرگاز تا جام جهانی!</h1>
-          <p class="caption">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است
-          </p>
+      <div class="header">
+        <!-- <h1 class="title">پرگاز تا جام جهانی!</h1> -->
+        <img src="./assets/images/title.png" alt="" />
+        <p class="caption">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+          استفاده از طراحان گرافیک است
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+          استفاده از طراحان گرافیک است
+          
+        </p>
+        <div class="timer">
+          <div class="tick" data-did-init="handleTickInit">
+            <div
+              data-repeat="true"
+              data-layout="horizontal center fit"
+              data-transform="preset(d, h, m, s) -> delay"
+            >
+              <div class="tick-group">
+                <div
+                  data-key="value"
+                  data-repeat="true"
+                  data-transform="pad(00) -> split -> delay"
+                >
+                  <span data-view="flip"></span>
+                </div>
+
+                <span
+                  data-key="label"
+                  data-view="text"
+                  class="tick-label"
+                ></span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <section id="first">
         <a href="#form" class="go" id="go">
           <span class="btnBox">شرکت در مسابقه</span>
           <!-- <div class="box">
@@ -29,10 +57,12 @@
           </div> -->
         </a>
       </section>
+      <div class="titleBox">
+        <h2 class="title">جوایز</h2>
+      </div>
 
       <!-- form -->
       <section id="form">
-        <h2 class="title">جوایز</h2>
         <div class="form">
           <h2 class="form-title">برای شروع مشخصاتتو وارد کن</h2>
           <form id="subscriber">
@@ -68,14 +98,8 @@
           <div class="errorValidate"></div>
           <div class="result"></div>
         </div>
-      </section>
-
-      <section id="third">
-        <div class="header">
-          <h1 class="title">پرگاز تا جام جهانی!</h1>
-        </div>
-        <!-- register -->
-        <div class="form">
+        <!-- smsPanel -->
+        <div class="smsForm">
           <h2 class="form-title">کد تایید ارسال شده را وارد کنید</h2>
           <form id="subscriber">
             <div class="form-group">
@@ -98,12 +122,18 @@
 
       <footer>
         <img src="./assets/images/logoFooter.png" alt="" loading="lazy" />
-        <img
-          src="./assets/images/harmonyLogo.png"
-          alt=""
-          class="harmonyLogo"
-          loading="lazy"
-        />
+        <a
+          href="https://harmony.agency/?utm_source=designbyharmony&amp;utm_medium=badge&amp;utm_campaign=sunich-cool-landing"
+          rel="nofollow,noindex"
+          target="_blank"
+        >
+          <img
+            src="./assets/images/harmonyLogo.png"
+            alt=""
+            class="harmonyLogo"
+            loading="lazy"
+          />
+        </a>
       </footer>
     </div>
 
@@ -115,6 +145,7 @@
     <script src="assets/js/jquery.validate.min.js"></script>
     <!-- <script src="assets/js/waypoint.js"></script> -->
     <!-- <script src="assets/js/jquery.countup.min.js"></script> -->
+    <script src="assets/js/flip.min.js"></script>
     <script src="assets/js/harmony.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

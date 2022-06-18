@@ -1,0 +1,247 @@
+
+/* race styles */
+
+/* body {
+  background: #f1e9ff;
+} */
+#race {
+    padding: 0 16px;
+    margin-top: -50px;
+  }
+  #race .content {
+    height: 100%;
+    width: 100%;
+    padding: 20px 16px 32px;
+    text-align: center;
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 29px 16px 38px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    background: #692b6f;
+    border-radius: 0px 0px 50px 50px;
+    padding: 20px 15px;
+    height: 163px;
+  }
+  header .headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 43px;
+    background: rgba(130, 73, 255, 0.1);
+    border-radius: 20px;
+    width: 100%;
+  }
+  header .headerContent .point {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    padding-right: 16px;
+  }
+  
+  #race .content .caption {
+    font-weight: 400;
+    font-size: 16px;
+    color: #692b6f;
+    margin-bottom: 60px;
+  }
+  #race .product {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 228px;
+  }
+  .product:not(:first-of-type) {
+    opacity: 0;
+  }
+  [type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* CHECKED STYLES */
+  /* [type="radio"]:checked + img {
+      outline: 2px solid #f00;
+    } */
+  
+  #race .product .left {
+    background: #ff7686;
+    border-radius: 0px 20px 20px 0px;
+    width: 160px;
+    text-align: right;
+    text-align-last: right;
+    padding-right: 16px;
+    padding-top: 15px;
+    position: relative;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #race .product .left img {
+    position: absolute;
+    top: 0;
+    left: -22px;
+  }
+  #race .product .left p {
+    text-align: right;
+    text-align-last: right;
+    margin: 0;
+  }
+  #race .product .right {
+    border-radius: 20px 0px 0px 20px;
+    width: 160px;
+    text-align: left;
+    text-align-last: left;
+    padding-left: 16px;
+    padding-top: 15px;
+    position: relative;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #race .product .right img {
+    position: absolute;
+    top: 0;
+    right: -22px;
+  }
+  #race .product .right p {
+    text-align: left;
+    text-align-last: left;
+    margin: 0;
+  }
+  
+  #race .bg-step1 .right {
+    background: #5cb1ff;
+  }
+  #race .bg-step1 .left {
+    background: #ff7686;
+  }
+  #race .bg-step2 .right {
+    background: #cc4732;
+  }
+  #race .bg-step2 .left {
+    background: #9e0014;
+  }
+  #race .bg-step3 .right {
+    background: #74c65a;
+  }
+  #race .bg-step3 .left {
+    background: #ff9100;
+  }
+  #race .bg-step4 .right {
+    background: #c48e2a;
+  }
+  #race .bg-step4 .left {
+    background: #9e134f;
+  }
+  #race .bg-step5 .right {
+    background: #72d9d0;
+  }
+  #race .bg-step5 .left {
+    background: #dfd228;
+  }
+  
+  #race .product #percent {
+    display: inline-block;
+    color: #000000;
+    font-weight: 300;
+    font-size: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2px 8px;
+    margin: 0;
+  }
+  
+  #race .product p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* number */
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .number p {
+    width: 37px;
+    height: 37px;
+    color: #692b6f;
+    border: 1.05196px solid #682467;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 13.8451px;
+    margin-bottom: 0;
+  }
+  .number p #currentNumber {
+    color: #dd1c18;
+    font-weight: 700;
+    font-size: 19.7787px;
+  }
+  
+  /*progressbar*/
+  .progressbarBox {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
+  #progressbar {
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #progressbar li {
+    display: inline-block;
+    width: auto;
+  }
+  #progressbar li:before {
+    content: "";
+    width: 52px;
+    line-height: 20px;
+    height: 5px;
+    display: block;
+    font-size: 10px;
+    background: #c1c1c1;
+    border-radius: 20px;
+    margin: 0 auto 5px auto;
+  }
+  #progressbar li.active:before {
+    background: #692b6f;
+    color: white;
+  }
+  
+  #progressbar li:after {
+    content: "";
+    width: 37px;
+    height: 28px;
+    display: block;
+    margin: 0 auto 5px auto;
+  }
+  
+  .section-progressbar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .progressbarImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

@@ -1,0 +1,176 @@
+/* result */
+#resultShow {
+  background-image: url(../images/resultBg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+#resultShow .header {
+  text-align: center;
+  padding: 0 15px;
+}
+#resultShow .header .title {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+}
+#resultShow .header .caption {
+  color: #ffffff;
+  text-align: justify;
+  font-weight: 300;
+  font-size: 12px;
+}
+.resultHeader {
+  height: auto;
+}
+
+/* resultTable */
+
+#resultTable {
+  background: #ffffff;
+  border-radius: 20px 20px 0px 0px;
+}
+#resultTable #pills-tab {
+  margin-bottom: 27px;
+}
+
+#resultTable .nav-pills .nav-link {
+  background: rgba(53, 27, 111, 0.05);
+  border-radius: 20px;
+  color: #989898;
+  font-weight: 400;
+  font-size: 12px;
+}
+#resultTable .nav-pills .nav-link.active {
+  background: #ffffff;
+  color: #692b6f;
+  border-bottom: 1px solid #692b6f;
+  box-shadow: 0px -1px 9px rgba(105, 43, 111, 0.13);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 12px;
+}
+#resultTable .tab-content .title {
+  color: #692b6f;
+  font-weight: 700;
+  font-size: 12px;
+}
+#resultTable .tab-content .tab-pane .lines {
+  background: #f5f3f8;
+  box-shadow: 0px 4px 9px rgba(105, 43, 111, 0.13);
+  border-radius: 15px;
+  margin-bottom: 14px;
+}
+#resultTable .tab-content .tab-pane .lines .rangBox {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 9px rgb(105 43 111 / 13%);
+  border-radius: 20px;
+  margin: 0 5px;
+}
+#resultTable .tab-content .tab-pane .lines .rangBox .right {
+  direction: ltr;
+}
+#resultTable .tab-content .tab-pane .lines .rangBox .progress {
+  background: linear-gradient(
+    to right,
+    #692b6f 0%,
+    #692b6f 40%,
+    rgba(105, 43, 111, 0.15) 40%,
+    rgba(105, 43, 111, 0.15) 100%
+  );
+  border-radius: 8px;
+  height: 5px;
+  width: 100px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+#resultTable
+  .tab-content
+  .tab-pane
+  .lines
+  .rangBox
+  .progress::-webkit-slider-thumb {
+  display: none;
+}
+#resultTable .tab-content .tab-pane .lines .rangBox .percent {
+  color: #623bca;
+  font-weight: 300;
+  font-size: 10px;
+}
+#resultTable .tab-content .tab-pane .lines .rangBox div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+#resultTable .tab-content .tab-pane .lines .goNextBox {
+  display: flex;
+  align-items: center;
+  padding: 13px 9px;
+}
+#resultTable .tab-content .tab-pane .lines .goNextBox p {
+  color: #090000;
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+#resultTable .tab-content .tab-pane .lines .goNextBox .goNextTitle {
+  color: #090000;
+  font-weight: 700;
+  font-size: 12px;
+}
+#resultTable .tab-content .tab-pane .lines .colorBox {
+  width: 29px;
+  height: 29px;
+  box-shadow: 0px 4px 9px rgba(105, 43, 111, 0.13);
+  border-radius: 50%;
+  text-align: center;
+}
+#resultTable .tab-content .tab-pane .line1 .right .colorBox {
+  background: #5cb1ff;
+}
+#resultTable .tab-content .tab-pane .line1 .left .colorBox {
+  background: #ff7686;
+}
+#resultTable .tab-content .tab-pane .line2 .right .colorBox {
+  background: #cc4732;
+}
+#resultTable .tab-content .tab-pane .line2 .left .colorBox {
+  background: #9e0014;
+}
+#resultTable .tab-content .tab-pane .line3 .right .colorBox {
+  background: #74c65a;
+}
+#resultTable .tab-content .tab-pane .line3 .left .colorBox {
+  background: #ff9100;
+}
+#resultTable .tab-content .tab-pane .line4 .right .colorBox {
+  background: #5cb1ff;
+}
+#resultTable .tab-content .tab-pane .line4 .left .colorBox {
+  background: #9e134f;
+}
+#resultTable .tab-content .tab-pane .line5 .right .colorBox {
+  background: #72d9d0;
+}
+#resultTable .tab-content .tab-pane .line5 .left .colorBox {
+  background: #dfd228;
+}
+.seeTable {
+  text-align: center;
+}
+.seeTable a {
+  color: #692b6f;
+  font-weight: 700;
+  font-size: 14px;
+}
