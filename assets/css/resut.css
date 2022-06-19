@@ -1,43 +1,108 @@
-/* result */
-#resultShow {
-  background-image: url(../images/resultBg.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0;
-}
-#resultShow .header {
-  text-align: center;
-  padding: 0 15px;
-}
-#resultShow .header .title {
-  color: #ffffff;
-  text-align: center;
-  font-weight: 400;
-  font-size: 20px;
-}
-#resultShow .header .caption {
-  color: #ffffff;
-  text-align: justify;
-  font-weight: 300;
-  font-size: 12px;
-}
-.resultHeader {
-  height: auto;
+body {
+  background-color: #692b6f;
 }
 
-/* resultTable */
+/* top */
+
+#top {
+  background-image: url(../images/resultBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  padding-bottom: 100px;
+}
+#top .content {
+  max-width: 60%;
+}
+#top .sunichLogo {
+  margin-bottom: 92px;
+}
+#top .title {
+  font-weight: 400;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: justify;
+}
+#top .score {
+  color: #d75ae3;
+}
+#top .caption {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: justify;
+  text-align-last: right;
+  margin: 15px 0 40px;
+}
+#top .timer-Btn {
+  display: flex;
+}
+
+#top .wave-btnBox {
+  height: 100px;
+  width: 330px;
+  position: relative;
+}
+#top .wave-btnBox span {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.wave-btn {
+  color: #000000;
+  background: #fff;
+  padding: 17px 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: all 1s;
+  width: 100%;
+  text-align: center;
+}
+
+.wave-btn:before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border-radius: 130px;
+  background-color: #d75ae3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  animation: wave 10s infinite linear;
+  transition: all 1s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%) rotate(-180deg);
+  }
+
+  100% {
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+
+/* ------------------------------- resultTable ------------------------------- */
 
 #resultTable {
   background: #ffffff;
   border-radius: 20px 20px 0px 0px;
+  border-radius: 60px 60px 0px 0px;
+  margin-top: -50px;
+  padding-bottom: 0;
 }
 #resultTable #pills-tab {
   margin-bottom: 27px;
+}
+#resultTable #pills-tab {
+    justify-content: center;
 }
 
 #resultTable .nav-pills .nav-link {
@@ -173,4 +238,80 @@
   color: #692b6f;
   font-weight: 700;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-top: 20px;
+  }
+  header .headerContent {
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(130, 73, 255, 0.1);
+    border-radius: 20px;
+    width: 100%;
+  }
+  header .headerContent .point {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    padding-right: 16px;
+  }
+
+  #top {
+    background-image: url(../images/resultBgM.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    height: 600px;
+    position: relative;
+    padding-bottom: 0;
+  }
+  #top .content {
+    max-width: 100%;
+    text-align: center;
+  }
+  #top .title {
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 20px;
+  }
+  #top .titleImg {
+    max-width: 60%;
+  }
+  #top .caption {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 21px 0 15px;
+  }
+  #top .timer-Btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #top .timer-Btn .timer {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  #top .wave-btnBox {
+    position: absolute;
+    bottom: 9%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ------------------------------- bottom ------------------------------- */
+  #bottom {
+    margin-top: -150px;
+  }
+  #resultTable {
+    border-radius: 20px 20px 0px 0px;
+    padding-bottom: 17px;
+    margin-top: 0;
+  }
 }

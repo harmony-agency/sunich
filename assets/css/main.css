@@ -2,47 +2,34 @@ body {
   background-color: #692b6f;
 }
 
-/* stickyButton  */
-.stickyButton {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+#top {
+  background-image: url(../images/startBgDesktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   width: 100%;
-  box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 30%);
-  z-index: 99;
-  background-color: #3270a3;
-  margin: 0;
+  padding-bottom: 100px;
 }
-/* header */
-.header {
-  text-align: center;
-  margin-top: 20px;
-}
-.header img {
+#top .content {
   max-width: 60%;
-  margin-bottom: 21px;
 }
-.header .title {
-  font-weight: 400;
-  font-size: 40px;
-  color: #ffffff;
-  text-align: justify;
-  text-align-last: center;
+#top .sunichLogo {
+  display: block;
+  margin-bottom: 92px;
 }
-.header .caption {
+
+#top .caption {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   color: #ffffff;
   text-align: justify;
   text-align-last: right;
-  padding: 0 16px;
+  margin: 34px 0 46px;
+}
+#top .timer-Btn {
+  display: flex;
 }
 
-/* timer */
-.timer {
-  max-width: 60%;
-  margin: 0 auto;
-}
 .tick .tick-group:nth-child(1) {
   display: none;
 }
@@ -73,120 +60,124 @@ body {
   background-color: transparent;
 }
 
-/* first */
-#first {
-  background-image: url(../images/startBg.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 25px 16px;
-}
-
-.go {
-  margin: 0 auto;
+#top .wave-btnBox {
+  height: 100px;
+  width: 285px;
   position: relative;
 }
-.titleBox {
+#top .wave-btnBox span {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.wave-btn {
+  color: #000000;
+  background: #fff;
+  padding: 17px 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: all 1s;
+  width: 100%;
+  text-align: center;
+}
+
+.wave-btn:before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border-radius: 130px;
+  background-color: #d75ae3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  animation: wave 10s infinite linear;
+  transition: all 1s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%) rotate(-180deg);
+  }
+
+  100% {
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+
+/* ------------------------------- bottom ------------------------------- */
+
+#bottom {
   background: #47134c;
   border-radius: 60px 60px 0px 0px;
+  margin-top: -50px;
+  padding-bottom: 0;
 }
-
-.titleBox .title {
-  font-weight: 400;
-  font-size: 40px;
-  color: #ffffff;
-  margin: 0 auto;
-}
-
-/* second */
-#form {
-  background: url(../images/awards.png), #47134c;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: inherit;
+#bottom img {
   height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
-
-#form .form {
-  background: #ffffff;
+#bottom .form {
   border-radius: 20px;
   text-align: center;
   text-align-last: center;
   padding: 16px 14px;
   margin: 0 17px;
 }
-#form .form .form-title {
+#bottom .form .form-title {
   font-weight: 700;
-  font-size: 14px;
-  color: #000000;
-  margin: 0 auto 16px;
+  font-size: 21.0215px;
+  color: #fff;
+  margin: 0 auto 20px;
 }
-#form .form #subscriber {
+#bottom .form .form-title1 {
+  font-weight: 400;
+  font-size: 40px;
+  font-family: "sunich";
+  margin: 0 auto 11px;
+  color: #fff;
+}
+#bottom .form #subscriber {
   margin: 0;
 }
-#form .form #subscriber .form-group {
-  margin: 0 auto 8px;
+#bottom .form #subscriber .form-group {
+  margin: 0 auto 16px;
 }
-#form .form #subscriber .form-group input {
+#bottom .form #subscriber .form-group input {
   background: #ededed;
   border: 1px solid #dbdbdb;
   border-radius: 28px;
+  width: 386px;
+  margin: 0 auto;
 }
-#form .form #subscriber .form-group input::placeholder {
+#bottom .form #subscriber .form-group input::placeholder {
   color: #8c8c8c;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 21px;
 }
-#form .form #subscriber .btn-register {
+#bottom .form #subscriber .btn-register {
   width: 100%;
   height: 46px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 24px;
   text-align: center;
   color: #000000;
   background: #d75ae3;
   border-radius: 30px;
-  margin: 4px auto 0;
-}
-.success-submit {
-  color: greenyellow;
-  text-align: center;
-}
-.success {
-  color: greenyellow;
-}
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.header .title {
-  font-weight: 400;
-  font-size: 40px;
-  color: #ffffff;
-  text-align: justify;
-  text-align-last: center;
+  width: 386px;
+  margin: 0 auto;
+  padding: 12px 0;
 }
 /* sms form */
 
-.smsForm {
+#bottom .smsForm {
   background: #ffffff;
   border-radius: 20px;
   text-align: center;
@@ -195,56 +186,34 @@ input[type="number"] {
   margin: 0 17px;
   display: none;
 }
-.smsForm .form-title {
+#bottom .smsForm .form-title {
   font-weight: 700;
   font-size: 14px;
   color: #000000;
   margin: 0 auto 16px;
 }
-.smsForm #subscriber {
+#bottom .smsForm #subscriber {
   margin: 0;
 }
-.smsForm #subscriber .form-group {
+#bottom .smsForm #subscriber .form-group {
   margin: 0 auto 8px;
 }
-.smsForm #subscriber .form-group input {
+#bottom .smsForm #subscriber .form-group input {
   background: #ededed;
   border: 1px solid #dbdbdb;
   border-radius: 28px;
 }
-.smsForm #subscriber .form-group input::placeholder {
+#bottom .smsForm #subscriber .form-group input::placeholder {
   color: #8c8c8c;
   font-weight: 400;
   font-size: 14px;
 }
-
-#timer {
-  color: #8c8c8c;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 7px;
-}
-#sendAgain {
+#bottom #sendAgain {
   color: #8c8c8c;
   font-weight: 300;
   font-size: 12px;
   text-align: center;
   margin-bottom: 35px;
-}
-#subscriber .btn-register {
-  width: 100%;
-  height: 46px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  color: #000000;
-  background: #d75ae3;
-  border-radius: 30px;
-  margin: 4px auto 0;
 }
 .success-submit {
   color: greenyellow;
@@ -263,85 +232,122 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+/* ------------------------------- footer ------------------------------- */
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #47134c;
-}
-footer .harmonyLogo {
-  background: #561d5b;
-  border-radius: 20px 20px 0px 0px;
-  padding: 14px 57px;
-  margin-top: 17px;
-}
-
-.btnBox {
-  background-color: #d75ae3;
-  border-radius: 30px;
-  height: 50px;
-  padding: 10px 30px;
-  color: #000;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.box {
-  transform: translate(-50%, -50%);
-  padding: 0 70px;
-  overflow: hidden;
-  background-color: #d75ae3;
-  border-radius: 30px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  /* position: absolute; */
-  left: 0;
-}
-
-.box span {
-  color: #000;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.box i {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 200px;
-  background-color: inherit;
-  box-shadow: inset 0 0 50px rgb(0 0 0 / 50%);
-  transition: transform 0.4s linear, top 1s linear;
-  overflow: hidden;
-}
-
-.box i:after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: 7%;
-  left: 50%;
-  transform: translate(-50%, -75%);
-}
-
-.box i:after {
-  border-radius: 40%;
   background-color: #fff;
-  animation: animate 10s linear infinite;
+  padding: 20px 0;
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
   }
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
+  #top {
+    background-image: url(../images/startBg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 900px;
+    position: relative;
+    padding-bottom: 0;
+  }
+  #top .content {
+    max-width: 100%;
+    text-align: center;
+  }
+  #top .titleImg {
+    max-width: 60%;
+  }
+  #top .caption {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 21px 0 15px;
+  }
+  #top .timer-Btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #top .timer-Btn .timer {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  #top .wave-btnBox {
+    position: absolute;
+    bottom: 17%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ------------------------------- bottom ------------------------------- */
+  #bottom {
+    margin-top: -150px;
+  }
+  #bottom .priseTitle {
+    font-family: "sunich";
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+  }
+  #bottom img {
+    height: auto;
+  }
+  #bottom .form {
+    background: #fff;
+  }
+  #bottom .form .form-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+    margin: 0 auto 16px;
+  }
+  #bottom .form #subscriber .form-group input::placeholder {
+    color: #8c8c8c;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  #bottom .form #subscriber .form-group input {
+    width: 100%;
+  }
+  #bottom .form #subscriber .form-group {
+    margin: 0 auto 8px;
+  }
+  #bottom .form #subscriber .btn-register {
+    font-size: 16px;
+  }
+  #bottom .form #subscriber .btn-register {
+    width: 100%;
+    margin: 4px auto 0;
+  }
+  /* ------------------------------- footer ------------------------------- */
+  footer {
+    background: #47134c;
+    padding-bottom: 0;
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .harmonyLogo {
+    background: #561d5b;
+    border-radius: 20px 20px 0px 0px;
+    padding: 14px 57px;
+    margin-top: 17px;
+  }
+  footer .sunichLogoFooter {
+    max-width: 50%;
+    margin: 0 auto;
   }
 }

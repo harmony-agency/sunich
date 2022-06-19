@@ -9,142 +9,169 @@
     <link rel="stylesheet" href="assets/css/flip.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style></style>
   </head>
   <body>
     <div class="wrapper">
-      <div class="header">
-        <!-- <h1 class="title">پرگاز تا جام جهانی!</h1> -->
-        <img src="./assets/images/title.png" alt="" />
-        <p class="caption">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-          استفاده از طراحان گرافیک است
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-          استفاده از طراحان گرافیک است
-          
-        </p>
-        <div class="timer">
-          <div class="tick" data-did-init="handleTickInit">
-            <div
-              data-repeat="true"
-              data-layout="horizontal center fit"
-              data-transform="preset(d, h, m, s) -> delay"
-            >
-              <div class="tick-group">
-                <div
-                  data-key="value"
-                  data-repeat="true"
-                  data-transform="pad(00) -> split -> delay"
-                >
-                  <span data-view="flip"></span>
-                </div>
+      <section id="top">
+        <div class="container">
+          <div class="content">
+            <img
+              src="./assets/images/sunichCoolLogo.png"
+              alt=""
+              class="sunichLogo desktop"
+            />
+            <img src="./assets/images/title.png" alt="" class="titleImg" />
+            <p class="caption">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون
+            </p>
+            <div class="timer-Btn">
+              <div class="timer">
+                <div class="tick" data-did-init="handleTickInit">
+                  <div
+                    data-repeat="true"
+                    data-layout="horizontal center fit"
+                    data-transform="preset(d, h, m, s) -> delay"
+                  >
+                    <div class="tick-group">
+                      <div
+                        data-key="value"
+                        data-repeat="true"
+                        data-transform="pad(00) -> split -> delay"
+                      >
+                        <span data-view="flip"></span>
+                      </div>
 
-                <span
-                  data-key="label"
-                  data-view="text"
-                  class="tick-label"
-                ></span>
+                      <span
+                        data-key="label"
+                        data-view="text"
+                        class="tick-label"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wave-btnBox">
+                <a href="#form" class="wave-btn">
+                  <span>شرکت در مسابقه</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <section id="first">
-        <a href="#form" class="go" id="go">
-          <span class="btnBox">شرکت در مسابقه</span>
-          <!-- <div class="box">
-            <span>شرکت در مسابقه</span>
-            <i></i>
-          </div> -->
-        </a>
       </section>
-      <div class="titleBox">
-        <h2 class="title">جوایز</h2>
-      </div>
-
-      <!-- form -->
-      <section id="form">
-        <div class="form">
-          <h2 class="form-title">برای شروع مشخصاتتو وارد کن</h2>
-          <form id="subscriber">
-            <div class="form-group">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                class="form-control"
-                placeholder="نام و نام خانوادگی"
-              />
+      <section id="bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <h2 class="priseTitle mobile">جوایز</h2>
+              <img src="./assets/images/awardsDesktop.png" alt="" />
             </div>
-            <div class="form-group">
-              <input
-                type="number"
-                name="phone"
-                id="phone"
-                class="form-control"
-                placeholder="شماره موبايل"
-              />
+            <div class="col-md-6 col-sm-12">
+              <div class="form">
+                <h2 class="form-title1 desktop">شرکت در مسابقه</h2>
+                <h2 class="form-title">برای شروع مشخصاتتو وارد کن</h2>
+                <form id="subscriber">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      class="form-control"
+                      placeholder="نام و نام خانوادگی"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="phone"
+                      id="phone"
+                      class="form-control"
+                      placeholder="شماره موبايل"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="insta"
+                      id="insta"
+                      class="form-control"
+                      placeholder="آیدی اینستاگرام"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-register">تاييد</button>
+                </form>
+                <div class="errorValidate"></div>
+                <div class="result"></div>
+              </div>
+              <div class="smsForm">
+                <h2 class="form-title">کد تایید ارسال شده را وارد کنید</h2>
+                <form id="subscriber">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      class="form-control"
+                      placeholder="-----"
+                    />
+                  </div>
+                  <p id="timer">۰۱:۰۵</p>
+                  <p id="sendAgain">ارسال مجدد</p>
+                  <button type="submit" class="btn btn-register">
+                    شروع مسابقه
+                  </button>
+                </form>
+                <div class="errorValidate"></div>
+                <div class="result"></div>
+              </div>
             </div>
-            <div class="form-group">
-              <input
-                type="text"
-                name="insta"
-                id="insta"
-                class="form-control"
-                placeholder="آیدی اینستاگرام"
-              />
-            </div>
-            <button type="submit" class="btn btn-register">تاييد</button>
-          </form>
-          <div class="errorValidate"></div>
-          <div class="result"></div>
-        </div>
-        <!-- smsPanel -->
-        <div class="smsForm">
-          <h2 class="form-title">کد تایید ارسال شده را وارد کنید</h2>
-          <form id="subscriber">
-            <div class="form-group">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                class="form-control"
-                placeholder="-----"
-              />
-            </div>
-            <p id="timer">۰۱:۰۵</p>
-            <p id="sendAgain">ارسال مجدد</p>
-            <button type="submit" class="btn btn-register">شروع مسابقه</button>
-          </form>
-          <div class="errorValidate"></div>
-          <div class="result"></div>
+          </div>
         </div>
       </section>
-
       <footer>
-        <img src="./assets/images/logoFooter.png" alt="" loading="lazy" />
-        <a
-          href="https://harmony.agency/?utm_source=designbyharmony&amp;utm_medium=badge&amp;utm_campaign=sunich-cool-landing"
-          rel="nofollow,noindex"
-          target="_blank"
-        >
-          <img
-            src="./assets/images/harmonyLogo.png"
-            alt=""
-            class="harmonyLogo"
-            loading="lazy"
-          />
-        </a>
+        <div class="container">
+          <a href="http://www.sunich.org/" target="_blank">
+            <img
+              src="./assets/images/sunichCoolLogoFooterD.png"
+              alt=""
+              loading="lazy"
+              class="desktop"
+            />
+            <img
+              src="./assets/images/sunichCoolLogoFooterM.png"
+              alt=""
+              loading="lazy"
+              class="mobile sunichLogoFooter"
+            />
+          </a>
+          <a
+            href="https://harmony.agency/?utm_source=designbyharmony&amp;utm_medium=badge&amp;utm_campaign=sunich-cool-landing"
+            rel="nofollow,noindex"
+            target="_blank"
+          >
+            <img
+              src="./assets/images/harmonyLogoD.png"
+              alt=""
+              class="harmonyLogo desktop"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/harmonyLogoM.png"
+              alt=""
+              class="harmonyLogo mobile"
+              loading="lazy"
+            />
+          </a>
+        </div>
       </footer>
     </div>
 
-    <!-- <script src="assets/js/jquery.easing.min.js"></script> -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
-    <!-- <script src="assets/js/aos.js"></script> -->
-    <!-- <script src="assets/js/swiper.min.js"></script> -->
     <script src="assets/js/jquery.validate.min.js"></script>
-    <!-- <script src="assets/js/waypoint.js"></script> -->
-    <!-- <script src="assets/js/jquery.countup.min.js"></script> -->
     <script src="assets/js/flip.min.js"></script>
     <script src="assets/js/harmony.js"></script>
     <script src="assets/js/main.js"></script>
