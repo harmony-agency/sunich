@@ -13,14 +13,14 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="mobile">
         <div class="container">
           <div class="headerContent">
             <div class="point">
               <span>امتياز شما:</span>
               <span class="score">0</span>
             </div>
-            <img src="./assets/images/sunichCoolLogo-white.png" alt="" />
+            <img src="./assets/images/sunichLogo.png" alt="" />
             <img
               src="./assets/images/headerLogo.png"
               alt=""
@@ -35,12 +35,11 @@
           <div class="content">
             <div class="desktop">
               <img
-              src="./assets/images/sunichCoolLogo.png"
-              alt=""
-              class="sunichLogo"
-            />
+                src="./assets/images/sunichLogo.png"
+                alt="sunichLogo"
+                class="sunichLogo"
+              />
             </div>
-
             <h2 class="title">
               سپاسگزاریم:)
               <br />
@@ -136,221 +135,256 @@
               role="tabpanel"
               aria-labelledby="firstStepTab"
             >
-              <div class="title">
-                <p>نتایج مرحله اول تا این لحظه</p>
-                <div class="timer"></div>
-              </div>
-              <div class="lines line1">
-                <div class="rangBox">
-                  <div class="right">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/blueberryMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                  <div class="left">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/kaktusMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
+              <div class="showInfo">
+                <div class="right">
+                  <p>نتایج مرحله اول تا این لحظه</p>
+                  <div class="timer">
+                    <div class="tick" data-did-init="handleTickInit">
+                      <div
+                        data-repeat="true"
+                        data-layout="horizontal center fit"
+                        data-transform="preset(d, h, m, s) -> delay"
+                      >
+                        <div class="tick-group">
+                          <div
+                            data-key="value"
+                            data-repeat="true"
+                            data-transform="pad(00) -> split -> delay"
+                          >
+                            <span data-view="flip"></span>
+                          </div>
+
+                          <span
+                            data-key="label"
+                            data-view="text"
+                            class="tick-label"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="goNextBox">
-                  <p>راه یافته به مرحله بعد:</p>
-                  <span class="goNextTitle">کاکتوس گازدار</span>
+                <div class="left desktop">
+                  <a href="#" target="_blank">
+                    <p>مشاهده جدول رقابتی</p>
+                    <i class="fas fa-arrow-left"></i>
+                  </a>
                 </div>
               </div>
-              <div class="lines line2">
-                <div class="rangBox">
-                  <div class="right">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/golabiMini.png"
-                        alt=""
+              <div class="row">
+                <div class="lines line1 col-md-6 col-sm-12">
+                  <div class="rangBox">
+                    <div class="right">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/blueberryMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
                       />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
+                      <span class="percent">۴۵%</span>
+                    </div>
+                    <div class="left">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/kaktusMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
                   </div>
-                  <div class="left">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/albalooMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
+                  <div class="goNextBox">
+                    <p>راه یافته به مرحله بعد:</p>
+                    <span class="goNextTitle">کاکتوس گازدار</span>
                   </div>
                 </div>
-                <div class="goNextBox">
-                  <p>راه یافته به مرحله بعد:</p>
-                  <span class="goNextTitle">گلابی گازدار</span>
+                <div class="lines line2 col-md-6 col-sm-12">
+                  <div class="rangBox">
+                    <div class="right">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/golabiMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                    <div class="left">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/albalooMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                  </div>
+                  <div class="goNextBox">
+                    <p>راه یافته به مرحله بعد:</p>
+                    <span class="goNextTitle">گلابی گازدار</span>
+                  </div>
+                </div>
+                <div class="lines line3 col-md-6 col-sm-12">
+                  <div class="rangBox">
+                    <div class="right">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/appleMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                    <div class="left">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/orangeMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                  </div>
+                  <div class="goNextBox">
+                    <p>راه یافته به مرحله بعد:</p>
+                    <span class="goNextTitle">سیب گازدار</span>
+                  </div>
+                </div>
+                <div class="lines line4 col-md-6 col-sm-12">
+                  <div class="rangBox">
+                    <div class="right">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/garmsiriMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                    <div class="left">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/angoorMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                  </div>
+                  <div class="goNextBox">
+                    <p>راه یافته به مرحله بعد:</p>
+                    <span class="goNextTitle">انگور گازدار</span>
+                  </div>
+                </div>
+                <div class="lines line5 col-md-6 col-sm-12">
+                  <div class="rangBox">
+                    <div class="right">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/mohitoMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                    <div class="left">
+                      <span class="colorBox">
+                        <img
+                          src="./assets/images/products/limonadMini.png"
+                          alt=""
+                        />
+                      </span>
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        step="1"
+                        class="progress"
+                      />
+                      <span class="percent">۴۵%</span>
+                    </div>
+                  </div>
+                  <div class="goNextBox">
+                    <p>راه یافته به مرحله بعد:</p>
+                    <span class="goNextTitle">کاکتوس گازدار</span>
+                  </div>
                 </div>
               </div>
-              <div class="lines line3">
-                <div class="rangBox">
-                  <div class="right">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/appleMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                  <div class="left">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/orangeMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                </div>
-                <div class="goNextBox">
-                  <p>راه یافته به مرحله بعد:</p>
-                  <span class="goNextTitle">سیب گازدار</span>
-                </div>
-              </div>
-              <div class="lines line4">
-                <div class="rangBox">
-                  <div class="right">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/garmsiriMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                  <div class="left">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/angoorMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                </div>
-                <div class="goNextBox">
-                  <p>راه یافته به مرحله بعد:</p>
-                  <span class="goNextTitle">انگور گازدار</span>
-                </div>
-              </div>
-              <div class="lines line5">
-                <div class="rangBox">
-                  <div class="right">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/mohitoMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                  <div class="left">
-                    <span class="colorBox">
-                      <img
-                        src="./assets/images/products/limonadMini.png"
-                        alt=""
-                      />
-                    </span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="100"
-                      value="50"
-                      step="1"
-                      class="progress"
-                    />
-                    <span class="percent">۴۵%</span>
-                  </div>
-                </div>
-                <div class="goNextBox">
-                  <p>راه یافته به مرحله بعد:</p>
-                  <span class="goNextTitle">کاکتوس گازدار</span>
-                </div>
-              </div>
-              <div class="seeTable">
+
+              <div class="seeTable mobile">
                 <a href="#" target="_blank">مشاهده جدول رقابتی</a>
               </div>
             </div>
@@ -360,10 +394,42 @@
               role="tabpanel"
               aria-labelledby="secondStepTab"
             >
-              <div class="title">
+            <div class="showInfo">
+              <div class="right">
                 <p>نتایج مرحله دوم تا این لحظه</p>
-                <div class="timer"></div>
+                <div class="timer">
+                  <div class="tick" data-did-init="handleTickInit">
+                    <div
+                      data-repeat="true"
+                      data-layout="horizontal center fit"
+                      data-transform="preset(d, h, m, s) -> delay"
+                    >
+                      <div class="tick-group">
+                        <div
+                          data-key="value"
+                          data-repeat="true"
+                          data-transform="pad(00) -> split -> delay"
+                        >
+                          <span data-view="flip"></span>
+                        </div>
+
+                        <span
+                          data-key="label"
+                          data-view="text"
+                          class="tick-label"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="left desktop">
+                <a href="#" target="_blank">
+                  <p>مشاهده جدول رقابتی</p>
+                  <i class="fas fa-arrow-left"></i>
+                </a>
+              </div>
+            </div>
               <div class="lines line1">
                 <div class="rangBox">
                   <div class="right">
@@ -448,7 +514,7 @@
                   <span class="goNextTitle">گلابی گازدار</span>
                 </div>
               </div>
-              <div class="seeTable">
+              <div class="seeTable mobile">
                 <a href="#" target="_blank">مشاهده جدول رقابتی</a>
               </div>
             </div>
@@ -458,10 +524,42 @@
               role="tabpanel"
               aria-labelledby="thirdStepTab"
             >
-              <div class="title">
+            <div class="showInfo">
+              <div class="right">
                 <p>نتایج مرحله سوم تا این لحظه</p>
-                <div class="timer"></div>
+                <div class="timer">
+                  <div class="tick" data-did-init="handleTickInit">
+                    <div
+                      data-repeat="true"
+                      data-layout="horizontal center fit"
+                      data-transform="preset(d, h, m, s) -> delay"
+                    >
+                      <div class="tick-group">
+                        <div
+                          data-key="value"
+                          data-repeat="true"
+                          data-transform="pad(00) -> split -> delay"
+                        >
+                          <span data-view="flip"></span>
+                        </div>
+
+                        <span
+                          data-key="label"
+                          data-view="text"
+                          class="tick-label"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="left desktop">
+                <a href="#" target="_blank">
+                  <p>مشاهده جدول رقابتی</p>
+                  <i class="fas fa-arrow-left"></i>
+                </a>
+              </div>
+            </div>
               <div class="lines line1">
                 <div class="rangBox">
                   <div class="right">
@@ -504,7 +602,7 @@
                   <span class="goNextTitle">کاکتوس گازدار</span>
                 </div>
               </div>
-              <div class="seeTable">
+              <div class="seeTable mobile">
                 <a href="#" target="_blank">مشاهده جدول رقابتی</a>
               </div>
             </div>
@@ -514,23 +612,23 @@
               role="tabpanel"
               aria-labelledby="fourthStepTab"
             >
-              <fieldset class="product bg-step1">
-                <button type="button" class="right next" value="1">
+              <div class="product results">
+                <div class="" >
                   <p>بلوبری گازدار</p>
                   <p id="percent">45%</p>
                   <img src="./assets/images/lastStepBg.png" loading="lazy" />
-                </button>
-                <button type="button" class="left next" value="2">
+                </div>
+                <div class="">
                   <p>کاکتوس گازدار</p>
                   <p id="percent">75%</p>
                   <img src="./assets/images/lastStepBg.png" loading="lazy" />
-                </button>
-                <button type="button" class="left next" value="3">
+                </div>
+                <div class="">
                   <p>کاکتوس گازدار</p>
                   <p id="percent">75%</p>
                   <img src="./assets/images/lastStepBg.png" loading="lazy" />
-                </button>
-              </fieldset>
+                </div>
+              </div>
               <div class="seeTable">
                 <a href="#" target="_blank">مشاهده جدول رقابتی</a>
               </div>
