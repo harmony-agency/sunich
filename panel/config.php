@@ -3,8 +3,8 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname="";
+$password = "55823151m";
+$dbname="sunich";
 $landingName="";
 
 try {
