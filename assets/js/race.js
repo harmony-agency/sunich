@@ -8,8 +8,8 @@ $(function () {
     if (animating) return false;
     animating = true;
 
-    current_fs = $(this).parent();
-    next_fs = $(this).parent().next();
+     current_fs = $(this).parent().parent();
+    next_fs = $(this).parent().parent().next();
 
     $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active"); //show the next fieldset
     next_fs.css({ opacity: 1 });

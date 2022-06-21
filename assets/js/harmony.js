@@ -26,18 +26,6 @@ $(document).ready(function () {
     },
   });
 
-  // hover package
-  $(".middleBox").hover(
-    function () {
-      $(this).css("transform", "scale(1.1)");
-      $(this).css("transition", "1s");
-    },
-    function () {
-      $(this).css("transform", "scale(1)");
-      $(this).css("transition", "1s");
-      $(this).removeClass("zoom");
-    }
-  );
 });
 
 

@@ -28,7 +28,11 @@ body {
   color: #ffffff;
   text-align: justify;
   text-align-last: right;
-  margin: 0 0 30px;
+  margin: 0;
+  max-width: 90%;
+}
+#top .container {
+  padding: 16px;
 }
 #top .timer-Btn {
   display: flex;
@@ -184,7 +188,7 @@ body {
   font-weight: 400;
   font-size: 21px;
 }
-#bottom .form #subscriber .btn-register {
+#bottom .btn-register {
   width: 100%;
   height: 46px;
   display: flex;
@@ -287,6 +291,9 @@ footer .harmonyLogo {
     padding-bottom: 0;
     padding-top: 0;
   }
+  #top .container {
+    padding: 16px;
+  }
   #top .content {
     max-width: 100%;
     text-align: center;
@@ -295,6 +302,7 @@ footer .harmonyLogo {
     font-weight: 400;
     font-size: 14px;
     margin: 15px 0;
+    max-width: 100%;
   }
   #top .timer-Btn {
     display: flex;

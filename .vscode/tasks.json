@@ -6,7 +6,8 @@
     {
       "label": "echo",
       "type": "shell",
-      "command": "sass assets/css/harmony.scss assets/css/harmony.css",
+      "command": "sass assets/css/wave.sass assets/css/wave.css", 
+      // "command": "sass assets/css/harmony.scss assets/css/harmony.css",
       "group": "build"
     }
   ]

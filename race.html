@@ -8,8 +8,27 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
     <link rel="stylesheet" href="assets/css/race.css" />
+    <link rel="stylesheet" href="assets/css/wave.css" />
   </head>
   <body>
+    <div class="progress" role="progressbar">
+      <div class="progress-inner">
+        <div class="progress-indicator"></div>
+        <div class="progress-indicator"></div>
+      </div>
+      <span class="progress-label">
+        <strong>50</strong>
+        <span>%</span>
+      </span>
+    </div>
+
+    <div class="description">
+      <span>progress percentage is </span>
+      <input type="number" min="0" max="100" step="1" value="50" />
+      <span>%</span>
+    </div>
+
+    <a href="https://codepen.io/miko-github" class="watermark">@mikoloism</a>
     <!-- Design by Harmony Agency -->
     <div class="wrapper">
       <header>
@@ -19,98 +38,130 @@
               <span>امتياز شما:</span>
               <span class="score">0</span>
             </div>
-            <img src="./assets/images/sunichCoolLogo-white.png" alt="" />
-            <img src="./assets/images/headerLogo.png" alt="" class="headerLogo" />
+            <img
+              src="./assets/images/sunichLogoWhite.png"
+              alt=""
+              class="sunichLogo"
+            />
+            <img
+              src="./assets/images/headerLogo.png"
+              alt=""
+              class="headerLogo"
+            />
           </div>
         </div>
       </header>
       <section id="race">
         <div class="container">
           <div class="content">
-            <p class="caption">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
-              سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-            </p>
             <fieldset class="product bg-step1">
-              <button type="button" class="right next" value="1">
-                <p>بلوبری گازدار</p>
-                <p id="percent">45%</p>
-                <img src="./assets/images/products/blueberry.png" />
-              </button>
-              <button type="button" class="left next" value="2">
-                <p>کاکتوس گازدار</p>
-                <p id="percent">75%</p>
-                <img src="./assets/images/products/kaktus.png" />
-              </button>
+              <p class="caption">
+                توی این گرمای تابستون، برای خنک شدن کدوم طعم سن‌ایچ کول می‌چسبه؟
+              </p>
+              <div class="d-flex buttonsBox">
+                <button type="button" class="right next" value="1">
+                  <p>بلوبری گازدار</p>
+                  <p id="percent">45%</p>
+                  <img src="./assets/images/products/blueberry.png" />
+                </button>
+                <button type="button" class="left next" value="2">
+                  <p>کاکتوس گازدار</p>
+                  <p id="percent">75%</p>
+                  <img src="./assets/images/products/kaktus.png" />
+                </button>
+              </div>
             </fieldset>
 
             <fieldset class="product bg-step2">
-              <button type="button" class="right next" value="1">
-                <p>گلابی گازدار</p>
-                <p id="percent">45%</p>
-                <img src="./assets/images/products/golabi.png" />
-              </button>
-              <button type="button" class="left next" value="2">
-                <p>آلبالو گازدار</p>
-                <p id="percent">75%</p>
-                <img src="./assets/images/products/albaloo.png" />
-              </button>
+              <p class="caption">
+                زمان تماشای فیلم و سریال مورد علاقت، کدوم طعم سن‌ایچ کول
+                می‌چسبه؟
+              </p>
+              <div class="d-flex buttonsBox">
+                <button type="button" class="right next" value="1">
+                  <p>گلابی گازدار</p>
+                  <p id="percent">45%</p>
+                  <img src="./assets/images/products/golabi.png" />
+                </button>
+                <button type="button" class="left next" value="2">
+                  <p>آلبالو گازدار</p>
+                  <p id="percent">75%</p>
+                  <img src="./assets/images/products/albaloo.png" />
+                </button>
+              </div>
             </fieldset>
 
             <fieldset class="product bg-step3">
-              <button type="button" class="right next" value="1">
-                <p>سیب گازدار</p>
-                <p id="percent">45%</p>
-                <img src="./assets/images/products/apple.png" />
-              </button>
-              <button type="button" class="left next" value="2">
-                <p>پرتقال گازدار</p>
-                <p id="percent">75%</p>
-                <img src="./assets/images/products/orange.png" />
-              </button>
+              <p class="caption">
+                زمان تماشای بازی فوتبال، برای سرحال شدن کدوم طعم سن‌ایچ کول
+                می‌چسبه؟
+              </p>
+              <div class="d-flex buttonsBox">
+                <button type="button" class="right next" value="1">
+                  <p>سیب گازدار</p>
+                  <p id="percent">45%</p>
+                  <img src="./assets/images/products/apple.png" />
+                </button>
+                <button type="button" class="left next" value="2">
+                  <p>پرتقال گازدار</p>
+                  <p id="percent">75%</p>
+                  <img src="./assets/images/products/orange.png" />
+                </button>
+              </div>
             </fieldset>
 
             <fieldset class="product bg-step4">
-              <button type="button" class="right next" value="1">
-                <p>
-                  میــــــوه‌ی
-                  <br />
-                  گرمسیری
-                  <br />
-                  گازدار
-                </p>
-                <p id="percent">45%</p>
-                <img src="./assets/images/products/garmsiri.png" />
-              </button>
-              <button type="button" class="left next" value="2">
-                <p>انگور گازدار</p>
-                <p id="percent">75%</p>
-                <img src="./assets/images/products/angoor.png" />
-              </button>
+              <p class="caption">
+                زمان تماشای بازی فوتبال، برای سرحال شدن کدوم طعم سن‌ایچ کول
+                می‌چسبه؟
+              </p>
+              <div class="d-flex buttonsBox">
+                <button type="button" class="right next" value="1">
+                  <p>
+                    میــــــوه‌ی
+                    <br />
+                    گرمسیری
+                    <br />
+                    گازدار
+                  </p>
+                  <p id="percent">45%</p>
+                  <img src="./assets/images/products/garmsiri.png" />
+                </button>
+                <button type="button" class="left next" value="2">
+                  <p>انگور گازدار</p>
+                  <p id="percent">75%</p>
+                  <img src="./assets/images/products/angoor.png" />
+                </button>
+              </div>
             </fieldset>
 
             <fieldset class="product bg-step5">
-              <button type="button" class="right next" value="1">
-                <p>موهیتو گازدار</p>
-                <p id="percent">45%</p>
-                <img src="./assets/images/products/mohito.png" />
-              </button>
-              <button type="button" class="left next" value="2">
-                <p>لیموناد گازدار</p>
-                <p id="percent">75%</p>
-                <img src="./assets/images/products/limonad.png" />
-              </button>
+              <p class="caption">
+                زمان تماشای بازی فوتبال، برای سرحال شدن کدوم طعم سن‌ایچ کول
+                می‌چسبه؟
+              </p>
+              <div class="d-flex buttonsBox">
+                <button type="button" class="right next" value="1">
+                  <p>موهیتو گازدار</p>
+                  <p id="percent">45%</p>
+                  <img src="./assets/images/products/mohito.png" />
+                </button>
+                <button type="button" class="left next" value="2">
+                  <p>لیموناد گازدار</p>
+                  <p id="percent">75%</p>
+                  <img src="./assets/images/products/limonad.png" />
+                </button>
+              </div>
             </fieldset>
 
-            <div class="progressbarBox mobile ">
+            <div class="progressbarBox mobile">
               <div class="number">
                 <p>
                   5/
                   <span id="currentNumber">1</span>
                 </p>
               </div>
-              <ul  class="mobile" id="progressbar">
+              <ul class="mobile" id="progressbar">
                 <li class="active"></li>
                 <li class=""></li>
                 <li class=""></li>
@@ -138,5 +189,28 @@
     <script src="assets/js/harmony.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/race.js"></script>
+    <script>
+      (function () {
+        const progress = document.querySelector(`.progress`);
+        const progressIndicator = document.querySelector(`.progress-indicator`);
+        const progressLabel = document.querySelector(
+          `.progress-label > strong`
+        );
+        const input = document.querySelector(`input[type="number"]`);
+
+        input.oninput = ({ target }) => {
+          let value =
+            target.value <= 100 && target.value >= 0 ? target.value : 50;
+          progressLabel.textContent = value;
+          progress.style.setProperty(`--progress-value`, value);
+          progress.dataset.value = value;
+
+          if (value > 50) progress.classList.add(`progress--upper-half-value`);
+          else
+            progress.classList.contains("progress--upper-half-value") &&
+              progress.classList.remove(`progress--upper-half-value`);
+        };
+      })();
+    </script>
   </body>
 </html>
