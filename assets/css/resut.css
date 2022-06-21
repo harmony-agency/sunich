@@ -2,7 +2,7 @@ body {
   background-color: #692b6f;
 }
 
-/* top */
+/* ------------------------------- top ------------------------------- */
 
 #top {
   background-image: url(../images/resultBg.png);
@@ -16,14 +16,15 @@ body {
   max-width: 60%;
 }
 
-#top .title {
+#top .title,
+#saku .title {
   font-family: "sunich";
   font-size: 50px;
   color: #ffffff;
   text-align: justify;
   margin-bottom: 0px;
 }
-#top .score {
+.score {
   color: #d75ae3;
 }
 #top .caption {
@@ -34,16 +35,16 @@ body {
   text-align-last: right;
   margin: 15px 0 25px;
 }
-#top .timer-Btn {
+.timer-Btn {
   display: flex;
 }
 
-#top .wave-btnBox {
+.wave-btnBox {
   height: 100px;
   width: 330px;
   position: relative;
 }
-#top .wave-btnBox span {
+.wave-btnBox span {
   position: relative;
   font-weight: 700;
   font-size: 16px;
@@ -86,6 +87,47 @@ body {
   100% {
     transform: translate(-50%) rotate(360deg);
   }
+}
+/* ------------------------------- saku ------------------------------- */
+#saku {
+  padding-bottom: 50px;
+}
+#saku .showInfo {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 35px;
+}
+#saku .showInfo p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 11px;
+}
+#saku .tick-label.tick-text {
+  color: #fff;
+}
+#saku header .headerContent {
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(130, 73, 255, 0.1);
+  border-radius: 20px;
+  width: 100%;
+}
+#saku header .headerContent .point {
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  padding-right: 16px;
+}
+#saku header .headerContent img {
+  max-height: 100%;
+}
+#saku .sakuImg {
+  display: flex;
+  align-items: flex-end;
 }
 
 /* ------------------------------- resultTable ------------------------------- */
@@ -146,47 +188,55 @@ body {
   margin-bottom: 0;
   margin-left: 10px;
 }
-#resultTable .timer {
+.timer {
   display: flex;
   align-items: center;
 }
-#resultTable .tick-label.tick-text {
+.tick-label.tick-text {
   color: #623bca;
   font-size: 12px;
   font-weight: 700;
   margin-top: 5px;
 }
 
-#resultTable .tick .tick-group:nth-child(1) {
+.tick .tick-group:nth-child(1) {
   display: none;
 }
 
-#resultTable .tick {
+.tick {
   font-size: 20px;
   font-family: iranYekan;
   direction: ltr;
 }
 
-#resultTable .tick-group {
+.tick-group {
   margin: 0 0.25em;
   text-align: center;
 }
-#resultTable .tick-credits {
+.tick-credits {
   display: none;
 }
+/* .tick-flip {
+  background: #fff;
+} */
+
 #resultTable .tick-flip-panel {
-  color: #623bca;
+  color: #fff;
+}
+#saku .tick-flip-panel {
+  color: #fff;
   background-color: transparent;
 }
-#resultTable .col-md-6 {
-  width: 48%;
+
+#resultTable .tick-label.tick-text {
+  color: #000000;
 }
 
 #resultTable .tab-content .tab-pane .lines {
   background: #f5f3f8;
   box-shadow: 0px 5.94976px 13.387px rgba(105, 43, 111, 0.13);
   border-radius: 22.3116px;
-  margin: 0 8px 23px;
+  margin: 0 0 23px;
   padding: 0;
 }
 #resultTable .tab-content .tab-pane .lines .rangBox {
@@ -198,7 +248,7 @@ body {
   background: #ffffff;
   box-shadow: 0px 4px 9px rgb(105 43 111 / 13%);
   border-radius: 20px;
-  height: 30px;
+  height: 43px;
 }
 #resultTable .tab-content .tab-pane .lines .rangBox .right {
   direction: ltr;
@@ -213,7 +263,7 @@ body {
   );
   border-radius: 8px;
   height: 5px;
-  width: 100%;
+  width: 60%;
   outline: none;
   -webkit-appearance: none;
 }
@@ -261,6 +311,12 @@ body {
   height: 43px;
   border-radius: 50%;
   text-align: center;
+  position: relative;
+}
+#resultTable .tab-content .tab-pane .lines .colorBox img {
+  position: absolute;
+  top: -12%;
+  right: 40%;
 }
 #resultTable .tab-content .tab-pane .line1 .right .colorBox {
   background: #5cb1ff;
@@ -294,16 +350,54 @@ body {
 }
 .seeTable {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .seeTable a {
   color: #692b6f;
   font-weight: 700;
-  font-size: 14px;
-}
-#resultTable  .results {
+  font-size: 18px;
   display: flex;
-
+  justify-content: center;
+  align-items: center;
+}
+#resultTable .results {
+  display: flex;
+  justify-content: center;
+}
+#resultTable .results div {
+  width: 180px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 9px rgba(105, 43, 111, 0.13);
+  margin: 0 15px;
+}
+#resultTable .results .first {
+  background: #72d9d0;
+}
+#resultTable .results .second {
+  background: #ff7685;
+}
+#resultTable .results .third {
+  background: #9e134f;
+}
+#resultTable .results img {
+  width: 100%;
+}
+#resultTable .results .title {
+  font-weight: 700;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 6px;
+  margin-top: 8px;
+}
+#resultTable .results .percent {
+  display: inline-block;
+  color: #000000;
+  font-weight: 300;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 3px 14px;
 }
 
 @media screen and (max-width: 768px) {
@@ -328,6 +422,29 @@ body {
   header .headerContent img {
     max-height: 100%;
   }
+  /* ------------------------------- saku ------------------------------- */
+  #saku {
+    padding: 0px;
+  }
+  #saku .title {
+    text-align: center;
+    font-size: 20px;
+  }
+  #saku .showInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  #saku .showInfo p {
+    margin-left: 0;
+    font-size: 12px;
+  }
+  #saku .wave-btnBox {
+    margin: 0 auto;
+  }
+  /* ------------------------------- top ------------------------------- */
 
   #top {
     background-image: url(../images/resultBgM.png);
@@ -429,17 +546,14 @@ body {
   #resultTable .tick-group {
     font-size: 12px;
   }
-  #resultTable .col-md-6 {
-    width: 100%;
-  }
-  #resultTable .row {
-    max-width: 100%;
+  #resultTable .tab-content {
+    padding: 0 16px;
   }
   #resultTable .tab-content .tab-pane .lines {
     background: #f5f3f8;
     box-shadow: 0px 4px 9px rgba(105, 43, 111, 0.13);
     border-radius: 22.3116px;
-    margin: 0 8px 14px;
+    margin: 0 0 16px;
     padding: 0;
   }
   #resultTable .tab-content .tab-pane .lines .colorBox {
@@ -454,16 +568,12 @@ body {
     top: -35%;
     right: 35%;
   }
+  #resultTable .tab-content .tab-pane .lines .rangBox {
+    height: 30px;
+  }
   #resultTable .tab-content .tab-pane .lines .rangBox .progress {
-    background: linear-gradient(
-      to right,
-      #692b6f 0%,
-      #692b6f 40%,
-      rgba(105, 43, 111, 0.15) 40%,
-      rgba(105, 43, 111, 0.15) 100%
-    );
     border-radius: 8px;
-    height: 5px;
+    height: 2px;
     width: 70%;
     outline: none;
     -webkit-appearance: none;
@@ -479,5 +589,26 @@ body {
   #resultTable .tab-content .tab-pane .lines .goNextBox .goNextTitle {
     font-weight: 700;
     font-size: 12px;
+  }
+  #resultTable .results {
+    display: flex;
+    justify-content: space-between;
+  }
+  #resultTable .results .title {
+    font-size: 12px;
+  }
+  #resultTable .results .percent {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+  #resultTable .results div {
+    width: 31%;
+    margin: unset;
+  }
+  .seeTable a {
+    font-size: 14px;
+  }
+  .seeTable {
+    margin-top: 20px;
   }
 }
