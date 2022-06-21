@@ -253,7 +253,7 @@ function handleTickInit(tick) {
   // '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
 
   // create the countdown counter
-  var counter = Tick.count.down('2022-06-21T00:00:00+01:00');
+  var counter = Tick.count.down('2026-06-21T00:00:00+01:00');
 
   counter.onupdate = function(value) {
     tick.value = value;
