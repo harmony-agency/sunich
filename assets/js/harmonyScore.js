@@ -102,3 +102,41 @@ $("#Mohito").click(function () {
   scoreMohito += Number($(this).attr("value"));
   sessionStorage.setItem("scoreMohito", scoreMohito);
 });
+
+$("fieldset:last button").click(function () {
+  submitScores() ;
+
+});
+
+
+function submitScores() {
+  var formDataScores = {
+    user_id: sessionStorage.getItem("user_id"),
+    cactus: sessionStorage.getItem("scoreCactus"),
+    blueberry: sessionStorage.getItem("scoreBlueberry"),
+    cherries: sessionStorage.getItem("scoreCherries"),
+    pear: sessionStorage.getItem("scorePear"),
+    portugal: sessionStorage.getItem("scorePortugal"),
+    apple: sessionStorage.getItem("scoreApple"),
+    grape: sessionStorage.getItem("scoreGrape"),
+    fruit: sessionStorage.getItem("scoreFruit"),
+    lemonade: sessionStorage.getItem("scoreLemonade"),
+    mohito: sessionStorage.getItem("scoreMohito"),
+  };
+  $.ajax({
+    type: "POST",
+    url: "panel/score.php",
+    data: formDataScores,
+    dataType: "json",
+    enconfirm: true,
+  }).done(function (data) {
+    if (data["success"] == true) {
+      // window.dataLayer = window.dataLayer || [];
+      // window.dataLayer.push({ event: "formSubmissionOtp" });
+        console.log(data);
+    } else {
+
+      console.log(data);
+    }
+  });
+}
