@@ -58,13 +58,13 @@ header .headerContent .point {
 #race .buttonsBox {
   height: 385px;
 }
-#race .product button:active {
+/* #race .product button:active {
   transform: scale(1.3);
   transition-duration: 1s;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
+} */
 .product:not(:first-of-type) {
   opacity: 0;
 }
@@ -80,7 +80,8 @@ header .headerContent .point {
   width: 385px;
   text-align: right;
   text-align-last: right;
-  padding-right: 16px;
+  /* padding-right: 16px; */
+  padding-right: 0;
   padding-top: 15px;
   position: relative;
   border: none;
@@ -93,18 +94,20 @@ header .headerContent .point {
   position: absolute;
   top: -20px;
   left: -45px;
+  z-index: 10;
 }
 #race .product .left p {
   text-align: right;
   text-align-last: right;
-  margin: 0;
+  margin: 0 18 0 0;
 }
 #race .product .right {
   border-radius: 20px 0px 0px 20px;
   width: 385px;
   text-align: left;
   text-align-last: left;
-  padding-left: 16px;
+  /* padding-left: 16px; */
+  padding-left: 0;
   padding-top: 15px;
   position: relative;
   border: none;
@@ -117,11 +120,13 @@ header .headerContent .point {
   position: absolute;
   top: -20px;
   right: -40px;
+  z-index: 10;
 }
 #race .product .right p {
   text-align: left;
   text-align-last: left;
   margin: 0;
+  margin-left: 38px;
 }
 
 #race .bg-step1 .right {
@@ -317,6 +322,12 @@ header .headerContent .point {
     position: absolute;
     top: 0;
     right: -22px;
+  }
+  #race .product .right p {
+    margin-left: 10px;
+  }
+  #race .product .left p {
+    margin-right: 10px;
   }
   .progressbarBox {
     width: 100%;
