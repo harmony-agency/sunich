@@ -186,6 +186,7 @@ header .headerContent .point {
   align-content: center;
   position: absolute;
   right: 2%;
+  top: 50%;
 }
 .number p {
   width: 60px;
@@ -204,49 +205,6 @@ header .headerContent .point {
   color: #dd1c18;
   font-weight: 700;
   font-size: 35.2576px;
-}
-
-/*progressbar*/
-
-.progressbarBox {
-  width: 100%;
-  position: absolute;
-  bottom: 50%;
-  right: 0%;
-}
-#progressbar {
-  margin-top: 30px;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-#progressbar li {
-  display: inline-block;
-  width: auto;
-}
-#progressbar li:before {
-  content: "";
-  width: 52px;
-  line-height: 20px;
-  height: 2px;
-  display: block;
-  font-size: 10px;
-  background: #c1c1c1;
-  border-radius: 20px;
-  margin: 0 auto 5px auto;
-}
-#progressbar li.active:before {
-  background: #692b6f;
-  color: white;
-}
-
-#progressbar li:after {
-  content: "";
-  width: 37px;
-  height: 28px;
-  display: block;
-  margin: 0 auto 5px auto;
 }
 
 .section-progressbar {
@@ -296,6 +254,7 @@ header .headerContent .point {
     text-align: center;
     color: #41375a;
     margin-bottom: 47px;
+    margin-top: 0;
   }
   #race .product p {
     font-size: 14px;
@@ -329,15 +288,64 @@ header .headerContent .point {
   #race .product .left p {
     margin-right: 10px;
   }
+  /*progressbar*/
+
+  .progressbarBox {
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: 0%;
+  }
+  #progressbar {
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #progressbar li {
+    display: inline-block;
+    width: auto;
+  }
+  #progressbar li:before {
+    content: "";
+    width: 52px;
+    line-height: 20px;
+    height: 2px;
+    display: block;
+    font-size: 10px;
+    background: #c1c1c1;
+    border-radius: 20px;
+    margin: 0 auto 5px auto;
+  }
+  #progressbar li.active:before {
+    background: #692b6f;
+    color: white;
+  }
+
+  #progressbar li:after {
+    content: "";
+    width: 37px;
+    height: 28px;
+    display: block;
+    margin: 0 auto 5px auto;
+  }
+
   .progressbarBox {
     width: 100%;
     position: absolute;
     bottom: 0%;
     left: 0%;
   }
+  /* number */
   .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     position: unset;
     right: unset;
+    top: unset;
   }
   .number p {
     width: 37px;

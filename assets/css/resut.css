@@ -175,7 +175,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
-#resultTable .showInfo .left .showTable {
+#resultTable .showInfo .left a {
   display: flex;
   align-items: center;
   color: #692b6f;
@@ -348,18 +348,20 @@ body {
 #resultTable .tab-content .tab-pane .line5 .left .colorBox {
   background: #dfd228;
 }
-.seeTable {
-  text-align: center;
-  margin-top: 40px;
-}
-.seeTable a {
+
+.showTable {
   color: #692b6f;
   font-weight: 700;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
+.showTable p {
+  margin-bottom: 0;
+}
+
 #resultTable .results {
   display: flex;
   justify-content: center;
@@ -399,7 +401,10 @@ body {
   border-radius: 20px;
   padding: 3px 14px;
 }
-
+.seeTable {
+  font-weight: 400;
+  font-size: 18px;
+}
 @media screen and (max-width: 768px) {
   header {
     padding-top: 20px;
@@ -605,10 +610,12 @@ body {
     width: 31%;
     margin: unset;
   }
-  .seeTable a {
-    font-size: 14px;
-  }
+
   .seeTable {
     margin-top: 20px;
+    text-align: center;
+    color: #692b6f;
+    font-weight: 700;
+    font-size: 14px;
   }
 }
