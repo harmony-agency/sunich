@@ -175,7 +175,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
-#resultTable .showInfo .left a {
+#resultTable .showInfo .left .showTable {
   display: flex;
   align-items: center;
   color: #692b6f;
