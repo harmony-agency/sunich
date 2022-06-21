@@ -8,27 +8,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
     <link rel="stylesheet" href="assets/css/race.css" />
-    <link rel="stylesheet" href="assets/css/wave.css" />
   </head>
   <body>
-    <div class="progress" role="progressbar">
-      <div class="progress-inner">
-        <div class="progress-indicator"></div>
-        <div class="progress-indicator"></div>
-      </div>
-      <span class="progress-label">
-        <strong>50</strong>
-        <span>%</span>
-      </span>
-    </div>
-
-    <div class="description">
-      <span>progress percentage is </span>
-      <input type="number" min="0" max="100" step="1" value="50" />
-      <span>%</span>
-    </div>
-
-    <a href="https://codepen.io/miko-github" class="watermark">@mikoloism</a>
     <!-- Design by Harmony Agency -->
     <div class="wrapper">
       <header>
@@ -59,7 +40,12 @@
                 توی این گرمای تابستون، برای خنک شدن کدوم طعم سن‌ایچ کول می‌چسبه؟
               </p>
               <div class="d-flex buttonsBox">
-                <button type="button" id="Blueberry" class="right next" value="1">
+                <button
+                  type="button"
+                  id="Blueberry"
+                  class="right next"
+                  value="1"
+                >
                   <p>بلوبری گازدار</p>
                   <p id="percent">45%</p>
                   <img src="./assets/images/products/blueberry.png" />
@@ -187,30 +173,6 @@
     <!-- <script src="assets/js/waypoint.js"></script> -->
     <!-- <script src="assets/js/jquery.countup.min.js"></script> -->
     <script src="assets/js/harmony.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/race.js"></script>
-    <script>
-      (function () {
-        const progress = document.querySelector(`.progress`);
-        const progressIndicator = document.querySelector(`.progress-indicator`);
-        const progressLabel = document.querySelector(
-          `.progress-label > strong`
-        );
-        const input = document.querySelector(`input[type="number"]`);
-
-        input.oninput = ({ target }) => {
-          let value =
-            target.value <= 100 && target.value >= 0 ? target.value : 50;
-          progressLabel.textContent = value;
-          progress.style.setProperty(`--progress-value`, value);
-          progress.dataset.value = value;
-
-          if (value > 50) progress.classList.add(`progress--upper-half-value`);
-          else
-            progress.classList.contains("progress--upper-half-value") &&
-              progress.classList.remove(`progress--upper-half-value`);
-        };
-      })();
-    </script>
+    <script src="assets/js/harmonyScore.js"></script>
   </body>
 </html>
