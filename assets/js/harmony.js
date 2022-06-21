@@ -277,3 +277,4 @@ $( "#sendAgain" ).click(function() {
   $(this).hide()
   timerSendSms();
 });
+
