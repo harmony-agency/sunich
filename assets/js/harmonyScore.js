@@ -90,16 +90,16 @@ function showWaveResult(data){
 
 
 
-  var percentBlueberry = objData.blueberry/100 ;
-  var percentCactus= objData.cactus/100 ;
-  var percentPear= objData.pear/100 ;
-  var percentCherries = objData.cherries/100 ;
-  var percentApple = objData.apple/100 ;
-  var percentPortugal= objData.portugal/100 ;
-  var percentFruit = objData.fruit/100 ;
-  var percentGrape = objData.grape/100 ;
-  var percentMohito = objData.mohito/100 ;
-  var percentLemonade = objData.lemonade/100 ;
+  var percentBlueberry = (objData.blueberry/objData.users)*100 ;
+  var percentCactus= (objData.cactus/objData.users)*100 ;
+  var percentPear= (objData.pear/objData.users)*100 ;
+  var percentCherries = (objData.cherries/objData.users)*100 ;
+  var percentApple = (objData.apple/objData.users)*100 ;
+  var percentPortugal= (objData.portugal/objData.users)*100 ;
+  var percentFruit = (objData.fruit/objData.users)*100 ;
+  var percentGrape = (objData.grape/objData.users)*100 ;
+  var percentMohito = (objData.mohito/objData.users)*100 ;
+  var percentLemonade = (objData.lemonade/objData.users)*100 ;
 
   $('#Blueberry #percent').html(percentBlueberry + '%');
 
@@ -204,7 +204,7 @@ $("#Mohito").click(function () {
 $("fieldset:last button").click(function () {
   sessionStorage.setItem("level",1);
   submitScores();
-  // window.location.href = "result.html";
+  window.location.href = "result.html";
 });
 
 function submitScores() {

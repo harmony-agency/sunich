@@ -48,6 +48,10 @@ try {
         $mohito = $row['mohito'] + $mohito;
     }
 
+
+    $users = $pdo->query('select count(*) from users')->fetchColumn(); 
+
+
     $data['cactus'] = $cactus;
     $data['blueberry'] = $blueberry;
     $data['cherries'] = $cherries;
@@ -58,6 +62,7 @@ try {
     $data['fruit'] = $fruit;
     $data['lemonade'] = $fruit;
     $data['mohito'] = $fruit;
+    $data['users'] = intval($users);
 
     $data['success'] = true;
 
@@ -68,4 +73,43 @@ try {
 
 
 }
+
+$user_id = $_POST['user_id'];
+
+if(isset($user_id) && $user_id != null)  {   
+
+
+    try {    
+    
+        $sql_fetch_user = "SELECT * FROM users  WHERE id = $user_id";
+    
+        $stmt_users= $pdo->query($sql_fetch_user);
+
+        $stmt_users->setFetchMode(PDO::FETCH_ASSOC);
+    
+        while ($row = $stmt_users->fetch()){
+    
+            $level1 = $row['level1'] ;
+            $level2 = $row['level2'] ;
+            $level3 = $row['level3'] ;
+            $level4 = $row['level4'];
+
+        }
+
+    
+        $data['level1'] = intval($level1);
+        $data['level2'] = intval($level2);
+        $data['level3'] = intval($level3);
+        $data['level4'] = intval($level4);
+
+        $data['success'] = true;
+    
+    } catch (PDOException $e) {
+        $data['success'] = false;
+        $data['message'] =  $sql . "<br>" . $e->getMessage();
+    }
+    
+    
+}
+
 echo json_encode($data);

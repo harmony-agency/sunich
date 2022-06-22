@@ -17,42 +17,6 @@ function validate_number($mobile_number){
 
 function verifySMS($mobile,$token){
 
-  // $mobile = int($mobile);
-  // $message = "کد تایید سن ایچ کول : $token";
-  
-  // $curl = curl_init();
-
-  // curl_setopt_array($curl, array(
-  //   CURLOPT_URL => 'https://new.payamsms.com/services/rest/index.php',
-  //   CURLOPT_RETURNTRANSFER => true,
-  //   CURLOPT_ENCODING => '',
-  //   CURLOPT_MAXREDIRS => 10,
-  //   CURLOPT_TIMEOUT => 0,
-  //   CURLOPT_FOLLOWLOCATION => true,
-  //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  //   CURLOPT_CUSTOMREQUEST => 'POST',
-  //   CURLOPT_POSTFIELDS =>'{
-  //     "organization": "sunich",
-  //     "username": "Marketing",
-  //     "password": "marketing1020",
-  //     "method": "send",
-  //     "messages": [
-  //         {
-  //             "sender": "9820001020",
-  //             "recipient": "98'.$mobile.'",
-  //             "body": "'.$message.'",
-  //             "customerId": 1
-  //         }
-  //     ]
-  // }',
-  //   CURLOPT_HTTPHEADER => array(
-  //     'Content-Type: application/json'
-  //   ),
-  // ));
-  
-  // $response = curl_exec($curl);
-  
-  // curl_close($curl);
     $mobile = (int)$mobile;
 
       $url = "https://new.payamsms.com/services/rest/index.php";
@@ -124,15 +88,14 @@ $mobile =strval($_POST['mobile']);
 if(isset($mobile))  {   
     
     
-          $sql_select_user = "SELECT mobile FROM users WHERE level1 = 1";
+          $sql_select_user = "SELECT mobile FROM users WHERE mobile = $mobile AND level1 = 1";
                         
           $recordsUsers = $pdo->query($sql_select_user)->fetchColumn();
 
           if($recordsUsers > 0)
           {
 
-            $data['message'] = 'شما قبلا در این مسابقه شرکت کرده اید';
-
+            $data['message'] = '  شما قبلا در این مسابقه شرکت کرده اید و 100 امتیاز دریافت کردید ';
             $data['success'] = false;
           }else{
 

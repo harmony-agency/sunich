@@ -8,6 +8,8 @@
 
 // (A) GET FROM SESSION
 
+
+
 $.ajax({
   type: "POST",
   url: "panel/result.php",
@@ -19,7 +21,7 @@ $.ajax({
     // window.dataLayer = window.dataLayer || [];
     // window.dataLayer.push({ event: "formSubmissionOtp" });
     showResult(data);
-      
+    getDataUser();
   } else {
 
     console.log(data);
@@ -36,16 +38,16 @@ function showResult(data){
 
 
 
-  var percentBlueberry = objData.blueberry/100 ;
-  var percentCactus= objData.cactus/100 ;
-  var percentPear= objData.pear/100 ;
-  var percentCherries = objData.cherries/100 ;
-  var percentApple = objData.apple/100 ;
-  var percentPortugal= objData.portugal/100 ;
-  var percentFruit = objData.fruit/100 ;
-  var percentGrape = objData.grape/100 ;
-  var percentMohito = objData.mohito/100 ;
-  var percentLemonade = objData.lemonade/100 ;
+  var percentBlueberry = (objData.blueberry/objData.users)*100 ;
+  var percentCactus= (objData.cactus/objData.users)*100 ;
+  var percentPear= (objData.pear/objData.users)*100 ;
+  var percentCherries = (objData.cherries/objData.users)*100 ;
+  var percentApple = (objData.apple/objData.users)*100 ;
+  var percentPortugal= (objData.portugal/objData.users)*100 ;
+  var percentFruit = (objData.fruit/objData.users)*100 ;
+  var percentGrape = (objData.grape/objData.users)*100 ;
+  var percentMohito = (objData.mohito/objData.users)*100 ;
+  var percentLemonade = (objData.lemonade/objData.users)*100 ;
 
   $('.line1 .right .percent').html(percentBlueberry + '%');
   $('.line1 .left .percent').html(percentCactus + '%');
@@ -147,6 +149,36 @@ function showResult(data){
 }
 
 
+function getDataUser(){
+
+  var user_id = sessionStorage.getItem("user_id");
+
+  $.ajax({
+    type: "POST",
+    url: "panel/result.php",
+    data: { user_id : user_id},
+    dataType: "json",
+    enconfirm: true,
+  }).done(function (data) {
+    if (data["success"] == true) {
+
+    var total = data["level1"] + data["level2"] +data["level3"] +data["level4"] ;
+
+      // window.dataLayer = window.dataLayer || [];
+      // window.dataLayer.push({ event: "formSubmissionOtp" });
+      $(".score").html(total*100);
+        
+    } else {
+  
+      console.log(data);
+    }
+  });
+  (".score").html();
+
+
+
+
+}
 function showRangeResult(element,number,value){
 
    let inputRange = document.getElementsByClassName(element);
