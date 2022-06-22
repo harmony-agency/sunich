@@ -3,7 +3,9 @@ body {
 }
 
 /* ------------------------------- top ------------------------------- */
-
+a:hover {
+  color: unset;
+}
 #top {
   background-image: url(../images/resultBg.png);
   background-repeat: no-repeat;
@@ -33,7 +35,7 @@ body {
   color: #ffffff;
   text-align: justify;
   text-align-last: right;
-  margin: 15px 0 25px;
+  margin: 15px 0 30px;
 }
 .timer-Btn {
   display: flex;
@@ -41,7 +43,7 @@ body {
 
 .wave-btnBox {
   height: 100px;
-  width: 330px;
+  width: 300px;
   position: relative;
 }
 .wave-btnBox span {
@@ -68,8 +70,8 @@ body {
 .wave-btn:before {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 130px;
   background-color: #d75ae3;
   top: 50%;
@@ -223,6 +225,9 @@ body {
 #resultTable .tick-flip-panel {
   color: #fff;
 }
+#saku {
+  display: none;
+}
 #saku .tick-flip-panel {
   color: #fff;
   background-color: transparent;
@@ -236,7 +241,7 @@ body {
   background: #f5f3f8;
   box-shadow: 0px 5.94976px 13.387px rgba(105, 43, 111, 0.13);
   border-radius: 22.3116px;
-  margin: 0 0 23px;
+  margin: 0 10px 23px;
   padding: 0;
 }
 #resultTable .tab-content .tab-pane .lines .rangBox {
@@ -314,8 +319,9 @@ body {
   position: relative;
 }
 #resultTable .tab-content .tab-pane .lines .colorBox img {
+  width: 11px;
   position: absolute;
-  top: -12%;
+  top: -30%;
   right: 40%;
 }
 #resultTable .tab-content .tab-pane .line1 .right .colorBox {
@@ -406,6 +412,12 @@ body {
   font-size: 18px;
 }
 @media screen and (max-width: 768px) {
+  .sunichLogo {
+    padding: 10px 0;
+  }
+  .score {
+    color: #dd1c18;
+  }
   header {
     padding-top: 20px;
   }
@@ -456,9 +468,13 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-    height: 600px;
+    height: 550px;
     position: relative;
     padding-bottom: 0;
+    padding-top: 10px;
+  }
+  #top .container {
+    padding: 0 16px;
   }
   #top .title {
     font-family: "sunich";
@@ -497,10 +513,11 @@ body {
 
   #top .wave-btnBox {
     position: absolute;
-    bottom: 9%;
-    left: 0;
-    width: 100%;
+    bottom: 11%;
+    left: 5%;
+    width: 90%;
     height: auto;
+    margin: 0 auto;
   }
 
   /* ------------------------------- bottom ------------------------------- */
@@ -511,7 +528,8 @@ body {
     border-radius: 20px 20px 0px 0px;
     padding-bottom: 17px;
     padding-top: 22px;
-    margin-top: 0;
+    position: relative;
+    margin-top: -12px;
   }
   #resultTable .nav-pills {
     overflow: auto;
@@ -537,6 +555,10 @@ body {
     margin-bottom: 27px;
     justify-content: right;
   }
+  #resultTable .showInfo .right {
+    align-items: center;
+    width: 100%;
+  }
   #resultTable .showInfo .left {
     display: none;
   }
@@ -547,7 +569,11 @@ body {
 
   #resultTable .showInfo p {
     font-size: 12px;
+    margin-left: 0;
+    text-align: right;
+    text-align-last: right;
   }
+
   #resultTable .tick-group {
     font-size: 12px;
   }
@@ -568,10 +594,10 @@ body {
     position: relative;
   }
   #resultTable .tab-content .tab-pane .lines .colorBox img {
+    width: 10px;
     position: absolute;
-
-    top: -35%;
-    right: 35%;
+    top: -50%;
+    right: 33%;
   }
   #resultTable .tab-content .tab-pane .lines .rangBox {
     height: 30px;
@@ -617,5 +643,12 @@ body {
     color: #692b6f;
     font-weight: 700;
     font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 48%;
   }
 }

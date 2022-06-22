@@ -14,9 +14,11 @@
     <!-- Design by Harmony Agency -->
     <div class="wrapper">
       <header>
+        <div id="particles-js"></div>
         <div class="container">
           <div class="headerContent">
             <div class="point">
+              <span class="name">وحیده</span>
               <span>امتياز شما:</span>
               <span class="score">0</span>
             </div>
@@ -51,6 +53,7 @@
                   <!-- <p id="percent">45%</p> -->
                   <img src="./assets/images/products/blueberry.png" />
                   <div class="wave" role="progressbar">
+                    <div id="btnParticles-js"></div>
                     <div class="progress-inner">
                       <div class="progress-indicator"></div>
                       <div class="progress-indicator"></div>
@@ -60,7 +63,7 @@
                     </span>
                   </div>
                 </button>
-                <button type="button" id="Cactus" class="left next" value="2">
+                <button type="button" id="Cactus" class="left next" value="1">
                   <p>کاکتوس گازدار</p>
                   <img src="./assets/images/products/kaktus.png" />
                   <div class="wave" role="progressbar">
@@ -95,7 +98,7 @@
                     </span>
                   </div>
                 </button>
-                <button type="button" id="Cherries" class="left next" value="2">
+                <button type="button" id="Cherries" class="left next" value="1">
                   <p>آلبالو گازدار</p>
                   <img src="./assets/images/products/albaloo.png" />
                   <div class="wave" role="progressbar">
@@ -130,7 +133,7 @@
                     </span>
                   </div>
                 </button>
-                <button type="button" id="Portugal" class="left next" value="2">
+                <button type="button" id="Portugal" class="left next" value="1">
                   <p>پرتقال گازدار</p>
                   <img src="./assets/images/products/orange.png" />
                   <div class="wave" role="progressbar">
@@ -171,7 +174,7 @@
                     </span>
                   </div>
                 </button>
-                <button type="button" id="Grape" class="left next" value="2">
+                <button type="button" id="Grape" class="left next" value="1">
                   <p>انگور گازدار</p>
                   <img src="./assets/images/products/angoor.png" />
                   <div class="wave" role="progressbar">
@@ -206,7 +209,7 @@
                     </span>
                   </div>
                 </button>
-                <button type="button" id="Lemonade" class="left next" value="2">
+                <button type="button" id="Lemonade" class="left next" value="1">
                   <p>لیموناد گازدار</p>
                   <img src="./assets/images/products/limonad.png" />
                   <div class="wave" role="progressbar">
@@ -222,14 +225,14 @@
               </div>
             </fieldset>
 
-            <div class="progressbarBox">
+            <div class="progressbarBox mobile">
               <div class="number">
                 <p>
                   5/
                   <span id="currentNumber">1</span>
                 </p>
               </div>
-              <ul class="mobile" id="progressbar">
+              <ul id="progressbar">
                 <li class="active"></li>
                 <li class=""></li>
                 <li class=""></li>
@@ -237,6 +240,12 @@
                 <li class=""></li>
               </ul>
             </div>
+          </div>
+          <div class="number desktop">
+            <p>
+              5/
+              <span id="currentNumber">1</span>
+            </p>
           </div>
         </div>
       </section>
@@ -254,6 +263,7 @@
     <script src="assets/js/jquery.validate.min.js"></script>
     <!-- <script src="assets/js/waypoint.js"></script> -->
     <!-- <script src="assets/js/jquery.countup.min.js"></script> -->
+    <script src="assets/js/particles.js"></script>
     <script src="assets/js/harmony.js"></script>
     <script src="assets/js/harmonyScore.js"></script>
     <script src="assets/js/wave.js"></script>
