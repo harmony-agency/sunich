@@ -34,7 +34,6 @@ if(isset($mobile) && isset($confirm)  )  {
                       $sql_select = "SELECT code FROM otp WHERE mobile = $mobile";
                   
                       $verify_code = $pdo->query($sql_select)->fetchColumn();
-                      $data['message'] = $verify_code ;
                       
                       if($verify_code ==  $confirm) {
                         

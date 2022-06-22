@@ -10,7 +10,7 @@
 
 $.ajax({
   type: "POST",
-  url: "panel/score.php",
+  url: "panel/result.php",
   data: { resultScore : 'All'},
   dataType: "json",
   enconfirm: true,

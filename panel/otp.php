@@ -124,6 +124,19 @@ $mobile =strval($_POST['mobile']);
 if(isset($mobile))  {   
     
     
+          $sql_select_user = "SELECT mobile FROM users WHERE level1 = 1";
+                        
+          $recordsUsers = $pdo->query($sql_select_user)->fetchColumn();
+
+          if($recordsUsers > 0)
+          {
+
+            $data['message'] = 'شما قبلا در این مسابقه شرکت کرده اید';
+
+            $data['success'] = false;
+          }else{
+
+
 
                if(validate_number($mobile) == false) 
                 {
@@ -140,14 +153,13 @@ if(isset($mobile))  {
                 
                     $records = $pdo->query($sql_select)->fetchColumn();
                     
-                    if($records > -1) {
                         $data['success'] = true;
 
                         $code = generateNumericOTP(4);
-                        $count = 1 ;
-                       $test =  verifySMS($mobile,$code);
+                      
+                        verifySMS($mobile,$code);
 
-                     $data['sms'] =  $test;
+
                       if  ($records > 0) {
                         $count = $count + $records;
                         $sql_update = "UPDATE  otp  SET count = '$count' , code = '$code' WHERE mobile = $mobile";
@@ -156,6 +168,8 @@ if(isset($mobile))  {
                         $data['message'] =  "Success Update";
 
                       }else{
+
+                        $count = 1 ;
 
                         $sql_insert = "INSERT INTO otp (mobile, code, count)
 
@@ -166,19 +180,15 @@ if(isset($mobile))  {
                         $pdo->exec($sql_insert);
                       }
 
-                      } else{
-                        $data['success'] = false;
-                        $data['message'] =  "حداکثر مجاز ارسال پیامک برای هر شماره 5 بار می باشد";
-                      }
-                    } 
-
+  
+                    }
                     catch(PDOException $e) {
                       $data['success'] = false;
                       $data['message'] =  $sql . "<br>" . $e->getMessage();
 
                     }
 
-
+                  }
                 }
 
  }     

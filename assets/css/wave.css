@@ -226,3 +226,6 @@ html {
   color: var(--color-primary);
   transform: translate(-85px, -50px);
 } 
+.wave{
+  display: none;
+}

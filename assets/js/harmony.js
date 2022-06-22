@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+  $.validator.addMethod(
+    "regex",
+    function(value, element, regexp) {
+      var re = new RegExp(regexp);
+      return this.optional(element) || re.test(value);
+    },
+    "لطفا آیدی معتبر وارد کنید"
+  );
+
+  
   $("#subscriber").validate({
     // initialize the plugin
     rules: {
@@ -12,6 +23,7 @@ $(document).ready(function () {
       },
       instagram: {
         required: true,
+        regex : /[A-Za-z0-9]./g 
       },
     },
     messages: {
@@ -142,7 +154,14 @@ function form_race() {
     if (data["success"] == true) {
       // window.dataLayer = window.dataLayer || [];
       // window.dataLayer.push({ event: "formSubmissionOtp" });
+     
+     var name = $("#subscriber #name").val();
+     sessionStorage.setItem("name", name);
+     var mobile = $("#subscriber #mobile").val();
+     sessionStorage.setItem("mobile", mobile);
+
       sessionStorage.setItem("user_id", data["user_id"]);
+      
       window.location.href = "race.html";
     } else {
 
