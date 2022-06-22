@@ -17,29 +17,77 @@ function validate_number($mobile_number){
 
 function verifySMS($mobile,$token){
 
-      $apiKey = '34766A373652457777676B464E2F344E6B653172564559504C7A356F643744654E454B4558564B554B68633D';
+  // $mobile = int($mobile);
+  // $message = "کد تایید سن ایچ کول : $token";
+  
+  // $curl = curl_init();
 
-      $url = "https://api.kavenegar.com/v1/$apiKey/verify/lookup.json";
-      
+  // curl_setopt_array($curl, array(
+  //   CURLOPT_URL => 'https://new.payamsms.com/services/rest/index.php',
+  //   CURLOPT_RETURNTRANSFER => true,
+  //   CURLOPT_ENCODING => '',
+  //   CURLOPT_MAXREDIRS => 10,
+  //   CURLOPT_TIMEOUT => 0,
+  //   CURLOPT_FOLLOWLOCATION => true,
+  //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  //   CURLOPT_CUSTOMREQUEST => 'POST',
+  //   CURLOPT_POSTFIELDS =>'{
+  //     "organization": "sunich",
+  //     "username": "Marketing",
+  //     "password": "marketing1020",
+  //     "method": "send",
+  //     "messages": [
+  //         {
+  //             "sender": "9820001020",
+  //             "recipient": "98'.$mobile.'",
+  //             "body": "'.$message.'",
+  //             "customerId": 1
+  //         }
+  //     ]
+  // }',
+  //   CURLOPT_HTTPHEADER => array(
+  //     'Content-Type: application/json'
+  //   ),
+  // ));
+  
+  // $response = curl_exec($curl);
+  
+  // curl_close($curl);
+    $mobile = (int)$mobile;
+
+      $url = "https://new.payamsms.com/services/rest/index.php";
+
+      $message = "کد تایید سن ایچ کول :‌$token";
+
+
       $curl = curl_init();
       
-      $fields = array(
-          'receptor' => $mobile,
-          'token' => $token,
-          'template' => 'study2020'
-      );
-      
-      
-      
+      $fields = [
+        "organization" => "sunich", 
+        "username" => "Marketing", 
+        "password" => "marketing1020", 
+        "method" => "send", 
+        "messages" => [
+              [
+                 "sender" => "9820001020", 
+                 "recipient" => "98$mobile", 
+                 "body" => $message, 
+                 "customerId" => 1 
+              ] 
+           ] 
+     ]; 
+
+
       $json_string = json_encode($fields);
       
       curl_setopt($curl, CURLOPT_URL, $url);
       curl_setopt($curl, CURLOPT_POST, TRUE);
-      curl_setopt($curl, CURLOPT_POSTFIELDS, $fields);
+      curl_setopt($curl, CURLOPT_POSTFIELDS, $json_string);
       curl_setopt($curl, CURLOPT_RETURNTRANSFER, true );
       
-      $data = curl_exec($curl);
+      $response = curl_exec($curl);
 
+      curl_close($curl);
 }
 
 // Function to generate OTP
@@ -97,8 +145,9 @@ if(isset($mobile))  {
 
                         $code = generateNumericOTP(4);
                         $count = 1 ;
-                        // verifySMS($mobile,$code);
-                  
+                       $test =  verifySMS($mobile,$code);
+
+                     $data['sms'] =  $test;
                       if  ($records > 0) {
                         $count = $count + $records;
                         $sql_update = "UPDATE  otp  SET count = '$count' , code = '$code' WHERE mobile = $mobile";
