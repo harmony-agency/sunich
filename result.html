@@ -17,10 +17,15 @@
         <div class="container">
           <div class="headerContent">
             <div class="point">
+              <span class="name">وحیده</span>
               <span>امتياز شما:</span>
               <span class="score">0</span>
             </div>
-            <img src="./assets/images/sunichLogo.png" alt="" />
+            <img
+              src="./assets/images/sunichLogoWhite.png"
+              alt=""
+              class="sunichLogo"
+            />
             <img
               src="./assets/images/headerLogo.png"
               alt=""
@@ -89,6 +94,7 @@
                 <a
                   href="https://www.instagram.com/sunichcool/?__coig_restricted=1"
                   class="wave-btn"
+                  target="_blank"
                 >
                   <span>اینستاگرام سن ایچ کول رو فالو کن</span>
                 </a>
@@ -129,6 +135,8 @@
                 <a
                   href="https://www.instagram.com/sunichcool/?__coig_restricted=1"
                   class="wave-btn"
+                  target="_blank"
+
                 >
                   <span>اینستاگرام سن ایچ کول رو فالو کن</span>
                 </a>
@@ -151,6 +159,7 @@
                 role="tab"
                 aria-controls="firstStepBody"
                 aria-selected="true"
+                
               >
                 <span class="fisrtStep">مرحله اول</span>
               </button>
@@ -165,6 +174,7 @@
                 role="tab"
                 aria-controls="secondStepBody"
                 aria-selected="false"
+                disabled
               >
                 <span class="port">مرحله دوم</span>
               </button>
@@ -179,6 +189,8 @@
                 role="tab"
                 aria-controls="thirdStepBody"
                 aria-selected="false"
+                disabled
+
               >
                 <span class="port">مرحله سوم</span>
               </button>
@@ -193,6 +205,8 @@
                 role="tab"
                 aria-controls="fourthStepBody"
                 aria-selected="false"
+                disabled
+
               >
                 <span class="port">مرحله چهارم</span>
               </button>
@@ -277,7 +291,7 @@
                     <div class="right">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/blueberryMini.png"
+                          src="./assets/images/products/blueberry.png"
                           alt=""
                         />
                       </span>
@@ -294,7 +308,7 @@
                     <div class="left">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/kaktusMini.png"
+                          src="./assets/images/products/kaktus.png"
                           alt=""
                         />
                       </span>
@@ -319,7 +333,7 @@
                     <div class="right">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/golabiMini.png"
+                          src="./assets/images/products/golabi.png"
                           alt=""
                         />
                       </span>
@@ -336,7 +350,7 @@
                     <div class="left">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/albalooMini.png"
+                          src="./assets/images/products/albaloo.png"
                           alt=""
                         />
                       </span>
@@ -361,7 +375,7 @@
                     <div class="right">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/appleMini.png"
+                          src="./assets/images/products/apple.png"
                           alt=""
                         />
                       </span>
@@ -378,7 +392,7 @@
                     <div class="left">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/orangeMini.png"
+                          src="./assets/images/products/orange.png"
                           alt=""
                         />
                       </span>
@@ -403,7 +417,7 @@
                     <div class="right">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/garmsiriMini.png"
+                          src="./assets/images/products/garmsiri.png"
                           alt=""
                         />
                       </span>
@@ -420,7 +434,7 @@
                     <div class="left">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/angoorMini.png"
+                          src="./assets/images/products/angoor.png"
                           alt=""
                         />
                       </span>
@@ -445,7 +459,7 @@
                     <div class="right">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/mohitoMini.png"
+                          src="./assets/images/products/mohito.png"
                           alt=""
                         />
                       </span>
@@ -462,7 +476,7 @@
                     <div class="left">
                       <span class="colorBox">
                         <img
-                          src="./assets/images/products/limonadMini.png"
+                          src="./assets/images/products/limonad.png"
                           alt=""
                         />
                       </span>
@@ -483,7 +497,6 @@
                   </div>
                 </div>
               </div>
-
               <div
                 class="seeTable mobile"
                 data-bs-toggle="modal"
@@ -910,85 +923,6 @@
                       <img src="" alt="" />
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal -->
-          <div
-            class="modal fade package-modal"
-            id="staticBackdrop"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">
-                    جهت پیش ثبت نام و دریافت کد تخفیف، اطلاعات خودرا وارد نمایید
-                  </h5>
-                  <p class="modal-subtitle"></p>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <form class="package-form" id="subscriber">
-                    <input type="hidden" id="dataPackage" name="dataPackage" />
-                    <div class="form-group">
-                      <label for="first_name">نام</label>
-                      <input
-                        name="first_name"
-                        type="text"
-                        class="form-control"
-                        id="first_name"
-                        placeholder="مهسا"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="last_name"> نام خانوادگی*</label>
-                      <input
-                        name="last_name"
-                        type="text"
-                        class="form-control"
-                        id="last_name"
-                        placeholder=" کریمی"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="mobile">شماره همراه *</label>
-                      <input
-                        name="mobile"
-                        type="number"
-                        class="form-control"
-                        id="mobile"
-                        placeholder="09*********"
-                      />
-                    </div>
-                    <div class="error-submit"></div>
-                    <div class="text-center mt-5">
-                      <input
-                        type="hidden"
-                        value="package1"
-                        name="package"
-                        class="package"
-                      />
-                      <button
-                        type="submit"
-                        name="p_submit"
-                        class="submit2 action-button primary-btn"
-                      >
-                        ثبت سفارش
-                      </button>
-                    </div>
-                  </form>
-                  <div class="result"></div>
                 </div>
               </div>
             </div>

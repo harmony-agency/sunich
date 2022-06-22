@@ -1,5 +1,7 @@
 body {
   background: #f1e9ff;
+  overflow: hidden;
+  /* height: 100vh; */
 }
 #race {
   padding: 0 16px;
@@ -8,9 +10,6 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: self-start;
   background: #692b6f;
   border-radius: 0px 0px 50px 50px;
   padding: 40px 15px 0;
@@ -37,14 +36,20 @@ header .headerContent .point {
 .sunichLogo {
   max-width: 100%;
   max-height: 100%;
+  padding: 10px 0;
+}
+#race .container {
+  z-index: 1100;
 }
 #race .content {
   height: 100%;
   width: 100%;
   text-align: center;
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 50px 50px 0px 0px;
   padding: 50px 230px 56px;
+  position: relative;
+  z-index: 1100;
 }
 #race .content .caption {
   font-weight: 400;
@@ -54,6 +59,12 @@ header .headerContent .point {
 }
 #race .product {
   text-align: center;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 #race .buttonsBox {
   height: 385px;
@@ -187,6 +198,8 @@ header .headerContent .point {
   position: absolute;
   right: 2%;
   top: 50%;
+  width: 82px;
+  height: 130px;
 }
 .number p {
   width: 60px;
@@ -218,8 +231,31 @@ header .headerContent .point {
   align-items: center;
   justify-content: center;
 }
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+#particles-js canvas {
+  max-height: 280px;
+}
+#btnParticles-js {
+  position: absolute;
+  bottom: 0;
+}
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #particles-js {
+    width: 90%;
+  }
+  #particles-js canvas {
+    max-height: 163px;
+  }
   header {
     height: 163px;
     padding: 20px 15px;
@@ -243,6 +279,7 @@ header .headerContent .point {
     padding: 0 15px 15px;
   }
   #race .content {
+    border-radius: 20px;
     position: relative;
     width: 100%;
     padding: 20px 16px 32px;
@@ -346,6 +383,8 @@ header .headerContent .point {
     position: unset;
     right: unset;
     top: unset;
+    width: unset;
+    height: unset;
   }
   .number p {
     width: 37px;
@@ -354,5 +393,8 @@ header .headerContent .point {
   }
   .number p #currentNumber {
     font-size: 19.7787px;
+  }
+  .number.desktop{
+    display: none;
   }
 }
