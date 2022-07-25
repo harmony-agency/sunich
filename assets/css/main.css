@@ -262,7 +262,7 @@ nav {
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
   flex-grow: 2;
-  padding: 105px 25px;
+  padding: 75px 25px;
 }
 
 .dashboard-nav {

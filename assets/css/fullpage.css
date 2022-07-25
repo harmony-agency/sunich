@@ -134,7 +134,7 @@ html.fp-enabled,
 .fp-slidesNav ul li {
   display: block;
   width: 14px;
-  height: 13px;
+  height: 50px;
   margin: 7px;
   position: relative;
 }
@@ -185,7 +185,7 @@ html.fp-enabled,
 }
 #fp-nav ul li .fp-tooltip {
   position: absolute;
-  top: -2px;
+  top: 15px;
   color: #6c6c6c;
   font-size: 20px;
   font-family: arial, helvetica, sans-serif;
@@ -193,8 +193,8 @@ html.fp-enabled,
   max-width: 220px;
   overflow: hidden;
   display: block;
-  opacity: 0;
-  width: 0;
+  opacity: 1;
+  width: 150px;
   cursor: pointer;
 }
 #fp-nav ul li:hover .fp-tooltip,
@@ -203,6 +203,18 @@ html.fp-enabled,
   transition: opacity 0.2s ease-in;
   width: auto;
   opacity: 1;
+}
+#fp-nav ul li:nth-child(1):hover .fp-tooltip:nth-child(1),
+#fp-nav.fp-show-active a.active:nth-child(1) + .fp-tooltip {
+  color: #d5736c;
+}
+#fp-nav ul li:nth-child(2):hover .fp-tooltip:nth-child(2),
+#fp-nav.fp-show-active a.active:nth-child(2) + .fp-tooltip {
+  color: #f09e7f;
+}
+#fp-nav ul li:nth-child(3):hover .fp-tooltip:nth-child(3),
+#fp-nav.fp-show-active a.active:nth-child(3) + .fp-tooltip {
+  color: #9bb99a;
 }
 #fp-nav ul li .fp-tooltip.fp-right {
   right: 20px;
