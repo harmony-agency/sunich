@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه اصلی</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="icon" href="assets/favicon.png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="mobile-none">
+        <div class="logo text-center">
+          <a href="#">
+            <img src="assets/images/logo.png" alt="" />
+          </a>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container text-center">
+          <div class="mobile-none">
+            <div class="row main-row">
+              <div class="col-lg-4">
+                <a
+                  href="navigation-tooltips.html#antioxidanSection"
+                  target="_blank"
+                >
+                  <div id="antioxidan" class="main-box">
+                    <div class="box-img">
+                      <img src="assets/images/anti-design.png" alt="" />
+                    </div>
+                    <h2>آنتی اکسیدان</h2>
+                    <div class="subtitle">آب میوه های قرمز</div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4">
+                <a
+                  href="navigation-tooltips.html#vitamineSection"
+                  target="_blank"
+                >
+                  <div id="vitamine" class="main-box">
+                    <div class="box-img">
+                      <img src="assets/images/vitamine.png" alt="" />
+                    </div>
+                    <h2>غنی شده با ویتامین</h2>
+                    <div class="subtitle">فراتر از آب میوه</div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4">
+                <a href="navigation-tooltips.html#nfcSection" target="_blank">
+                  <div id="nfc" class="main-box">
+                    <div class="box-img">
+                      <img src="assets/images/yellow-apple.png" alt="" />
+                    </div>
+                    <h2>NFC</h2>
+                    <div class="subtitle">بدون کنسانتره</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- mobile-none -->
+
+          <div class="mobile-block">
+            <div
+              class="d-flex justify-content-between align-items-center carousel-title mb-3 py-5"
+            >
+              <h2>نوشیدنی ها</h2>
+              <img src="assets/images/logo.png" alt="" />
+            </div>
+            <div id="home-carousel" class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="antioxidan.html">
+                    <div id="anti-card" class="home-card">
+                      <div class="card-img">
+                        <img src="assets/images/anti-mobile.png" alt="" />
+                      </div>
+                      <div class="card-content">
+                        <h2>آنتی اکسیدان</h2>
+                        <p class="subtitle">آب میوه های قرمز</p>
+                      </div>
+                    </div>
+                    <!-- anti-card -->
+                  </a>
+                </div>
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                  <a href="vitamine.html">
+                    <div id="vitamine-card" class="home-card">
+                      <div class="card-img">
+                        <img src="assets/images/vitamine-mobile.png" alt="" />
+                      </div>
+                      <div class="card-content">
+                        <h2>غنی‌شده با ویتامین</h2>
+                        <p class="subtitle">فراتر از آب میوه</p>
+                      </div>
+                    </div>
+                    <!-- vitamine-card -->
+                  </a>
+                </div>
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                  <a href="nfc.html">
+                    <div id="nfc-card" class="home-card">
+                      <div class="card-img">
+                        <img src="assets/images/nfc-mobile.png" alt="" />
+                      </div>
+                      <div class="card-content">
+                        <h2>NFC</h2>
+                        <p class="subtitle">بدون استفاده از کنسانتره</p>
+                      </div>
+                    </div>
+                    <!-- nfc-card -->
+                  </a>
+                </div>
+                <!--swiper-slide-->
+              </div>
+              <!-- swiper-wrapper -->
+            </div>
+            <!-- home-carousel -->
+            <div class="fixed-menu">
+              <div class="container">
+                <div
+                  class="fixed-menu-inner d-flex justify-content-between align-items-center"
+                >
+                  <a href="#" class="active"
+                    ><img src="assets/images/home-icon.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="assets/images/search-icon.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="assets/images/shop-icon.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="assets/images/profile-icon.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <!--fixed menu -->
+          </div>
+        </div>
+      </div>
+      <!-- main -->
+    </div>
+    <!--end wrapper -->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/harmony.js"></script>
+
+    <script>
+      var windowHeight = $(window).height();
+
+      $(document).ready(function () {
+        $(".main-box").css("height", $(window).height() - 140);
+        $(".box-img").css("height", $(window).height() * 0.5);
+      });
+      $(window).resize(function () {
+        $(".main-box").css("height", $(window).height() - 140);
+        $(".box-img").css("height", $(window).height() * 0.5);
+      });
+    </script>
+    <!-- ================= home carousel ============= -->
+    <script>
+      var swiper = new Swiper("#home-carousel", {
+        slidesPerView: 2.5,
+        spaceBetween: 5,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        autoplay: {
+          delay: 2500,
+        },
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

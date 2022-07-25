@@ -1,0 +1,1009 @@
+/*========= General =============*/
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/dana/eot/Dana-FaNum-Medium.eot");
+  src: url("../fonts/dana/eot/Dana-FaNum-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/dana/woff/Dana-FaNum-Medium.woff") format("woff"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/dana/woff2/Dana-FaNum-Medium.woff2") format("woff2"),
+    url("../fonts/dana/ttf/Dana-FaNum-Medium.ttf") format("ttf");
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/dana/eot/Dana-FaNum-Bold.eot");
+  src: url("../fonts/dana/eot/Dana-FaNum-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/dana/woff/Dana-FaNum-Bold.woff") format("woff"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/dana/woff2/Dana-FaNum-Bold.woff2") format("woff2"),
+    url("../fonts/dana/ttf/Dana-FaNum-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("../fonts/ray/eot/Ray-Bold.eot");
+  src: url("../fonts/ray/eot/Ray-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ray/woff2/Ray-Bold.woff2") format("woff2"),
+    url("../fonts/ray/woff/Ray-Bold.woff") format("woff"),
+    url("../fonts/ray/ttf/Ray-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("../fonts/ray/eot/Ray-Black.eot");
+  src: url("../fonts/ray/eot/Ray-Black.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ray/woff2/Ray-Black.woff2") format("woff2"),
+    url("../fonts/ray/woff/Ray-Black.woff") format("woff"),
+    url("../fonts/ray/ttf/Ray-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("../fonts/ray/eot/Ray.eot");
+  src: url("../fonts/ray/eot/Ray.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ray/woff2/Ray.woff2") format("woff2"),
+    url("../fonts/ray/woff/Ray.woff") format("woff"),
+    url("../fonts/ray/ttf/Ray.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("../fonts/ray/eot/Ray-Medium.eot");
+  src: url("../fonts/ray/eot/Ray-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ray/woff2/Ray-Medium.woff2") format("woff2"),
+    url("../fonts/ray/woff/Ray-Medium.woff") format("woff"),
+    url("../fonts/ray/ttf/Ray-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ray";
+  src: url("../fonts/ray/eot/Ray-Light.eot");
+  src: url("../fonts/ray/eot/Ray-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ray/woff2/Ray-Light.woff2") format("woff2"),
+    url("../fonts/ray/woff/Ray-Light.woff") format("woff"),
+    url("../fonts/ray/ttf/Ray-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  font-style: normal;
+  font-family: ray;
+  color: #000;
+  background-color: rgba(245, 245, 245, 1);
+}
+ul {
+  padding-right: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+.section-title {
+  font-size: 24px;
+  line-height: 37px;
+  color: #000;
+  margin-bottom: 10px;
+}
+img,
+svg {
+  max-width: 100%;
+}
+a {
+  transition: all 0.5s;
+  color: #2f1160;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  transition: all 0.5s;
+  border: none;
+}
+a:focus,
+button:focus {
+  border: none;
+  outline: 0;
+}
+.btn.focus,
+.btn:focus,
+.btn:visited,
+button:visited {
+  outline: 0;
+  box-shadow: none;
+}
+p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #525252;
+  margin-bottom: 0rem;
+}
+ul {
+  padding-right: 0;
+  list-style: none;
+}
+.py {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.my {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.mt {
+  margin-top: 40px;
+}
+.mobile-none {
+  display: block;
+}
+.mobile-block {
+  display: none;
+}
+.logo {
+  padding-top: 1%;
+}
+/*========= main =============*/
+.main {
+  padding: 1% 0 0;
+}
+.main-row {
+  position: relative;
+}
+.main-row:before {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: -40px;
+  z-index: -1;
+  background-image: url(../images/albalu.png);
+  width: 112px;
+  height: 143px;
+  background-repeat: no-repeat;
+}
+.main-row:after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  bottom: -47px;
+  z-index: -1;
+  background-image: url(../images/porteghal.png);
+  width: 241px;
+  height: 206px;
+  background-repeat: no-repeat;
+}
+.main-box {
+  padding: 5% 20px;
+  color: #fff;
+  overflow: hidden;
+}
+#antioxidan {
+  background-color: rgba(206, 83, 74, 80%);
+  border-radius: 0 50px 0 0;
+}
+#vitamine {
+  background-color: rgba(239, 137, 98, 80%);
+}
+#nfc {
+  background-color: rgba(134, 171, 133, 80%);
+  border-radius: 0 0 0 50px;
+}
+.box-img img {
+  height: 100%;
+}
+.main-box h2 {
+  padding: 2% 0 0;
+  font-family: ray;
+  font-weight: 800;
+  line-height: 34px;
+}
+.subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
+  font-family: ray;
+}
+/*============= pages =============*/
+nav {
+  display: block;
+}
+.dashboard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-app {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+.dashboard-content {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  padding: 105px 25px;
+}
+
+.dashboard-nav {
+  min-width: 184px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.dashboard-compact .dashboard-nav {
+  display: none;
+}
+.dashboard-nav header {
+  min-height: 84px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dashboard-nav header .menu-toggle {
+  display: none;
+  margin-right: auto;
+}
+
+.dashboard-nav a {
+  color: #515151;
+}
+
+.dashboard-nav a:hover {
+  text-decoration: none;
+}
+
+.dashboard-nav {
+  background-color: #edede9;
+}
+
+.dashboard-nav a {
+  color: #6c6c6c;
+  font-size: 20px;
+}
+.brand-logo {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #515151;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.brand-logo:focus,
+.brand-logo:active,
+.brand-logo:hover {
+  color: #dbdbdb;
+  text-decoration: none;
+}
+
+.brand-logo i {
+  color: #d2d1d1;
+  font-size: 27px;
+  margin-right: 10px;
+}
+
+.dashboard-nav-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 130px 5px 0;
+}
+
+.dashboard-nav-item {
+  min-height: 42px;
+  padding: 8px 20px 8px 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: 0.02em;
+  transition: ease-out 0.5s;
+  position: relative;
+}
+.dashboard-nav-item:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid #8c8c8b;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+}
+.dashboard-nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.dashboard-nav-item.active {
+  color: #f09e7f;
+  font-weight: 900;
+}
+.dashboard-nav-item.active:before {
+  border: 2px solid #f09e7f;
+}
+.dashboard-nav-dropdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+a.dashboard-nav-dropdown-item {
+  font-size: 18px;
+  color: rgba(108, 108, 108, 0.55);
+}
+.dashboard-nav-dropdown-item.active {
+  color: #f09e7f;
+}
+.dashboard-nav-dropdown.show {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dashboard-nav-dropdown.show > .dashboard-nav-dropdown-toggle {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.dashboard-nav-dropdown.show > .dashboard-nav-dropdown-toggle:after {
+  -webkit-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.dashboard-nav-dropdown.show > .dashboard-nav-dropdown-menu {
+  display: block;
+  width: 170px;
+}
+.dashboard-nav-dropdown-menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.dashboard-nav-dropdown-item {
+  min-height: 30px;
+  padding: 0px 20px 8px 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: ease-out 0.5s;
+}
+.dashboard-nav-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.menu-toggle {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #443ea2;
+}
+
+.menu-toggle:hover,
+.menu-toggle:active,
+.menu-toggle:focus {
+  text-decoration: none;
+  color: #875de5;
+}
+
+.menu-toggle i {
+  font-size: 20px;
+}
+.dashboard-toolbar {
+  min-height: 84px;
+  background-color: #dfdfdf;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 27px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+.nav-item-divider {
+  height: 1px;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: rgba(236, 238, 239, 0.3);
+}
+.dashboard-bottom a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.59);
+}
+
+.vitamine-page .dashboard-app {
+  background-image: url(../images/bg-vitamine.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(239, 137, 98, 0.8);
+}
+.extra-larg {
+  text-align: center;
+  color: #fff;
+  opacity: 0.3;
+  font-size: 8rem;
+  font-weight: 900;
+}
+.inner-content-title {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 500;
+  font-family: ray;
+  line-height: 38px;
+}
+.inner-content-text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: ray;
+  line-height: 32px;
+  text-align: justify;
+  margin-left: 25%;
+}
+.light-btn {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  padding: 7px 15px;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 9px;
+}
+.light-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9px;
+  padding: 1px; /* control the border thickness */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255),
+    rgba(255, 255, 255, 0.01)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.light-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+.page-title {
+  position: relative;
+}
+.page-title img {
+  position: absolute;
+  top: -160px;
+  text-align: center;
+  right: 31%;
+}
+.view-product {
+  padding-right: 80px;
+  padding-top: 50px;
+}
+.view-product .icon {
+  margin-right: 8px;
+}
+.dashboard-bottom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #edede9;
+  width: 100%;
+  right: 0;
+  text-align: center;
+}
+.dashboard-content .box-item {
+  padding: 0 55px;
+}
+.page-content h1 {
+  color: #fff;
+  font-size: 55px;
+  margin: 0 0 75px;
+}
+@media (min-width: 992px) {
+  .dashboard-app {
+    margin-right: 184px;
+  }
+
+  .dashboard-compact .dashboard-app {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 15px 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1070;
+  }
+
+  .dashboard-nav.mobile-show {
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-nav header .menu-toggle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard-toolbar {
+    left: 238px;
+  }
+
+  .dashboard-compact .dashboard-toolbar {
+    left: 0;
+  }
+}
+
+/*============= nfc ================*/
+.nfc-page .dashboard-app {
+  background-image: url(../images/bg-nfc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(134, 171, 133, 0.8);
+  overflow-y: hidden;
+}
+.extra-larg.english {
+  font-size: 15rem;
+  font-family: inherit;
+  letter-spacing: 100px;
+  font-weight: 300;
+  line-height: 200px;
+  margin-left: 28%;
+}
+.nfc-page .dashboard-content .box-item {
+  padding: 0 0;
+}
+.nfc-page .dashboard-nav-item.active {
+  color: #9bb99a;
+}
+.nfc-page .dashboard-nav-dropdown-item.active {
+  color: #9bb99a;
+}
+.nfc-page .dashboard-nav-item.active:before {
+  border: 2px solid #9bb99a;
+}
+.nfc-page h1 {
+  margin-bottom: 0px;
+}
+.nfc-page .subtitle {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 300;
+}
+/*=========== antioxidan ===========*/
+.antioxidan-page .dashboard-app {
+  background-image: url(../images/bg-anti.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(206, 83, 74, 0.8);
+}
+.antioxidan-page .dashboard-nav-item.active {
+  color: rgba(213, 115, 108, 1);
+}
+.antioxidan-page .dashboard-nav-dropdown-item.active {
+  color: rgba(213, 115, 108, 1);
+}
+.antioxidan-page .dashboard-nav-item.active:before {
+  border: 2px solid rgba(213, 115, 108, 1);
+}
+.antioxidan-page .dashboard-content .box-item {
+  padding: 0 0px;
+}
+/*=========== products ============*/
+.product-description h1 {
+  font-size: 38px;
+  line-height: 60px;
+  font-weight: 800;
+  font-family: "Ray";
+  margin-bottom: 0px;
+}
+.text-small {
+  font-size: 25px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+.product-description p {
+  font-size: 22px;
+  color: #fff;
+  line-height: 34px;
+  font-weight: 400;
+  text-align: justify;
+}
+.product-description .subtitle {
+  font-weight: 300;
+  margin-bottom: 18px;
+  font-size: 25px;
+}
+/*========== media =============*/
+@media all and (max-width: 768px) {
+  .mobile-none {
+    display: none;
+  }
+  .mobile-block {
+    display: block;
+  }
+  .banner .d-flex.banner-inner {
+    display: grid !important;
+  }
+  .mob-order1 {
+    order: 1;
+  }
+  .mob-order2 {
+    order: 2;
+  }
+  .py {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/*=========== mobile ================*/
+#home-carousel {
+  margin-left: -10px;
+}
+.home-card {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  min-height: 390px;
+  width: 100%;
+  border-radius: 116px;
+}
+#anti-card {
+  background-image: url(../images/anti-bg.png);
+}
+#vitamine-card {
+  background-image: url(../images/vitamin-bg.png);
+}
+#nfc-card {
+  background-image: url(../images/nfc-bg.png);
+}
+.home-card h2 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 800;
+  margin: 30px 0 5px;
+}
+.home-card p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.home-card .card-img {
+  height: 220px;
+  padding-top: 35px;
+}
+.home-card .card-img img {
+  padding: 10px;
+}
+.home-card .card-content {
+  padding: 10px 5px;
+}
+.mob-inner-header {
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 15px 15px 94px 15px;
+  margin: 21px 18px 38px 18px;
+  background-size: 1000%;
+}
+.mob-text p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 29px;
+  padding: 14px 21px 82px 21px;
+  text-align: justify;
+}
+.mob-inner-header h2 {
+  color: #fff;
+}
+.mob-inner-header p {
+  color: #fff;
+}
+.mob-inner-header p.subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+.mob-header-title {
+  padding-right: 21px;
+}
+.mob-header-title img {
+  margin-bottom: 24px;
+}
+.mob-header-img {
+  margin-top: 29px;
+}
+
+/*========== antioxidan-mobile ===========*/
+
+.antioxidan-page .mob-inner-header {
+  /* background-image: url(../images/anti-bg-mobile.png); */
+  background: rgba(206, 83, 74, 0.8);
+  backdrop-filter: blur(28px);
+}
+.product-card {
+  text-align: center;
+  color: #fff;
+  padding: 36px 10px;
+  border-radius: 16px;
+  margin: 20px 0 40px;
+}
+#anti-products .product-card {
+  background-color: rgba(206, 83, 74, 80%);
+  backdrop-filter: blur(28px);
+}
+.product-card p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+.product-card h2 {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.carousel-title {
+  padding: 0px 20px;
+}
+.carousel-title h2 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 44px;
+}
+.mob-product-carousel {
+  padding-bottom: 50px;
+}
+.mob-product-carousel .container {
+  padding-left: 0;
+}
+.fixed-menu {
+  padding-bottom: 15px;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+  right: 0;
+}
+.fixed-menu-inner.d-flex {
+  background-color: #b95750;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  backdrop-filter: blur(18px);
+  border-radius: 50px;
+  padding: 10px 62px;
+}
+.fixed-menu-inner img {
+  width: 24px;
+}
+.antioxidan-page .mob-product-details {
+  background-color: rgba(206, 83, 74, 80%);
+  border-radius: 0 0 45px 0;
+  margin-bottom: 34px;
+}
+.detail-description {
+  background-color: #fff;
+  padding: 25px 19px;
+  border-radius: 150px 0 40px 0;
+  color: #000;
+  margin-top: 28px;
+}
+.detail-description .mob-header-title {
+  text-align: right;
+  padding-right: 0;
+}
+.detail-description .mob-text p {
+  color: #000;
+  text-align: right;
+  padding-right: 0;
+  padding: 14px 0px 40px 40px;
+}
+.detail-description .mob-header-title h2 {
+  font-size: 22px;
+}
+.detail-description .mob-header-title .subtitle {
+  font-size: 18px;
+}
+.fixed-menu-inner a {
+  opacity: 0.5;
+  position: relative;
+}
+.fixed-menu-inner a.active {
+  opacity: 1;
+}
+.fixed-menu-inner a.active:before {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  background-image: url(../images/Union.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  right: -7px;
+  width: 37px;
+  height: 7px;
+}
+
+/*======= vitamine-mobile ========*/
+.vitamine-page .mob-inner-header {
+  background: rgba(239, 137, 98, 0.8);
+  backdrop-filter: blur(28px);
+}
+.vitamine-page .product-card {
+  background: rgba(239, 137, 98, 0.8);
+  backdrop-filter: blur(28px);
+}
+.vitamine-page .mob-product-details {
+  background: rgba(239, 137, 98, 0.8);
+  backdrop-filter: blur(28px);
+  border-radius: 0 0 45px 0;
+  margin-bottom: 34px;
+}
+.vitamine-page .fixed-menu-inner {
+  background-color: #ef8962;
+}
+.mob-header-title h2 {
+  padding: 20px 0 0 90px;
+  line-height: 38px;
+}
+
+/*============== nfc mobile =============*/
+.nfc-page .mob-inner-header {
+  background: rgba(134, 171, 133, 0.8);
+  backdrop-filter: blur(28px);
+  background-image: url(../images/nfc2-mobile.png);
+  background-position: 0 -20px;
+  background-repeat: no-repeat;
+}
+#nfc-products .product-card {
+  background: rgba(134, 171, 133, 0.8);
+  backdrop-filter: blur(28px);
+}
+.nfc-page .fixed-menu-inner {
+  background-color: #86ab85;
+}
+.nfc-page .mob-header-title img {
+  margin-bottom: 18px;
+}
+.nfc-page .mob-header-title h2 {
+  padding: 0px 0 0 90px;
+  line-height: 32px;
+  margin-bottom: 0;
+}
+.product-card .subtitle {
+  font-size: 18px;
+}
+.nfc-page .mob-product-details {
+  background: rgba(134, 171, 133, 0.8);
+  backdrop-filter: blur(28px);
+  border-radius: 0 0 45px 0;
+  margin-bottom: 34px;
+}
+.pt-200 {
+  padding-top: 200px;
+}
