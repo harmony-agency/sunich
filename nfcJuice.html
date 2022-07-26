@@ -36,6 +36,17 @@
     <![endif]-->
   </head>
   <body>
+    <ul id="menu">
+      <li data-menuanchor="tomato-product" class="active">
+        <a href="#tomato-product">گوجه فرنگي</a>
+      </li>
+      <li data-menuanchor="yellowApple-product">
+        <a href="#yellowApple-product">سيب زرد</a>
+      </li>
+      <li data-menuanchor="anar-product">
+        <a href="#anar-product">انار</a>
+      </li>
+    </ul>
     <div id="fullpage">
       <!-- tomato -->
       <div class="section" id="tomato">
@@ -759,10 +770,8 @@
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         sectionsColor: ["#fff"],
-        anchors: ["first", "second", "third"],
+        anchors: ["tomato-product", "yellowApple-product", "anar-product"],
         navigation: true,
-        navigationTooltips: ["گوجه فرنگی", "سيب زرد", "انار"],
-        showActiveTooltip: true,
         menu: "#menu",
         loopTop: true,
         loopBottom: true,

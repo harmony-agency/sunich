@@ -36,6 +36,20 @@
     <![endif]-->
   </head>
   <body>
+    <ul id="menu">
+      <li data-menuanchor="anarAlbalu" class="active">
+        <a href="#anarAlbalu">مخلوط انار و آلبالو</a>
+      </li>
+      <li data-menuanchor="anarzereshk" class="active">
+        <a href="#anarzereshk">مخلوط انار و زرشک</a>
+      </li>
+      <li data-menuanchor="anarzoghal">
+        <a href="#anarzoghal">مخلوط انار و زغال اخته</a>
+      </li>
+      <li data-menuanchor="redFruits">
+        <a href="#redFruits">مخلوط میوه های قرمز</a>
+      </li>
+    </ul>
     <div id="fullpage">
       <!-- anaralbalu -->
       <div class="section" id="anaralbalu">
@@ -1115,15 +1129,8 @@
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         sectionsColor: ["#fff"],
-        anchors: ["first", "second", "third", "fourth"],
+        anchors: ["anarAlbalu", "anarzereshk", "anarzoghal", "redFruits"],
         navigation: true,
-        navigationTooltips: [
-          "انار و آلبالو",
-          "انار و زرشك",
-          "انار و زغال‌اخته",
-          "ميوه هاي قرمز",
-        ],
-        showActiveTooltip: true,
         menu: "#menu",
         loopTop: true,
         loopBottom: true,
