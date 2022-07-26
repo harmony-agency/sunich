@@ -1011,3 +1011,6 @@ a.dashboard-nav-dropdown-item {
 .pt-200 {
   padding-top: 200px;
 }
+.fp-watermark {
+  display: none;
+}

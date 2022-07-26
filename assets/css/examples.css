@@ -2,43 +2,35 @@
   display: inline-block;
   margin: 10px;
   color: #000;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.5);
+
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
-#menu li.active {
-  background: #666;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
+
 #menu li a {
   text-decoration: none;
-  color: #000;
+  color: #6c6c6c;
 }
-#menu li.active a:hover {
-  color: #000;
-}
-#menu li:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
+
 #menu li a,
 #menu li.active a {
   padding: 9px 18px;
   display: block;
 }
 #menu li.active a {
-  color: #fff;
+  color: #d5736c;
 }
 #menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 40px;
+  top: 40%;
+  right: 40px;
+  height: 200px;
   z-index: 70;
-  width: 100%;
+  width: auto;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 .twitter-share-button {
   position: fixed !important;
@@ -134,8 +126,6 @@
 #download:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
-
-
 
 /* Extensions preview menu
  * --------------------------------------- */

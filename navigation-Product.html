@@ -36,6 +36,17 @@
     <![endif]-->
   </head>
   <body>
+    <ul id="menu">
+      <li data-menuanchor="antioxidan-products" class="active">
+        <a href="#antioxidan-products">آنتي اكسيدان</a>
+      </li>
+      <li data-menuanchor="vitamine-products">
+        <a href="#vitamine-products">آب ميوه طبيعي</a>
+      </li>
+      <li data-menuanchor="nfc-products">
+        <a href="#nfc-products">بدون كنسانتره</a>
+      </li>
+    </ul>
     <div id="fullpage">
       <div class="section" id="antioxidanProducts">
         <div class="wrapper antioxidan-page">
@@ -886,11 +897,11 @@
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         sectionsColor: ["#fff"],
-        anchors: ["first", "second", "third"],
+        anchors: ["antioxidan-products", "vitamine-products", "nfc-products"],
         navigation: true,
-        navigationTooltips: ["آنتي اكسيدان", "آب ميوه طبيعي", "بدون كنسانتره"],
-        showActiveTooltip: true,
         menu: "#menu",
+        loopTop: true,
+        loopBottom: true,
       });
     </script>
   </body>

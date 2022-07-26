@@ -36,10 +36,21 @@
     <![endif]-->
   </head>
   <body>
+    <ul id="menu">
+      <li data-menuanchor="antioxidanSection" class="active">
+        <a href="#antioxidanSection">آنتي اكسيدان</a>
+      </li>
+      <li data-menuanchor="vitamineSection">
+        <a href="#vitamineSection">آب ميوه طبيعي</a>
+      </li>
+      <li data-menuanchor="nfcSection">
+        <a href="#nfcSection">بدون كنسانتره</a>
+      </li>
+    </ul>
     <div id="fullpage">
       <div
         class="section"
-        id="antioxidanSection"
+        id="antioxidan-part"
         data-menuanchor="antioxidananchor"
       >
         <div class="intro">
@@ -333,11 +344,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="section"
-        id="vitamineSection"
-        data-menuanchor="vitamineanchor"
-      >
+      <div class="section" id="vitamine-part" data-menuanchor="vitamineanchor">
         <div class="wrapper vitamine-page">
           <div class="dashboard mobile-none">
             <div class="dashboard-nav">
@@ -584,7 +591,7 @@
         </div>
         <!--end wrapper -->
       </div>
-      <div class="section" id="nfcSection" data-menuanchor="nfcanchor">
+      <div class="section" id="nfc-part" data-menuanchor="nfcanchor">
         <div class="wrapper nfc-page">
           <div class="dashboard mobile-none">
             <div class="dashboard-nav">
@@ -890,11 +897,11 @@
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         sectionsColor: ["#fff"],
-        anchors: ["antioxidananchor", "vitamineanchor", "nfcanchor"],
+        anchors: ["antioxidanSection", "vitamineSection", "nfcSection"],
         navigation: true,
-        navigationTooltips: ["آنتي اكسيدان", "آب ميوه طبيعي", "بدون كنسانتره"],
-        showActiveTooltip: true,
         menu: "#menu",
+        loopTop: true,
+        loopBottom: true,
       });
     </script>
   </body>

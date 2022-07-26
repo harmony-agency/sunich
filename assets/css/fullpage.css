@@ -96,11 +96,12 @@ html.fp-enabled,
 #fp-nav {
   position: fixed;
   z-index: 100;
-  top: 50%;
+  top: 55%;
   opacity: 1;
   transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translate3d(0, -50%, 0);
+  height: 200px;
 }
 #fp-nav.fp-right {
   right: 17px;
@@ -129,13 +130,14 @@ html.fp-enabled,
 .fp-slidesNav ul {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 #fp-nav ul li,
 .fp-slidesNav ul li {
   display: block;
   width: 14px;
-  height: 35px;
-  margin: 7px;
+  height: 63px;
+  margin: 0;
   position: relative;
 }
 .fp-slidesNav ul li {
