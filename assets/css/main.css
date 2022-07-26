@@ -195,7 +195,7 @@ ul {
   bottom: -18px;
   z-index: -1;
   background-image: url(../images/porteghal.png);
-  width: 241px;
+  width: 260px;
   height: 206px;
   background-repeat: no-repeat;
 }
@@ -1024,18 +1024,7 @@ a.dashboard-nav-dropdown-item {
 .fp-watermark {
   display: none;
 }
-/* #antioxidanLottie {
-  text-align: center;
-}
-#antioxidanLottie svg {
-  max-width: 500px;
-  max-height: 200px;
-  margin: 0 auto;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 30%;
-} */
+
 /*========== new ===========*/
 .custom-container {
   position: absolute;
@@ -1173,4 +1162,18 @@ a.dashboard-nav-dropdown-item {
     height: 170px;
     padding-top: 25px;
   }
+}
+
+/* style for antioxidanLottie in navigation */
+.antioxidanLottie,
+.vitamineLottie,
+.nfcLottie {
+  text-align: center;
+}
+.antioxidanLottie svg,
+.vitamineLottie svg,
+.nfcLottie svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
