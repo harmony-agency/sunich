@@ -267,11 +267,11 @@ nav {
 
 .dashboard-nav {
   min-width: 184px;
-  position: fixed;
+  /* position: fixed; */
   right: 0;
   top: 0;
   bottom: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 .dashboard-compact .dashboard-nav {
   display: none;
@@ -351,7 +351,11 @@ nav {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 130px 5px 0;
+  margin: 5px;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  bottom: 0;
 }
 
 .dashboard-nav-item {
@@ -603,9 +607,9 @@ a.dashboard-nav-dropdown-item {
   margin: 0 0 75px;
 }
 @media (min-width: 992px) {
-  .dashboard-app {
+  /* .dashboard-app {
     margin-right: 184px;
-  }
+  } */
 
   .dashboard-compact .dashboard-app {
     margin-left: 0;
