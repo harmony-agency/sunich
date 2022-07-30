@@ -1085,7 +1085,11 @@ a.dashboard-nav-dropdown-item {
   margin-left: 0;
 }
 .dashboard-content {
+<<<<<<< HEAD
   padding: 30px 0px;
+=======
+  padding: 0px 0px;
+>>>>>>> 7915a7b56aff93255f85e5a51b5f4e4eb60ee7b7
   position: relative;
 }
 .pro-img {
@@ -1169,6 +1173,7 @@ a.dashboard-nav-dropdown-item {
 .vitamineLottie,
 .nfcLottie {
   text-align: center;
+<<<<<<< HEAD
   text-align: center;
   position: absolute;
   height: 500px;
@@ -1191,3 +1196,13 @@ a.dashboard-nav-dropdown-item {
 #preloader video {
   display: none;
 }
+=======
+}
+.antioxidanLottie svg,
+.vitamineLottie svg,
+.nfcLottie svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+>>>>>>> 7915a7b56aff93255f85e5a51b5f4e4eb60ee7b7
