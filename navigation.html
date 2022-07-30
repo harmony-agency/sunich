@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="icon" type="icon" href="assets/favicon.png" />
     <link rel="stylesheet" type="text/css" href="./assets/css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/examples.css" />
@@ -36,6 +37,21 @@
     <![endif]-->
   </head>
   <body>
+    <!--  preload  -->
+    <div id="preloader">
+      <video muted id="anti-preload">
+        <source src="assets/anime/anti-preload.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video muted id="vitamine-preload">
+        <source src="assets/anime/vitemin-preload.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video muted id="nfc-preload">
+        <source src="assets/anime/nfc-preload.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <ul id="menu">
       <li data-menuanchor="antioxidanSection" class="active">
         <a href="#antioxidanSection">آنتي اكسيدان</a>
@@ -48,6 +64,7 @@
       </li>
     </ul>
     <div id="fullpage">
+      <!-- antioxidan-part -->
       <div
         class="section"
         id="antioxidan-part"
@@ -163,14 +180,21 @@
                       <img src="assets/images/light-logo.png" alt="" />
                     </div>
                     <div class="page-title">
-                      <h1 class="extra-larg">آنــتی اکسیدان</h1>
-                      <img src="assets/images/anti-big.png" alt="" />
+                      <h1 class="extra-larg" data-aos="zoom-in-down">
+                        آنــتی اکسیدان
+                      </h1>
+                      <div id="antioxidanLottie" class="antioxidanLottie"></div>
+                      <!-- <img src="assets/images/anti-big.png" alt="" /> -->
                     </div>
                     <div class="page-content">
                       <div
                         class="row justify-content-between align-items-center"
                       >
-                        <div class="col-lg-6">
+                        <div
+                          class="col-lg-6"
+                          data-aos="zoom-in-down"
+                          data-aos-delay="1000"
+                        >
                           <h2 class="inner-content-title">آب میوه های قرمز</h2>
                           <p class="inner-content-text">
                             سال‌هاست از آنتی‌اکسیدان به‌عنوان معجون جوانی و
@@ -180,7 +204,11 @@
                           </p>
                         </div>
                         <div class="col-lg-6">
-                          <div class="view-product">
+                          <div
+                            class="view-product"
+                            data-aos="zoom-in-down"
+                            data-aos-delay="2000"
+                          >
                             <a
                               href="./navigation-Product.html#antioxidanProducts"
                               class="light-btn"
@@ -344,6 +372,7 @@
           </div>
         </div>
       </div>
+      <!-- vitamine-part -->
       <div class="section" id="vitamine-part" data-menuanchor="vitamineanchor">
         <div class="wrapper vitamine-page">
           <div class="dashboard mobile-none">
@@ -454,12 +483,19 @@
                     <img src="assets/images/light-logo.png" alt="" />
                   </div>
                   <div class="page-title">
-                    <h1 class="extra-larg">غنی شده با ویتامین</h1>
-                    <img src="assets/images/vitamine-big.png" alt="" />
+                    <h1 class="extra-larg" data-aos="zoom-in-down">
+                      غنی شده با ویتامین
+                    </h1>
+                    <div id="vitamineLottie" class="vitamineLottie"></div>
+                    <!-- <img src="assets/images/vitamine-big.png" alt="" /> -->
                   </div>
                   <div class="page-content">
                     <div class="row justify-content-between align-items-center">
-                      <div class="col-lg-6">
+                      <div
+                        class="col-lg-6"
+                        data-aos="zoom-in-down"
+                        data-aos-delay="1000"
+                      >
                         <h2 class="inner-content-title">فراتر از یک آبمیوه</h2>
                         <p class="inner-content-text">
                           علوم تغذیه ثابت کرده است که یکی از بهترین روش‌های جذب
@@ -469,7 +505,11 @@
                         </p>
                       </div>
                       <div class="col-lg-6">
-                        <div class="view-product">
+                        <div
+                          class="view-product"
+                          data-aos="zoom-in-down"
+                          data-aos-delay="2000"
+                        >
                           <a
                             href="./navigation-Product.html#vitamineProducts"
                             class="light-btn"
@@ -591,6 +631,7 @@
         </div>
         <!--end wrapper -->
       </div>
+      <!-- nfc-part -->
       <div class="section" id="nfc-part" data-menuanchor="nfcanchor">
         <div class="wrapper nfc-page">
           <div class="dashboard mobile-none">
@@ -701,12 +742,19 @@
                     <img src="assets/images/light-logo.png" alt="" />
                   </div>
                   <div class="page-title">
-                    <h1 class="extra-larg english">NFC</h1>
-                    <img src="assets/images/nfc-big.png" alt="" />
+                    <h1 class="extra-larg english" data-aos="zoom-in-down">
+                      NFC
+                    </h1>
+                    <div id="nfcLottie" class="nfcLottie"></div>
+                    <!-- <img src="assets/images/nfc-big.png" alt="" /> -->
                   </div>
                   <div class="page-content">
                     <div class="row justify-content-between align-items-center">
-                      <div class="col-lg-6">
+                      <div
+                        class="col-lg-6"
+                        data-aos="zoom-in-down"
+                        data-aos-delay="1000"
+                      >
                         <h2 class="inner-content-title">
                           بدون استفاده از کنسانتره
                         </h2>
@@ -716,7 +764,11 @@
                         </p>
                       </div>
                       <div class="col-lg-6">
-                        <div class="view-product">
+                        <div
+                          class="view-product"
+                          data-aos="zoom-in-down"
+                          data-aos-delay="2000"
+                        >
                           <a
                             href="./navigation-Product.html#nfcProducts"
                             class="light-btn"
@@ -842,67 +894,9 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/harmony.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/lottie.min.js"></script>
     <script type="text/javascript" src="./assets/js/fullpage.js"></script>
-
-    <script>
-      var windowHeight = $(window).height();
-
-      $(document).ready(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-      $(window).resize(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-    </script>
-    <script>
-      const mobileScreen = window.matchMedia("(max-width: 990px )");
-      $(document).ready(function () {
-        $(".dashboard-nav-dropdown-toggle").click(function () {
-          $(this)
-            .closest(".dashboard-nav-dropdown")
-            .toggleClass("show")
-            .find(".dashboard-nav-dropdown")
-            .removeClass("show");
-          $(this).parent().siblings().removeClass("show");
-        });
-        $(".menu-toggle").click(function () {
-          if (mobileScreen.matches) {
-            $(".dashboard-nav").toggleClass("mobile-show");
-          } else {
-            $(".dashboard").toggleClass("dashboard-compact");
-          }
-        });
-      });
-    </script>
-    <!------- product-carousel --------->
-    <script>
-      var swiper = new Swiper("#product-carousel", {
-        slidesPerView: 1.5,
-        spaceBetween: 5,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        autoplay: {
-          delay: 2500,
-        },
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-      });
-    </script>
-    <script type="text/javascript">
-      var myFullpage = new fullpage("#fullpage", {
-        sectionsColor: ["#fff"],
-        anchors: ["antioxidanSection", "vitamineSection", "nfcSection"],
-        navigation: true,
-        menu: "#menu",
-        loopTop: true,
-        loopBottom: true,
-      });
-    </script>
+    <script src="assets/js/animate.js"></script>
   </body>
 </html>

@@ -90,6 +90,7 @@ body {
   direction: rtl;
   text-align: right;
   overflow-x: hidden;
+  overflow-y: hidden;
   font-style: normal;
   font-family: ray;
   color: #000;
@@ -191,17 +192,26 @@ ul {
   content: "";
   position: absolute;
   right: -100px;
-  bottom: -47px;
+  bottom: -18px;
   z-index: -1;
   background-image: url(../images/porteghal.png);
-  width: 241px;
+  width: 260px;
   height: 206px;
   background-repeat: no-repeat;
 }
 .main-box {
-  padding: 5% 20px;
+  padding: 0 20px 5%;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.captionBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #antioxidan {
   background-color: rgba(206, 83, 74, 80%);
@@ -521,7 +531,7 @@ a.dashboard-nav-dropdown-item {
 .extra-larg {
   text-align: center;
   color: #fff;
-  opacity: 0.3;
+  opacity: 0.3 !important;
   font-size: 8rem;
   font-weight: 900;
 }
@@ -1012,5 +1022,172 @@ a.dashboard-nav-dropdown-item {
   padding-top: 200px;
 }
 .fp-watermark {
+  display: none;
+}
+
+/*========== new ===========*/
+.custom-container {
+  position: absolute;
+  top: 50%;
+  max-width: 842px;
+  right: 35%;
+  -moz-transform: translateX(27%) translateY(-50%);
+  -webkit-transform: translateX(27%) translateY(-50%);
+  transform: translateX(27%) translateY(-50%);
+}
+.custom-container .cat-logo {
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.custom-container2 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -moz-transform: translateX(0%) translateY(-50%);
+  -webkit-transform: translateX(0%) translateY(-50%);
+  transform: translateX(0%) translateY(-50%);
+  overflow-x: hidden;
+}
+.custom-container3 {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+.custom-container3 .page-content {
+  padding: 0 6%;
+}
+.minus-mt {
+  margin-top: -90px;
+}
+.antioxidan-page .minus-mt {
+  margin-top: -110px;
+}
+.antioxidan-page .view-product {
+  padding-right: 60px;
+  margin-top: -30px;
+}
+.title-section {
+  margin-top: -40px;
+  text-align: center;
+}
+.title-section img {
+  width: 100%;
+}
+.nfc-page .title-section img {
+  width: auto;
+}
+.nfc-page .inner-content-text {
+  margin-left: 0;
+}
+.dashboard-content {
+  padding: 30px 0px;
+  position: relative;
+}
+.pro-img {
+  height: 220px;
+}
+.box-item .hover-img {
+  display: none;
+  height: 220px;
+  transition: all 0.5s;
+  text-align: center;
+  margin: 0 auto;
+}
+.box-item .normal-img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  height: 220px;
+  transition: all 0.5s;
+}
+.box-item:hover .hover-img {
+  display: block;
+  transition: all 0.5s;
+}
+.box-item:hover .normal-img {
+  display: none;
+  transition: all 0.5s;
+}
+
+@media (min-width: 1600px) {
+  .custom-container2 {
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    -moz-transform: translateX(0%) translateY(-50%);
+    -webkit-transform: translateX(0%) translateY(-50%);
+    transform: translateX(0%) translateY(-50%);
+  }
+  .main-box {
+    max-height: 621px;
+  }
+  .box-img {
+    height: 400px;
+  }
+  .box-item .inner-content-title {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1599px) {
+  .title-section img {
+    max-height: 500px;
+  }
+  .box-img img {
+    max-height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+  #home-carousel {
+    margin-bottom: 70px;
+  }
+  .custom-container3 {
+    position: relative;
+    top: auto;
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .home-card .card-img {
+    height: 170px;
+    padding-top: 25px;
+  }
+}
+
+/* style for antioxidanLottie in navigation */
+.antioxidanLottie,
+.vitamineLottie,
+.nfcLottie {
+  text-align: center;
+  text-align: center;
+  position: absolute;
+  height: 500px;
+  left: 30%;
+}
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#preloader video {
   display: none;
 }
