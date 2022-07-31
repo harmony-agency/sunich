@@ -13,7 +13,7 @@ if(window.matchMedia("(max-width: 767px)").matches){
         easing: easing,
         step: function(now) {
           $elem.css({
-             opacity:  1
+             opacity: 0 + now
            });
         },
         complete: complete || $.noop
@@ -28,6 +28,21 @@ if(window.matchMedia("(max-width: 767px)").matches){
     slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
+    // autoplay: {
+    //   delay: 2500,
+    // },
+    navigation: {
+      nextEl: ".swiper-next",
+      prevEl: ".swiper-prev",
+    },
+  });
+
+  var productSwiper = new Swiper("#product-carousel", {
+    slidesPerView: 1.5,
+    spaceBetween: 5,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
     autoplay: {
       delay: 2500,
     },
@@ -36,30 +51,6 @@ if(window.matchMedia("(max-width: 767px)").matches){
       prevEl: ".swiper-prev",
     },
   });
-
-
-  var swiper = new Swiper("#product-carousel", {
-    slidesPerView: 1.5,
-    spaceBetween: 5,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    autoplay: {
-        delay: 2500,
-    },
-    navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-    }
-});
-
-$('#product-carousel a').click(function(){
-
-  $("#productModal .product-content").load("product-anarzoghal.html");
-
-});
-  
-
 
 
   $('.card-img img').animateImages(1);
