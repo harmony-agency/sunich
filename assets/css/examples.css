@@ -11,10 +11,17 @@
   text-decoration: none;
   color: #6c6c6c;
 }
-
+#fp-nav ul li, .fp-slidesNav ul li {
+  display: block;
+  width: 10px;
+  height: 37px;
+  margin: 7px;
+  position: relative;
+  top: -30px;
+}
 #menu li a,
 #menu li.active a {
-  padding: 9px 18px;
+  padding: 0;
   display: block;
 }
 #menu li.active a {
@@ -23,7 +30,7 @@
 #menu {
   position: fixed;
   top: 40%;
-  right: 40px;
+  right: 30px;
   height: 200px;
   z-index: 70;
   width: auto;

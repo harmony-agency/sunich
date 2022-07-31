@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="icon" type="icon" href="assets/favicon.png" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper custom-container3">
       <header class="mobile-none">
         <div class="logo text-center">
           <a href="#">
@@ -24,35 +25,53 @@
           <div class="mobile-none">
             <div class="row main-row">
               <div class="col-lg-4">
-                <a href="navigation.html#antioxidan-part" target="_blank">
+                <a href="navigation.html#antioxidan-part">
                   <div id="antioxidan" class="main-box">
-                    <div class="box-img">
-                      <img src="assets/images/anti-design.png" alt="" />
+                    <div id="antioxidanLottie"></div>
+                    <div
+                      class="d-flex captionBox"
+                      data-aos-duration="2000"
+                      data-aos-delay="600"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                    >
+                      <h2>آنتی اکسیدان</h2>
+                      <div class="subtitle">آب میوه های قرمز</div>
                     </div>
-                    <h2>آنتی اکسیدان</h2>
-                    <div class="subtitle">آب میوه های قرمز</div>
                   </div>
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="navigation.html#vitamine-part" target="_blank">
+                <a href="navigation.html#vitamine-part">
                   <div id="vitamine" class="main-box">
-                    <div class="box-img">
-                      <img src="assets/images/vitamine.png" alt="" />
+                    <div id="vitamineLottie"></div>
+                    <div
+                      class="d-flex captionBox"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-duration="2000"
+                      data-aos-delay="600"
+                    >
+                      <h2>غنی شده با ویتامین</h2>
+                      <div class="subtitle">فراتر از آب میوه</div>
                     </div>
-                    <h2>غنی شده با ویتامین</h2>
-                    <div class="subtitle">فراتر از آب میوه</div>
                   </div>
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="navigation.html#nfc-part" target="_blank">
+                <a href="navigation.html#nfc-part">
                   <div id="nfc" class="main-box">
-                    <div class="box-img">
-                      <img src="assets/images/yellow-apple.png" alt="" />
+                    <div id="nfcLottie"></div>
+                    <div
+                      class="d-flex captionBox"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-duration="2000"
+                      data-aos-delay="600"
+                    >
+                      <h2>NFC</h2>
+                      <div class="subtitle">بدون کنسانتره</div>
                     </div>
-                    <h2>NFC</h2>
-                    <div class="subtitle">بدون کنسانتره</div>
                   </div>
                 </a>
               </div>
@@ -149,36 +168,8 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/lottie.min.js"></script>
     <script src="assets/js/harmony.js"></script>
-
-    <script>
-      var windowHeight = $(window).height();
-
-      $(document).ready(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-      $(window).resize(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-    </script>
-    <!-- ================= home carousel ============= -->
-    <script>
-      var swiper = new Swiper("#home-carousel", {
-        slidesPerView: 2.5,
-        spaceBetween: 5,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        autoplay: {
-          delay: 2500,
-        },
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-      });
-    </script>
   </body>
 </html>
