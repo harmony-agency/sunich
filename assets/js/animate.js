@@ -1,3 +1,24 @@
+// preloader
+var currentURL = $(location).attr("href");
+var sectionId = currentURL.split("#");
+if (sectionId[1] == "antioxidan-part" || sectionId[1] == "antioxidanSection") {
+  $("#anti-preload").trigger("play");
+  $('#anti-preload').show();
+}
+if (sectionId[1] == "vitamine-part" || sectionId[1] == "vitamineSection") {
+  $("#vitamine-preload").trigger("play");
+  $('#vitamine-preload').show();
+}
+if (sectionId[1] == "nfc-part" || sectionId[1] == "nfcSection") {
+  $("#nfc-preload").trigger("play");
+  $('#nfc-preload').show();
+}
+
+setTimeout(function () {
+  $("#preloader").fadeOut();
+}, 2000);
+
+
 // Aos animation
 AOS.init();
 
@@ -6,7 +27,7 @@ var antioxidanLottie = bodymovin.loadAnimation({
   container: document.getElementById("antioxidanLottie"), // required
   path: "antioxidanLottie.json", // required
   renderer: "svg", // required
-  autoplay: true, // optional
+  autoplay: false, // optional
   loop: false, // Optional
 });
 var vitamineLottie = bodymovin.loadAnimation({
@@ -83,59 +104,73 @@ var myFullpage = new fullpage("#fullpage", {
   afterRender: function (anchors, index) {
     var currentURL = $(location).attr("href");
     var sectionId = currentURL.split("#");
+   
 
-    if ((sectionId = "vitamineSection")) {
+
+    
+    
+    if ((sectionId[1] = "antioxidanSection")) {
+      setTimeout(function () {
+
+      document.querySelectorAll("#antioxidan-part .aos-init").forEach((el) => {
+        el.classList.add("aos-animate");
+      });
+
+      antioxidanLottie.play();
+
+      }, 3000);
+
+    }
+
+    if ((sectionId[1] = "vitamineSection")) {
+      setTimeout(function () {
+
       document.querySelectorAll("#vitamine-part .aos-init").forEach((el) => {
         el.classList.add("aos-animate");
       });
-      vitamineLottie.play();
+
+        vitamineLottie.play();
+
+      }, 3000);
+
     }
-    if ((sectionId = "nfcSection")) {
+    if ((sectionId[1] = "nfcSection")) {
+
+      setTimeout(function () {
+
       document.querySelectorAll("#nfc-part .aos-init").forEach((el) => {
         el.classList.add("aos-animate");
       });
+
       nfcLottie.play();
+    }, 3000);
     }
+
   },
   beforeLeave: function (anchors, index) {
     var currentURL = $(location).attr("href");
     var sectionId = currentURL.split("#");
 
-    if (anchors.index == 0 || (sectionId = "vitamineSection")) {
+    if (anchors.index == 0) {
+      setTimeout(function () {
+
       document.querySelectorAll("#vitamine-part .aos-init").forEach((el) => {
         el.classList.add("aos-animate");
       });
       vitamineLottie.play();
+    }, 3000);
+
     }
 
-    if (anchors.index == 1 || (sectionId = "nfcSection")) {
+    if (anchors.index == 1 ) {
+      setTimeout(function () {
+
       document.querySelectorAll("#nfc-part .aos-init").forEach((el) => {
         el.classList.add("aos-animate");
       });
-      nfcLottie.play();
+        nfcLottie.play();
+    }, 3000);
     }
   },
 });
 
-// preloader
-var currentURL = $(location).attr("href");
-var sectionId = currentURL.split("#");
-if (sectionId[1] == "antioxidan-part") {
-  console.log(sectionId);
-  $("#anti-preload").trigger("play");
-  $('#anti-preload').show();
-}
-if (sectionId[1] == "vitamine-part") {
-  console.log(sectionId);
-  $("#vitamine-preload").trigger("play");
-  $('#vitamine-preload').show();
-}
-if (sectionId[1] == "nfc-part") {
-  console.log(sectionId);
-  $("#nfc-preload").trigger("play");
-  $('#nfc-preload').show();
-}
-
-setTimeout(function () {
-  $("#preloader").fadeOut("slow");
-}, 2000);
