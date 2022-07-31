@@ -53,7 +53,19 @@ if(window.matchMedia("(max-width: 767px)").matches){
   });
 
 
-  $('.card-img img').animateImages(1);
+  $("#product-carousel a").click(function(){
+
+    let htmlContent = $(this).data('content');
+    let folder = $(this).data('folder');
+
+
+    $("#productModal .product-content").load('product/'+ folder + '/' +htmlContent+'.html');
+    
+  });
+
+  
+
+  // $('.card-img img').animateImages(1);
 
 }else{
   
