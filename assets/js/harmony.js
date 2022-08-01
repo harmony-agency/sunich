@@ -28,12 +28,8 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
-    // autoplay: {
-    //   delay: 2500,
-    // },
-    navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
+    autoplay: {
+      delay: 4000,
     },
   });
 
@@ -43,21 +39,35 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
-    // autoplay: {
-    //   delay: 2500,
-    // },
-    navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
+    autoplay: {
+      delay: 3500,
     },
+
   });
+
+
+
 
   var myModalEl = document.getElementById("productModal");
   myModalEl.addEventListener("shown.bs.modal", function (event) {
     // do something...
-    console.log("modal");
-    productSwiper.destroy();
-    productSwiper.init("#product-carousel");
+
+    var productModalSwiper = new Swiper("#product-carousel-modal", {
+      slidesPerView: 1.5,
+      spaceBetween: 5,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      // autoplay: {
+      //   delay: 2500,
+      // },
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+    });
+
+ 
   });
 
 

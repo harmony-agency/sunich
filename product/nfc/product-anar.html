@@ -27,10 +27,15 @@
           >
             <h2>محصولات مشابه</h2>
           </div>
-          <div id="product-carousel" class="swiper">
+          <div id="product-carousel-modal" class="swiper">
             <div id="nfc-products" class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="product-goje.html">
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                  data-content="product-gohe"
+                  data-folder="nfc"
+                >
                   <div class="product-card">
                     <div class="card-img">
                       <img src="assets/images/product/goje.png" alt="" />
@@ -45,7 +50,12 @@
               </div>
               <!--swiper-slide-->
               <div class="swiper-slide">
-                <a href="product-sibezard.html">
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                  data-content="product-sibezard"
+                  data-folder="nfc"
+                >
                   <div class="product-card">
                     <div class="card-img">
                       <img src="assets/images/product/sibezard.png" alt="" />

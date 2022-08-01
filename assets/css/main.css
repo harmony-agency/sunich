@@ -1267,3 +1267,6 @@ a.dashboard-nav-dropdown-item {
   top: -55px;
   font-size: 18px;
 }
+.nav-home:hover {
+  color: #d5736c;
+}

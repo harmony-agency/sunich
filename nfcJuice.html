@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="icon" href="assets/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/fullpage.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/fullpage.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="./assets/css/examples.css" />
 
     <style>
@@ -37,6 +41,8 @@
   </head>
   <body>
     <ul id="menu">
+      <a class="nav-home" href="/">خانه</a>
+
       <li data-menuanchor="tomato-product" class="active">
         <a href="#tomato-product">گوجه فرنگي</a>
       </li>
@@ -154,7 +160,7 @@
             </div>
             <div class="dashboard-app">
               <div class="dashboard-content">
-                <div class="container">
+                <div class="container full-height-product">
                   <div class="page-content">
                     <div class="row align-items-center">
                       <div class="col-lg-5">
@@ -168,7 +174,10 @@
                         </div>
                       </div>
                       <div class="col-lg-4">
-                        <img src="assets/images/product-goje.png" alt="" />
+                        <img
+                          src="assets/images/product/product-goje.png"
+                          alt=""
+                        />
                       </div>
                       <div class="col-lg-3">
                         <img src="assets/images/details.png" alt="" />
@@ -222,7 +231,10 @@
                         <a href="product-anar.html">
                           <div class="product-card">
                             <div class="card-img">
-                              <img src="assets/images/anar.png" alt="" />
+                              <img
+                                src="assets/images/product/anar.png"
+                                alt=""
+                              />
                             </div>
                             <div class="card-content">
                               <h2>انار</h2>
@@ -237,7 +249,10 @@
                         <a href="product-sibezard.html">
                           <div class="product-card">
                             <div class="card-img">
-                              <img src="assets/images/product/sibezard.png" alt="" />
+                              <img
+                                src="assets/images/product/sibezard.png"
+                                alt=""
+                              />
                             </div>
                             <div class="card-content">
                               <h2>سیب زرد</h2>
@@ -385,7 +400,7 @@
             </div>
             <div class="dashboard-app">
               <div class="dashboard-content">
-                <div class="container">
+                <div class="container full-height-product">
                   <div class="page-content">
                     <div class="row align-items-center">
                       <div class="col-lg-5">
@@ -399,7 +414,10 @@
                         </div>
                       </div>
                       <div class="col-lg-4">
-                        <img src="assets/images/product/product-sibezard.png" alt="" />
+                        <img
+                          src="assets/images/product/product-sibezard.png"
+                          alt=""
+                        />
                       </div>
                       <div class="col-lg-3">
                         <img src="assets/images/details.png" alt="" />
@@ -453,7 +471,10 @@
                         <a href="product-goje.html">
                           <div class="product-card">
                             <div class="card-img">
-                              <img src="assets/images/product/goje.png" alt="" />
+                              <img
+                                src="assets/images/product/goje.png"
+                                alt=""
+                              />
                             </div>
                             <div class="card-content">
                               <h2>گوجه‌فرنگی</h2>
@@ -585,7 +606,7 @@
             </div>
             <div class="dashboard-app">
               <div class="dashboard-content">
-                <div class="container">
+                <div class="container full-height-product">
                   <div class="page-content">
                     <div class="row align-items-center">
                       <div class="col-lg-5">
@@ -599,7 +620,10 @@
                         </div>
                       </div>
                       <div class="col-lg-4">
-                        <img src="assets/images/product/product-anar.png" alt="" />
+                        <img
+                          src="assets/images/product/product-anar.png"
+                          alt=""
+                        />
                       </div>
                       <div class="col-lg-3">
                         <img src="assets/images/details.png" alt="" />
@@ -622,7 +646,10 @@
                   /></a>
                 </div>
                 <div class="detail-img">
-                  <img src="assets/images/product/product-anar-mobile.png" alt="" />
+                  <img
+                    src="assets/images/product/product-anar-mobile.png"
+                    alt=""
+                  />
                 </div>
                 <div class="detail-description">
                   <div class="mob-header-title">
@@ -653,7 +680,10 @@
                         <a href="product-goje.html">
                           <div class="product-card">
                             <div class="card-img">
-                              <img src="assets/images/product/goje.png" alt="" />
+                              <img
+                                src="assets/images/product/goje.png"
+                                alt=""
+                              />
                             </div>
                             <div class="card-content">
                               <h2>گوجه‌فرنگی</h2>
@@ -668,7 +698,10 @@
                         <a href="product-sibezard.html">
                           <div class="product-card">
                             <div class="card-img">
-                              <img src="assets/images/product/sibezard.png" alt="" />
+                              <img
+                                src="assets/images/product/sibezard.png"
+                                alt=""
+                              />
                             </div>
                             <div class="card-content">
                               <h2>سیب زرد</h2>
@@ -718,55 +751,6 @@
     <script src="assets/js/harmony.js"></script>
     <script type="text/javascript" src="./assets/js/fullpage.js"></script>
 
-    <script>
-      var windowHeight = $(window).height();
-
-      $(document).ready(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-      $(window).resize(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-    </script>
-    <script>
-      const mobileScreen = window.matchMedia("(max-width: 990px )");
-      $(document).ready(function () {
-        $(".dashboard-nav-dropdown-toggle").click(function () {
-          $(this)
-            .closest(".dashboard-nav-dropdown")
-            .toggleClass("show")
-            .find(".dashboard-nav-dropdown")
-            .removeClass("show");
-          $(this).parent().siblings().removeClass("show");
-        });
-        $(".menu-toggle").click(function () {
-          if (mobileScreen.matches) {
-            $(".dashboard-nav").toggleClass("mobile-show");
-          } else {
-            $(".dashboard").toggleClass("dashboard-compact");
-          }
-        });
-      });
-    </script>
-    <!------- product-carousel --------->
-    <script>
-      var swiper = new Swiper("#product-carousel", {
-        slidesPerView: 1.5,
-        spaceBetween: 5,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        // autoplay: {
-        //   delay: 2500,
-        // },
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-      });
-    </script>
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         sectionsColor: ["#fff"],
