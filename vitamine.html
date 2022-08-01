@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
-
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="icon" href="assets/favicon.png" />
   </head>
@@ -134,7 +133,7 @@
               </div>
               <div class="page-title">
                 <h1 class="extra-larg">غنی شده با ویتامین</h1>
-                <img src="assets/images/vitamine-big.png" alt="" />
+                <!-- <img src="assets/images/vitamine-big.png" alt="" /> -->
               </div>
               <div class="page-content">
                 <div class="row justify-content-between align-items-center">
@@ -206,7 +205,12 @@
               <div id="product-carousel" class="swiper">
                 <div id="vitamine-products" class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="product-porteghal.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-porteghal"
+                      data-folder="vitamine"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img
@@ -224,7 +228,12 @@
                   </div>
                   <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-sibmozporteghal.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-sibmozporteghal"
+                      data-folder="vitamine"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img
@@ -258,8 +267,10 @@
                 <a href="#"
                   ><img src="assets/images/search-icon.svg" alt=""
                 /></a>
-                <a href="#"><img src="assets/images/shop-icon.svg" alt="" /></a>
-                <a href="#"
+                <a href="nfc.html"
+                  ><img src="assets/images/shop-icon.svg" alt=""
+                /></a>
+                <a href="antioxidan.html"
                   ><img src="assets/images/profile-icon.svg" alt=""
                 /></a>
               </div>
@@ -269,13 +280,35 @@
       </div>
     </div>
     <!--end wrapper -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="productModal"
+      tabindex="-1"
+      aria-labelledby="productModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <div class="product-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/preloader.js"></script>
-
     <script src="assets/js/harmony.js"></script>
 
     <script>
@@ -318,9 +351,9 @@
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
-        autoplay: {
-          delay: 2500,
-        },
+        // autoplay: {
+        //   delay: 2500,
+        // },
         navigation: {
           nextEl: ".swiper-next",
           prevEl: ".swiper-prev",

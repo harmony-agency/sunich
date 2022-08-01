@@ -7,10 +7,26 @@
     <title>بدون استفاده از کنسانتره</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="icon" href="assets/favicon.png" />
   </head>
   <body>
+    <!--  preload  -->
+    <div id="preloader">
+      <video muted id="anti-preload">
+        <source src="assets/anime/anti-preload.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video muted id="vitamine-preload">
+        <source src="assets/anime/vitemin-preload.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video muted id="nfc-preload">
+        <source src="assets/anime/nfc-preload.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div class="wrapper nfc-page">
       <div class="dashboard mobile-none">
         <div class="dashboard-nav">
@@ -117,7 +133,7 @@
               </div>
               <div class="page-title">
                 <h1 class="extra-larg english">NFC</h1>
-                <img src="assets/images/product/nfc-big.png" alt="" />
+                <!-- <img src="assets/images/product/nfc-big.png" alt="" /> -->
               </div>
               <div class="page-content">
                 <div class="row justify-content-between align-items-center">
@@ -178,8 +194,14 @@
               </div>
               <div id="product-carousel" class="swiper">
                 <div id="nfc-products" class="swiper-wrapper">
+                  <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-goje.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-goje"
+                      data-folder="nfc"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img src="assets/images/product/goje.png" alt="" />
@@ -194,7 +216,12 @@
                   </div>
                   <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-anar.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-anar"
+                      data-folder="nfc"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img src="assets/images/product/anar.png" alt="" />
@@ -209,7 +236,12 @@
                   </div>
                   <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-sibezard.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-sibezard"
+                      data-folder="nfc"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img
@@ -225,7 +257,6 @@
                       <!-- product-card -->
                     </a>
                   </div>
-                  <!--swiper-slide-->
                 </div>
                 <!-- swiper-wrapper -->
               </div>
@@ -234,19 +265,11 @@
           <!-- mob-product-carousel -->
           <div class="fixed-menu">
             <div class="container">
-              <div
-                class="fixed-menu-inner d-flex justify-content-between align-items-center"
-              >
-                <a href="#" class="active"
-                  ><img src="assets/images/home-icon.svg" alt=""
-                /></a>
-                <a href="#"
-                  ><img src="assets/images/search-icon.svg" alt=""
-                /></a>
-                <a href="#"><img src="assets/images/shop-icon.svg" alt="" /></a>
-                <a href="#"
-                  ><img src="assets/images/profile-icon.svg" alt=""
-                /></a>
+              <div class="fixed-menu-inner d-flex justify-content-between align-items-center">
+                <a href="#" class="active"><img src="assets/images/home-icon.svg" alt=""/></a>
+                <a href="#"><img src="assets/images/search-icon.svg" alt=""/></a>
+                <a href="vitamine.html"><img src="assets/images/shop-icon.svg" alt=""/></a>
+                <a href="antioxidan.html"><img src="assets/images/profile-icon.svg" alt=""/></a>
               </div>
             </div>
           </div>
@@ -255,59 +278,36 @@
     </div>
     <!--end wrapper -->
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="productModal"
+      tabindex="-1"
+      aria-labelledby="productModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <div class="product-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/preloader.js"></script>
     <script src="assets/js/harmony.js"></script>
 
-    <script>
-      var windowHeight = $(window).height();
-
-      $(document).ready(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-      $(window).resize(function () {
-        $(".main-box").css("height", $(window).height() - 140);
-        $(".box-img").css("height", $(window).height() * 0.5);
-      });
-    </script>
-    <script>
-      const mobileScreen = window.matchMedia("(max-width: 990px )");
-      $(document).ready(function () {
-        $(".dashboard-nav-dropdown-toggle").click(function () {
-          $(this)
-            .closest(".dashboard-nav-dropdown")
-            .toggleClass("show")
-            .find(".dashboard-nav-dropdown")
-            .removeClass("show");
-          $(this).parent().siblings().removeClass("show");
-        });
-        $(".menu-toggle").click(function () {
-          if (mobileScreen.matches) {
-            $(".dashboard-nav").toggleClass("mobile-show");
-          } else {
-            $(".dashboard").toggleClass("dashboard-compact");
-          }
-        });
-      });
-    </script>
-    <!------- product-carousel --------->
-    <script>
-      var swiper = new Swiper("#product-carousel", {
-        slidesPerView: 1.5,
-        spaceBetween: 5,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        autoplay: {
-          delay: 2500,
-        },
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-      });
-    </script>
   </body>
 </html>

@@ -136,7 +136,7 @@
               </div>
               <div class="page-title">
                 <h1 class="extra-larg">آنــتی اکسیدان</h1>
-                <img src="assets/images/product/anti-big.png" alt="" />
+                <!-- <img src="assets/images/product/anti-big.png" alt="" /> -->
               </div>
               <div class="page-content">
                 <div class="row justify-content-between align-items-center">
@@ -210,8 +210,14 @@
               </div>
               <div id="product-carousel" class="swiper">
                 <div id="anti-products" class="swiper-wrapper">
+                  <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-anarzereshk.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-anarzereshk"
+                      data-folder="antioxidan"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img
@@ -252,7 +258,12 @@
                   </div>
                   <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-anaralbalu.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-anaralbalu"
+                      data-folder="antioxidan"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img
@@ -270,7 +281,12 @@
                   </div>
                   <!--swiper-slide-->
                   <div class="swiper-slide">
-                    <a href="product-miveghermez.html">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-content="product-miveghermez"
+                      data-folder="antioxidan"
+                    >
                       <div class="product-card">
                         <div class="card-img">
                           <img
@@ -286,7 +302,6 @@
                       <!-- product-card -->
                     </a>
                   </div>
-                  <!--swiper-slide-->
                 </div>
                 <!-- swiper-wrapper -->
               </div>
@@ -295,19 +310,11 @@
           <!-- mob-product-carousel -->
           <div class="fixed-menu">
             <div class="container">
-              <div
-                class="fixed-menu-inner d-flex justify-content-between align-items-center"
-              >
-                <a href="#" class="active"
-                  ><img src="assets/images/home-icon.svg" alt=""
-                /></a>
-                <a href="#"
-                  ><img src="assets/images/search-icon.svg" alt=""
-                /></a>
-                <a href="#"><img src="assets/images/shop-icon.svg" alt="" /></a>
-                <a href="#"
-                  ><img src="assets/images/profile-icon.svg" alt=""
-                /></a>
+              <div class="fixed-menu-inner d-flex justify-content-between align-items-center">
+                <a href="#" class="active"><img src="assets/images/home-icon.svg" alt=""/></a>
+                <a href="#"><img src="assets/images/search-icon.svg" alt=""/></a>
+                <a href="nfc.html"><img src="assets/images/shop-icon.svg" alt=""/></a>
+                <a href="vitamine.html"><img src="assets/images/profile-icon.svg" alt=""/></a>
               </div>
             </div>
           </div>
@@ -325,15 +332,14 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header"></div>
+          <div class="modal-body">
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
-          </div>
-          <div class="modal-body">
             <div class="product-content"></div>
           </div>
         </div>

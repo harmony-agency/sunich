@@ -1108,10 +1108,9 @@ a.dashboard-nav-dropdown-item {
   background-size: contain;
 }
 
-.box-item{
-  position:relative
+.box-item {
+  position: relative;
 }
-
 
 @media (min-width: 1600px) {
   .custom-container2 {
@@ -1147,7 +1146,7 @@ a.dashboard-nav-dropdown-item {
   #home-carousel {
     margin-bottom: 70px;
   }
-  #home-carousel .swiper-wrapper{
+  #home-carousel .swiper-wrapper {
     height: 550px;
   }
   .custom-container3 {
@@ -1177,7 +1176,6 @@ a.dashboard-nav-dropdown-item {
   left: 30%;
 }
 
-
 #preloader {
   position: fixed;
   top: 0;
@@ -1194,4 +1192,43 @@ a.dashboard-nav-dropdown-item {
   display: none;
   width: 100%;
   height: 100%;
+}
+
+/* modal style for products */
+.modal-dialog {
+  margin: 0;
+}
+.modal-header {
+  display: none;
+  padding: 0;
+  border: none;
+}
+.modal-body {
+  padding: 0;
+}
+.modal-body .back {
+  display: none;
+}
+.modal-body .btn-close {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  color: #fff;
+  background: transparent url("../images/arrow-back.svg") center/1em auto
+    no-repeat;
+  opacity: 1;
+  z-index: 10;
+}
+.modal-body .detail-img {
+  padding-top: 50px;
+}
+
+#backHome {
+  /* position: relative; */
+  padding-top: 10px;
+}
+#backHome img {
+  position: absolute;
+  left: 3%;
+  top: 2%;
 }
