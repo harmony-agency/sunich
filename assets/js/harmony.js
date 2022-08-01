@@ -73,7 +73,7 @@ if(window.matchMedia("(max-width: 767px)").matches){
   var antioxidanLottie = bodymovin.loadAnimation({
       // animationData: { /* ... */ },
       container: document.getElementById("antioxidanLottie"), // required
-      path: "antioxidanLottie.json", // required
+      path: "assets/antiLottie/antioxidanLottie.json", // required
       renderer: "svg", // required
       autoplay: true, // optional
       loop: false, // Optional
@@ -81,20 +81,30 @@ if(window.matchMedia("(max-width: 767px)").matches){
   var vitamineLottie = bodymovin.loadAnimation({
       // animationData: { /* ... */ },
       container: document.getElementById("vitamineLottie"), // required
-      path: "vitamineLottie.json", // required
+      path: "assets/vitamineLottie/vitamineLottie.json", // required
       renderer: "svg", // required
-      autoplay: true, // optional
+      autoplay: false, // optional
       loop: false, // Optional
 
   });
   var nfcLottie = bodymovin.loadAnimation({
       // animationData: { /* ... */ },
       container: document.getElementById("nfcLottie"), // required
-      path: "nfcLottie.json", // required
+      path: "assets/nfcLottie/nfcLottie.json", // required
       renderer: "svg", // required
-      autoplay: true, // optional
+      autoplay: false, // optional
       loop: false, // Optional
   });
+
+
+
+  setTimeout(function () {
+    vitamineLottie.play();
+  }, 2000);
+
+  setTimeout(function () {
+    nfcLottie.play();
+  }, 3000);
 
 
 }

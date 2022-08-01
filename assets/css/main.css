@@ -538,7 +538,7 @@ a.dashboard-nav-dropdown-item {
   text-align: center;
   color: #fff;
   opacity: 0.3 !important;
-  font-size: 8rem;
+  font-size: 10rem;
   font-weight: 900;
 }
 .inner-content-title {
@@ -1173,8 +1173,9 @@ a.dashboard-nav-dropdown-item {
   text-align: center;
   text-align: center;
   position: absolute;
-  height: 500px;
+  height: 700px;
   left: 30%;
+  z-index: 9;
 }
 
 
@@ -1194,4 +1195,38 @@ a.dashboard-nav-dropdown-item {
   display: none;
   width: 100%;
   height: 100%;
+}
+.dashboard-content .full-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard-content .full-height-product {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard-content .full-height .page-content {
+  width: 72%;
+}
+.dashboard-content .full-height .page-content {
+  width: 72%;
+  position: relative;
+  top: 122px;
+  z-index: 99;
+}
+#fp-nav {
+  top: 49%;
+}
+.nav-home {
+  color: #6c6c6c;
+  position: absolute;
+  top: -55px;
+  font-size: 18px;
 }
