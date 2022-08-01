@@ -25,7 +25,7 @@ AOS.init();
 var antioxidanLottie = bodymovin.loadAnimation({
   // animationData: { /* ... */ },
   container: document.getElementById("antioxidanLottie"), // required
-  path: "antioxidanLottie.json", // required
+  path: "assets/antiLottie/antioxidanLottie.json", // required
   renderer: "svg", // required
   autoplay: false, // optional
   loop: false, // Optional
@@ -33,7 +33,7 @@ var antioxidanLottie = bodymovin.loadAnimation({
 var vitamineLottie = bodymovin.loadAnimation({
   // animationData: { /* ... */ },
   container: document.getElementById("vitamineLottie"), // required
-  path: "vitamineLottie.json", // required
+  path: "assets/vitamineLottie/vitamineLottie.json", // required
   renderer: "svg", // required
   autoplay: false, // optional
   loop: false, // Optional
@@ -41,7 +41,7 @@ var vitamineLottie = bodymovin.loadAnimation({
 var nfcLottie = bodymovin.loadAnimation({
   // animationData: { /* ... */ },
   container: document.getElementById("nfcLottie"), // required
-  path: "nfcLottie.json", // required
+  path: "assets/nfcLottie/nfcLottie.json", // required
   renderer: "svg", // required
   autoplay: false, // optional
   loop: false, // Optional
@@ -104,12 +104,7 @@ var myFullpage = new fullpage("#fullpage", {
   afterRender: function (anchors, index) {
     var currentURL = $(location).attr("href");
     var sectionId = currentURL.split("#");
-   
-
-
-    
-    
-    if ((sectionId[1] = "antioxidanSection")) {
+    if (sectionId[1] == "antioxidanSection" || sectionId[1] == "antioxidan-part") {
       setTimeout(function () {
 
       document.querySelectorAll("#antioxidan-part .aos-init").forEach((el) => {
@@ -122,7 +117,7 @@ var myFullpage = new fullpage("#fullpage", {
 
     }
 
-    if ((sectionId[1] = "vitamineSection")) {
+    if ((sectionId[1] == "vitamineSection")) {
       setTimeout(function () {
 
       document.querySelectorAll("#vitamine-part .aos-init").forEach((el) => {
@@ -134,7 +129,7 @@ var myFullpage = new fullpage("#fullpage", {
       }, 3000);
 
     }
-    if ((sectionId[1] = "nfcSection")) {
+    if ((sectionId[1] == "nfcSection")) {
 
       setTimeout(function () {
 
@@ -158,7 +153,7 @@ var myFullpage = new fullpage("#fullpage", {
         el.classList.add("aos-animate");
       });
       vitamineLottie.play();
-    }, 3000);
+    }, 1000);
 
     }
 
@@ -169,7 +164,7 @@ var myFullpage = new fullpage("#fullpage", {
         el.classList.add("aos-animate");
       });
         nfcLottie.play();
-    }, 3000);
+    }, 1000);
     }
   },
 });
