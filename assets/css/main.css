@@ -1147,9 +1147,7 @@ a.dashboard-nav-dropdown-item {
   #home-carousel {
     margin-bottom: 70px;
   }
-  #home-carousel .swiper-wrapper {
-    height: 550px;
-  }
+
   .custom-container3 {
     position: relative;
     top: auto;
