@@ -46,11 +46,7 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     autoplay: {
       delay: 3500,
     },
-
   });
-
-
-
 
   var myModalEl = document.getElementById("productModal");
   myModalEl.addEventListener("shown.bs.modal", function (event) {
@@ -70,20 +66,24 @@ if (window.matchMedia("(max-width: 767px)").matches) {
         prevEl: ".swiper-prev",
       },
     });
-
- 
   });
 
-
-
-
   $("#product-carousel a").click(function () {
+    let htmlContent = $(this).data("content");
+    let folder = $(this).data("folder");
+
+    $("#productModal .product-content").load(
+      "product/" + folder + "/" + htmlContent + ".html"
+    );
+  });
+
+  $("#nfc-products a").click(function () {
+    console.log("sssssss");
     let htmlContent = $(this).data("content");
     let folder = $(this).data("folder");
     $("#productModal .product-content").load(
       "product/" + folder + "/" + htmlContent + ".html"
     );
-
   });
 
 
@@ -91,32 +91,29 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   // $('.card-img img').animateImages(1);
 } else {
   var antioxidanLottie = bodymovin.loadAnimation({
-      // animationData: { /* ... */ },
-      container: document.getElementById("antioxidanLottie"), // required
-      path: "assets/antiLottie/antioxidanLottie.json", // required
-      renderer: "svg", // required
-      autoplay: true, // optional
-      loop: false, // Optional
+    // animationData: { /* ... */ },
+    container: document.getElementById("antioxidanLottie"), // required
+    path: "assets/antiLottie/antioxidanLottie.json", // required
+    renderer: "svg", // required
+    autoplay: true, // optional
+    loop: false, // Optional
   });
   var vitamineLottie = bodymovin.loadAnimation({
-      // animationData: { /* ... */ },
-      container: document.getElementById("vitamineLottie"), // required
-      path: "assets/vitamineLottie/vitamineLottie.json", // required
-      renderer: "svg", // required
-      autoplay: false, // optional
-      loop: false, // Optional
-
+    // animationData: { /* ... */ },
+    container: document.getElementById("vitamineLottie"), // required
+    path: "assets/vitamineLottie/vitamineLottie.json", // required
+    renderer: "svg", // required
+    autoplay: false, // optional
+    loop: false, // Optional
   });
   var nfcLottie = bodymovin.loadAnimation({
-      // animationData: { /* ... */ },
-      container: document.getElementById("nfcLottie"), // required
-      path: "assets/nfcLottie/nfcLottie.json", // required
-      renderer: "svg", // required
-      autoplay: false, // optional
-      loop: false, // Optional
+    // animationData: { /* ... */ },
+    container: document.getElementById("nfcLottie"), // required
+    path: "assets/nfcLottie/nfcLottie.json", // required
+    renderer: "svg", // required
+    autoplay: false, // optional
+    loop: false, // Optional
   });
-
-
 
   setTimeout(function () {
     vitamineLottie.play();
@@ -125,8 +122,6 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   setTimeout(function () {
     nfcLottie.play();
   }, 3000);
-
-
 }
 
 var windowHeight = $(window).height();
