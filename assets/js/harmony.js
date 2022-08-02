@@ -1,6 +1,10 @@
 // Aos animation
 AOS.init();
 
+
+
+
+
 if (window.matchMedia("(max-width: 767px)").matches) {
   $.fn.animateImages = function (angle, duration, easing, complete) {
     return this.each(function () {
@@ -79,8 +83,11 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     $("#productModal .product-content").load(
       "product/" + folder + "/" + htmlContent + ".html"
     );
+
   });
 
+
+ 
   // $('.card-img img').animateImages(1);
 } else {
   var antioxidanLottie = bodymovin.loadAnimation({
