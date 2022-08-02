@@ -26,7 +26,7 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     slidesPerView: 2.5,
     spaceBetween: 5,
     slidesPerGroup: 1,
-    loop: true,
+    // loop: true,
     loopFillGroupWithBlank: true,
     autoplay: {
       delay: 4000,
