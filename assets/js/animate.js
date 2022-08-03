@@ -85,9 +85,9 @@ var swiper = new Swiper("#product-carousel", {
   slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
-  autoplay: {
-    delay: 2500,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  // },
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",

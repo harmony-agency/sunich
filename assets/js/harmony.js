@@ -41,11 +41,11 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     slidesPerView: 1.5,
     spaceBetween: 5,
     slidesPerGroup: 1,
-    loop: true,
+    // loop: true,
     loopFillGroupWithBlank: true,
-    autoplay: {
-      delay: 3500,
-    },
+    // autoplay: {
+    //   delay: 3500,
+    // },
   });
 
   var myModalEl = document.getElementById("productModal");
@@ -56,7 +56,7 @@ if (window.matchMedia("(max-width: 767px)").matches) {
       slidesPerView: 1.5,
       spaceBetween: 5,
       slidesPerGroup: 1,
-      loop: true,
+      // loop: true,
       loopFillGroupWithBlank: true,
       // autoplay: {
       //   delay: 2500,
@@ -78,7 +78,6 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   });
 
   $("#nfc-products a").click(function () {
-    console.log("sssssss");
     let htmlContent = $(this).data("content");
     let folder = $(this).data("folder");
     $("#productModal .product-content").load(

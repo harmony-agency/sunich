@@ -996,7 +996,7 @@ a.dashboard-nav-dropdown-item {
 .nfc-page .mob-inner-header {
   background: rgba(134, 171, 133, 0.8);
   backdrop-filter: blur(28px);
-  background-image: url(../images/nfc2-mobile.png);
+  /* background-image: url(../images/nfc2-mobile.png); */
   background-position: 0 -20px;
   background-repeat: no-repeat;
 }
@@ -1010,11 +1010,14 @@ a.dashboard-nav-dropdown-item {
 .nfc-page .mob-header-title img {
   margin-bottom: 18px;
 }
-.nfc-page .mob-header-title h2 {
+.nfc-page .mob-header-title .subtitle {
+margin: 0;
+}
+/* .nfc-page .mob-header-title h2 {
   padding: 0px 0 0 90px;
   line-height: 32px;
   margin-bottom: 0;
-}
+} */
 .product-card .subtitle {
   font-size: 18px;
 }
@@ -1269,4 +1272,9 @@ a.dashboard-nav-dropdown-item {
 }
 .nav-home:hover {
   color: #d5736c;
+}
+
+.rotate {
+  transition: 2s;
+  transform: rotate(-20deg);
 }

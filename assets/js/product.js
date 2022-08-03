@@ -43,7 +43,7 @@ $(".box-item a").hover(function(){
       slidesPerView: 1.5,
       spaceBetween: 5,
       slidesPerGroup: 1,
-      loop: true,
+      // loop: true,
       loopFillGroupWithBlank: true,
       autoplay: {
         delay: 2500,
