@@ -21,13 +21,7 @@
     <style>
       /* Overwriting styles for navigation bullets
 	* --------------------------------------- */
-      #fp-nav ul li a span,
-      .fp-slidesNav ul li a span {
-        background: white;
-        border: 1px solid #666;
-        height: 12px;
-        width: 12px;
-      }
+
     </style>
 
     <!--[if IE]>
@@ -40,15 +34,15 @@
     <!--  preload  -->
     <div id="preloader">
       <video muted id="anti-preload">
-        <source src="assets/anime/anti-preload.mp4" type="video/mp4" />
+        <source src="assets/preload/anti-preload.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video muted id="vitamine-preload">
-        <source src="assets/anime/vitemin-preload.mp4" type="video/mp4" />
+        <source src="assets/preload/vitemin-preload.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <video muted id="nfc-preload">
-        <source src="assets/anime/nfc-preload.mp4" type="video/mp4" />
+        <source src="assets/preload/nfc-preload.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -59,8 +53,7 @@
       </a>
     </header>
     <ul id="menu">
-      <a class="nav-home" href="/">خانه</a>
-
+      <a class="nav-home" href="index.html"> <span class="dot"></span> خانه</a>
       <li data-menuanchor="antioxidanSection" class="active">
         <a href="#antioxidanSection">آنتي اكسيدان</a>
       </li>
@@ -182,7 +175,12 @@
                     <div id="antioxidanLottie" class="antioxidanLottie"></div>
 
                     <div class="page-title">
-                      <h1 class="extra-larg" data-aos="zoom-in-down">
+                      <h1
+                        class="extra-larg"
+                        data-aos="zoom-in-down"
+                        data-aos-delay="2000"
+                        data-aos-duration="2000"
+                      >
                         آنــتی اکسیدان
                       </h1>
                       <!-- <img src="assets/images/anti-big.png" alt="" /> -->
@@ -194,7 +192,8 @@
                         <div
                           class="col-lg-6"
                           data-aos="zoom-in-down"
-                          data-aos-delay="1000"
+                          data-aos-delay="3000"
+                          data-aos-duration="3000"
                         >
                           <h2 class="inner-content-title">آب میوه های قرمز</h2>
                           <p class="inner-content-text">
@@ -208,13 +207,12 @@
                           <div
                             class="view-product"
                             data-aos="zoom-in-down"
-                            data-aos-delay="2000"
+                            data-aos-delay="3000"
                           >
                             <a
                               href="./navigation-Product.html#antioxidanProducts"
-                              class="animsition-link"
                               data-animsition-out-class="fade-out-right"
-                              data-animsition-out-duration="2000"
+                              data-animsition-out-duration="3000"
                               class="light-btn"
                               >مشاهده محصولات
                               <span class="icon"
@@ -481,7 +479,11 @@
                   <div id="vitamineLottie" class="vitamineLottie"></div>
 
                   <div class="page-title">
-                    <h1 class="extra-larg" data-aos="zoom-in-down">
+                    <h1
+                      class="extra-larg"
+                      data-aos="zoom-in-down"
+                      data-aos-duration="2000"
+                    >
                       غنی شده با ویتامین
                     </h1>
                     <!-- <img src="assets/images/vitamine-big.png" alt="" /> -->
@@ -509,7 +511,6 @@
                         >
                           <a
                             href="./navigation-Product.html#vitamineProducts"
-                            class="animsition-link"
                             data-animsition-out-class="fade-out-right"
                             data-animsition-out-duration="2000"
                             class="light-btn"
@@ -736,7 +737,11 @@
                   <div id="nfcLottie" class="nfcLottie"></div>
 
                   <div class="page-title">
-                    <h1 class="extra-larg english" data-aos="zoom-in-down">
+                    <h1
+                      class="extra-larg english"
+                      data-aos="zoom-in-down"
+                      data-aos-duration="2000"
+                    >
                       NFC
                     </h1>
                     <!-- <img src="assets/images/nfc-big.png" alt="" /> -->
@@ -764,7 +769,6 @@
                         >
                           <a
                             href="./navigation-Product.html#nfcProducts"
-                            class="animsition-link"
                             data-animsition-out-class="fade-out-right"
                             data-animsition-out-duration="2000"
                             class="light-btn"
@@ -895,6 +899,15 @@
         <!--end wrapper -->
       </div>
     </div>
+    <footer>
+      <a
+        href="https://harmony.agency/?utm_source=designbyharmony&utm_medium=badge&utm_campaign=sunich-landing"
+        target="_blank"
+        class="harmony-logo"
+      >
+        <img src="assets/images/harmonyLogo.png" alt="" />
+      </a>
+    </footer>
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>

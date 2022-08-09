@@ -20,29 +20,17 @@
       href="./assets/css/fullpage.min.css"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/examples.css" />
-
     <style>
-      /* Overwriting styles for navigation bullets
-	* --------------------------------------- */
-      #fp-nav ul li a span,
-      .fp-slidesNav ul li a span {
-        background: white;
-        border: 1px solid #666;
-        height: 12px;
-        width: 12px;
+      #menu li.active a {
+        color: #f09e7f;
+        font-weight: 700;
       }
     </style>
-
-    <!--[if IE]>
-      <script type="text/javascript">
-        var console = { log: function () {} };
-      </script>
-    <![endif]-->
   </head>
   <body>
     <ul id="menu">
-      <a class="nav-home" href="/">خانه</a>
-
+      <a class="nav-home" href="index.html"> <span class="dot"></span> خانه</a>
+      <h2 class="vitemine-categoryTitle">غنی شده با ویتامین</h2>
       <li data-menuanchor="apple" class="active">
         <a href="#apple">آب سیب، پرتقال و موز غنی‌شده با فیبر </a>
       </li>
@@ -50,17 +38,17 @@
         <a href="#orange">آب پرتقال غنی‌شده با کلسیم و ویتامین D</a>
       </li>
     </ul>
+    <header>
+      <a href="#" class="brand-logo">
+        <img src="assets/images/logo.png" alt="" />
+      </a>
+    </header>
     <div id="fullpage">
       <!-- applejuice -->
       <div class="section" id="applejuice">
         <div class="wrapper vitamine-page">
           <div class="dashboard mobile-none">
             <div class="dashboard-nav">
-              <header>
-                <a href="#" class="brand-logo">
-                  <img src="assets/images/logo.png" alt="" />
-                </a>
-              </header>
               <nav class="dashboard-nav-list d-none">
                 <div class="dashboard-nav-dropdown">
                   <a
@@ -306,11 +294,6 @@
         <div class="wrapper vitamine-page">
           <div class="dashboard mobile-none">
             <div class="dashboard-nav">
-              <header>
-                <a href="#" class="brand-logo">
-                  <img src="assets/images/logo.png" alt="" />
-                </a>
-              </header>
               <nav class="dashboard-nav-list d-none">
                 <div class="dashboard-nav-dropdown">
                   <a
@@ -552,6 +535,11 @@
         <!--end wrapper -->
       </div>
     </div>
+    <footer>
+      <a href="https://harmony.agency/" target="_blank" class="harmony-logo">
+        <img src="assets/images/harmonyLogo.png" alt="" />
+      </a>
+    </footer>
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
