@@ -1,0 +1,500 @@
+@font-face {
+  font-family: "IRANSansDN";
+  src: url("/assets/fonts/IRANSansDN.woff2") format("woff2"),
+    url("/assets/fonts/IRANSansDN.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none;
+}
+.btn {
+  cursor: pointer;
+  z-index: 10;
+}
+body {
+  font-family: "IRANSansDN", Arial, Helvetica, sans-serif;
+  /* direction: rtl;
+  text-align: right; */
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+* {
+  max-width: 100%;
+}
+/* =============== swiper  ======================== */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: "";
+}
+/* =================================== preload ====================================== */
+.preload {
+  background: url(../images/preload_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.preload #start_party {
+  position: absolute;
+  left: 0;
+  top: 3%;
+  max-width: 80%;
+}
+.preload .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.preload .container .content {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  float: right;
+  max-width: 100%;
+}
+.image_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preload .game_board,
+.preload .happy_land {
+  margin-bottom: 19px;
+}
+.preload .container .content #Progress {
+  background-image: url(../images/input_bg.png);
+  width: 381px;
+  height: 52px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.preload .container .content #Progress #Bar {
+  width: 1%;
+  height: 41px;
+  background-color: #99ff99;
+  border-radius: 30px;
+}
+
+/* =================================== section ====================================== */
+section {
+  background: url(../images/bg_register.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.btn-sunich-g {
+  background: url(../images/btn_green.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 167px;
+  height: 66px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.btn-sunich-g:hover {
+  color: #fff;
+}
+.btn-sunich-y {
+  background: url(../images/btn_yellow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 167px;
+  height: 66px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.input-sunich {
+  display: block;
+  background-image: url(../images/input_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  width: 425px;
+  height: 54px;
+  margin: 0 auto 87px;
+  color: #fff;
+  outline: none;
+  text-align: center;
+  text-align-last: center;
+}
+#mobile::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+.characterSelect {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.characterSelect .item {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.characterSelect .item.active {
+  opacity: 1;
+}
+.arrow {
+  cursor: pointer;
+}
+.arrow .preview {
+  transform: rotate(180deg);
+}
+section#step3 {
+  background: url(../images/bg_character.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+/* =================================== logo in steps ====================================== */
+.logo_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-radius: 0px 0px 17.75px 17.75px;
+  padding: 40px 8px;
+  max-width: 142px;
+}
+.logo_box img {
+  max-width: 100%;
+}
+/* =================================== step1 and step2 ====================================== */
+#steps_form {
+  position: relative;
+  display: none;
+}
+#toti_talk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 10%;
+}
+.steps {
+  position: relative;
+}
+.steps .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.steps .content {
+  width: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+.steps h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+  margin: 0 auto 21px;
+}
+.steps p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  margin: 0 auto 36px;
+}
+.steps p {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 auto 49px;
+}
+
+/* =================================== step3  ====================================== */
+#step3 {
+  background-image: url(../images/bg_character.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+/* =============== characterSwiper  =============== */
+.characterSwiper {
+  position: relative;
+}
+.characterSwiper .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 32%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.characterSwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 150px;
+  opacity: 0.4;
+}
+.characterSwiper .swiper-slide p {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  text-align-last: center;
+  margin-top: 20px;
+  opacity: 0;
+}
+.characterSwiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.characterSwiper .swiper-slide.swiper-slide-active p {
+  opacity: 1;
+}
+.characterSwiper .swiper-button-next {
+  top: unset;
+  bottom: 22%;
+  right: 35%;
+}
+.characterSwiper .swiper-button-prev {
+  top: unset;
+  bottom: 22%;
+  left: 35%;
+}
+.submit_character {
+  background: url(../images/btn_yellow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #000;
+  width: 167px;
+  height: 66px;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 7%;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+}
+/* =================================== step4  ====================================== */
+#step4 {
+  background: url(../images/step4_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+#step4 #party {
+  position: absolute;
+    bottom: -27%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 80%;
+}
+#step4 .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16%;
+}
+#step4 .title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #ee6124;
+  text-align: center;
+  text-align-last: center;
+  line-height: 38px;
+  margin-bottom: 4px;
+}
+#step4 .subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  text-align-last: center;
+  line-height: 25px;
+  margin-bottom: 2px;
+}
+#step4 .caption {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-align-last: center;
+  margin: 0 auto;
+  line-height: 30px;
+}
+#step4 .orange_text {
+  color: #ee6124;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  text-align-last: center;
+}
+#step4 .ready_togo {
+  background: url(../images/btn_yellow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #000;
+  width: 167px;
+  height: 66px;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 7%;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 10;
+}
+/* =================================== step5  ====================================== */
+#step5 {
+  display: none;
+}
+.swiper-slide.slide1 {
+  background: url(../images/slide1_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-slide.slide2 {
+  background: url(../images/slide2_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-slide.slide3 {
+  background: url(../images/slide3_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-slide.slide4 {
+  background: url(../images/slide4_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-slide.slide5 {
+  background: url(../images/slide5_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-slide.slide6 {
+  background: url(../images/slide6_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.partySwiper .swiper-slide .title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  margin: 0 auto 8px;
+  text-align: center;
+  text-align-last: center;
+}
+.partySwiper .swiper-slide .caption {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin: 0 auto 8px;
+  text-align: center;
+  text-align-last: center;
+}
+.partySwiper .swiper-slide .content {
+  max-width: 327px;
+  margin: 15px auto 0;
+  padding-top: 70px;
+}
+.partySwiper .swiper-slide.slide6 .content {
+  text-align: center;
+}
+.partySwiper .swiper-button-next {
+  top: unset;
+  bottom: 42%;
+  right: 35%;
+}
+.partySwiper .swiper-button-prev {
+  top: unset;
+  bottom: 42%;
+  left: 35%;
+}
+.partySwiper .swiper-button-prev img,
+.partySwiper .swiper-button-next img {
+  max-width: 33px;
+}
+.next_level {
+  background: url(../images/btn_yellow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #000;
+  width: 167px;
+  height: 66px;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 7%;
+  right: 37%;
+}
+.start_game {
+  background: url(../images/btn_light_green.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 167px;
+  height: 66px;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 7%;
+  left: 37%;
+}
+.start_game:hover {
+  color: #fff;
+}
+.swiper-pagination-progressbar-fill {
+  background: #ffc62d !important;
+}
+.swiper-pagination-progressbar {
+  max-width: 50%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 5% !important;
+}

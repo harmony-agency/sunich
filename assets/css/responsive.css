@@ -1,0 +1,154 @@
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .characterSwiper .swiper-slide {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .submit_character {
+    bottom: 3%;
+  }
+  .preload {
+    background: url(../images/bg_main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: unset;
+    height: 100%;
+    width: 100%;
+  }
+  /* =================================== preload ====================================== */
+  .preload {
+    background: url(../images/bg_main_mo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .preload .container {
+    align-items: center;
+  }
+  .preload .container .content {
+    height: 100%;
+    justify-content: space-between;
+    padding: 50px 26px 23px;
+  }
+  .preload .game_board {
+    margin: 0 auto 5px;
+  }
+  .preload .happy_land {
+    margin-bottom: 19px;
+    max-width: 60%;
+    margin: 0 auto 5px;
+  }
+  .preload .container .content #Progress {
+    padding: 0 5px;
+    max-width: 90%;
+    background-size: contain;
+  }
+  .preload .container .content #Progress #Bar {
+    height: 30px;
+  }
+  /* =================================== step1 and step2 ====================================== */
+  .logo_box {
+    left: 30px;
+    border-radius: 0px 0px 8px 8px;
+    padding: 19px 3px;
+    max-width: 65px;
+  }
+  .steps h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto 16px;
+  }
+  .steps p {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 auto 45px;
+  }
+  .steps .content {
+    padding: 0 15px;
+  }
+  .input-sunich {
+    background-size: contain;
+  }
+
+  /* =================================== characterSwiper  ====================================== */
+  section#step3 {
+    background: url(../images/bg_character_mo.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #step3 .container {
+    padding: 0;
+  }
+  .characterSwiper .title {
+    top: 25%;
+  }
+  .characterSwiper .swiper-button-next {
+    bottom: 14%;
+    right: 5%;
+  }
+  .characterSwiper .swiper-button-prev {
+    bottom: 14%;
+    left: 5%;
+  }
+  .characterSwiper .swiper-slide {
+    padding-bottom: 100px;
+  }
+  /* =================================== characterSwiper  ====================================== */
+
+  #step4 {
+    background: url(../images/step4_bg_mo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #step4 .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    margin-bottom: 11px;
+  }
+  #step4 .subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  #step4 .caption {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  #step4 .content {
+    padding: 0 55px;
+  }
+  /* =================================== step5  ====================================== */
+
+  .partySwiper .swiper-button-next {
+    right: 5%;
+  }
+  .partySwiper .swiper-button-prev {
+    left: 5%;
+  }
+  .next_level {
+    height: 62px;
+    bottom: 2%;
+    right: 3%;
+  }
+  .start_game {
+    height: 62px;
+    bottom: 2%;
+    left: 3%;
+  }
+  .partySwiper .swiper-slide .caption {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .partySwiper .swiper-slide .content {
+    max-width: 241px;
+    padding-top: 70px;
+  }
+}
