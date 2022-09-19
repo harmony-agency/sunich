@@ -22,6 +22,7 @@ document.body.onload = function () {
   preloadMain();
 };
 
+
 $(".otp").click(() => {
   $("#step1").hide();
   $("#step2").fadeIn();
@@ -66,24 +67,19 @@ const characterSwiper = new Swiper(".characterSwiper", {
     },
   },
 });
-
-$(".submit_character").click(() => {
-  $("#steps_form").hide();
-  $("#step4").fadeIn();
-});
-
 $(".ready_togo").click(() => {
   $("#step4").hide();
   $("#step5").fadeIn();
 });
 
 /* =================================== partySwiper  ====================================== */
+var pagination_num = ["1", "2", "3", "4", "5", "6"];
 
 const partySwiper = new Swiper(".partySwiper", {
   slidesPerView: 1,
   grabCursor: true,
   centeredSlides: true,
-  loop: true,
+  // loop: true,
   // autoplay: {
   //   delay: 2000,
   // },
@@ -91,10 +87,25 @@ const partySwiper = new Swiper(".partySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
   pagination: {
     el: ".swiper-pagination",
-    type: "progressbar",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        '<span class="' + className + '">' + pagination_num[index] + "</span>"
+      );
+    },
   },
+});
+partySwiper.on('slidePrevTransitionEnd', function () {
+  $(".next_level").fadeIn();
+});
+partySwiper.on('reachEnd', function () {
+  $(".next_level").fadeOut();
+});
+$(".next_level").click(() => {
+  partySwiper.slideNext();
 });
 
 /* =================================== start_party_lottie  ====================================== */
@@ -121,11 +132,117 @@ lottie.loadAnimation({
   autoplay: true,
   path: "assets/anime/party/data.json", // the path to the animation json
 });
-/* =================================== slider1_lottie  ====================================== */
+/* =================================== slide1_elephant  ====================================== */
 lottie.loadAnimation({
-  container: document.getElementById("slider1_motion"), // the dom element that will contain the animation
+  container: document.getElementById("slide1_elephant"), // the dom element that will contain the animation
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "assets/anime/party/data.json", // the path to the animation json
+  path: "assets/anime/swiper/slide1_elephant/data.json", // the path to the animation json
 });
+/* =================================== slide2_dolfin  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("slide2_dolfin"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/swiper/slide2_dolfin/data.json", // the path to the animation json
+});
+/* =================================== slide3_happyhip  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("slide3_happyhip"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/swiper/slide3_happyhip/data.json", // the path to the animation json
+});
+/* =================================== slide4_jutu  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("slide4_jutu"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/swiper/slide4_jutu/data.json", // the path to the animation json
+});
+/* =================================== slide5_tutu  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("slide5_tutu"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/swiper/slide5_tutu/data.json", // the path to the animation json
+});
+
+$(".submit_character").click(() => {
+  $("#steps_form").hide();
+  $("#step4").fadeIn();
+
+  // selected character motion in last slide
+  var charmotion = $(".swiper-slide.swiper-slide-active").data("charmotion");
+  $(".selected_char").attr("id", charmotion);
+
+  // selected character image in each slide
+  var charmini = $(".swiper-slide.swiper-slide-active").data("charmini");
+  $(".submit_character_imgmini").attr(
+    "src",
+    "assets/images/characters/" + charmini + ".png"
+  );
+  $(".submit_character_imglarge").attr(
+    "src",
+    "assets/images/characters/" + charmini + ".png"
+  );
+
+  // for test
+  // console.log(charmotion);
+  // alert(charmini);
+});
+
+/* =================================== selected_tutu  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("selectedtutu"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/selected_char/selected_tutu/data.json", // the path to the animation json
+});
+/* =================================== selected_jutu  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("selectedjutu"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/selected_char/selected_jutu/data.json", // the path to the animation json
+});
+/* =================================== selected_elephant  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("selectedelephant"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/selected_char/selected_elephant/data.json", // the path to the animation json
+});
+/* =================================== selected_dolfin  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("selecteddolfin"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/selected_char/selected_dolfin/data.json", // the path to the animation json
+});
+/* =================================== selected_happyhip  ====================================== */
+lottie.loadAnimation({
+  container: document.getElementById("selectedhappyhip"), // the dom element that will contain the animation
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "assets/anime/selected_char/selected_happyhip/data.json", // the path to the animation json
+});
+
+// $(".slide6.swiper-slide-active") {
+
+// }
+
+// if ($(".slide6").hasClass("swiper-slide-active")) {
+//   $(".next_level").fadeOut();
+//   alert("sdsad");
+// }

@@ -24,6 +24,12 @@ img {
 }
 * {
   max-width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
 }
 /* =============== swiper  ======================== */
 .swiper-button-next:after,
@@ -307,6 +313,20 @@ section#step3 {
   z-index: 10;
   outline: none;
 }
+.swiper-pagination-bullet {
+  background: url(../images/pagination_bg.png);
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 43px;
+  color: #fff;
+  font-weight: 400;
+font-size: 26px;
+}
+.swiper-pagination{
+  top: 5%;
+  bottom: unset;
+  height: fit-content;
+}
 /* =================================== step4  ====================================== */
 #step4 {
   background: url(../images/step4_bg.png);
@@ -317,11 +337,11 @@ section#step3 {
 }
 #step4 #party {
   position: absolute;
-    bottom: -27%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 80%;
+  bottom: -27%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 80%;
 }
 #step4 .content {
   position: absolute;
@@ -385,6 +405,23 @@ section#step3 {
 #step5 {
   display: none;
 }
+.slide_motion {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 25%;
+  bottom: 10%;
+}
+#slide3_happyhip.slide_motion {
+  max-width: 80%;
+  top: 10%;
+  bottom: unset;
+}
+#slide4_jutu.slide_motion {
+  max-width: 40%;
+  bottom: 20%;
+}
 .swiper-slide.slide1 {
   background: url(../images/slide1_bg.png);
   background-size: cover;
@@ -398,10 +435,7 @@ section#step3 {
   background-position: center;
 }
 .swiper-slide.slide3 {
-  background: url(../images/slide3_bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #00bed6;
 }
 .swiper-slide.slide4 {
   background: url(../images/slide4_bg.png);
@@ -440,7 +474,7 @@ section#step3 {
 .partySwiper .swiper-slide .content {
   max-width: 327px;
   margin: 15px auto 0;
-  padding-top: 70px;
+  padding-top: 150px;
 }
 .partySwiper .swiper-slide.slide6 .content {
   text-align: center;
@@ -497,4 +531,18 @@ section#step3 {
   left: 0;
   right: 0;
   top: 5% !important;
+}
+.submit_character_imgmini {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 10;
+}
+.selected_char {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 25%;
+  bottom: 10%;
 }

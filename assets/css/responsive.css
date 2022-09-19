@@ -10,20 +10,18 @@
   .submit_character {
     bottom: 3%;
   }
+  /* =================================== preload ====================================== */
   .preload {
-    background: url(../images/bg_main.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: unset;
     height: 100%;
     width: 100%;
   }
-  /* =================================== preload ====================================== */
-  .preload {
-    background: url(../images/bg_main_mo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  .preload #start_party {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    top: unset;
+    bottom: 20%;
   }
   .preload .container {
     align-items: center;
@@ -38,7 +36,7 @@
   }
   .preload .happy_land {
     margin-bottom: 19px;
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto 5px;
   }
   .preload .container .content #Progress {
@@ -50,6 +48,10 @@
     height: 30px;
   }
   /* =================================== step1 and step2 ====================================== */
+  #toti_talk {
+    top: 5%;
+    max-width: 30%;
+  }
   .logo_box {
     left: 30px;
     border-radius: 0px 0px 8px 8px;
@@ -74,17 +76,17 @@
   }
 
   /* =================================== characterSwiper  ====================================== */
-  section#step3 {
+  #step3 {
     background: url(../images/bg_character_mo.png);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
   #step3 .container {
     padding: 0;
   }
   .characterSwiper .title {
-    top: 25%;
+    top: 30%;
   }
   .characterSwiper .swiper-button-next {
     bottom: 14%;
@@ -98,12 +100,15 @@
     padding-bottom: 100px;
   }
   /* =================================== characterSwiper  ====================================== */
-
   #step4 {
     background: url(../images/step4_bg_mo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  #step4 #party {
+    bottom: 20%;
+    max-width: 100%;
   }
   #step4 .title {
     font-weight: 700;
@@ -150,5 +155,26 @@
   .partySwiper .swiper-slide .content {
     max-width: 241px;
     padding-top: 70px;
+  }
+  .slide_motion {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 90%;
+    bottom: 10%;
+  }
+  #slide3_happyhip.slide_motion {
+    max-width: 100%;
+    top: unset;
+    bottom: 30%;
+  }
+  #slide4_jutu.slide_motion {
+    max-width: 100%;
+    bottom: 20%;
+  }
+  #slide5_tutu.slide_motion {
+    max-width: 90%;
+    bottom: 5%;
   }
 }

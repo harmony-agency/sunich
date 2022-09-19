@@ -79,24 +79,44 @@
           <div class="swiper characterSwiper">
             <h2 class="title">کاراکتر مورد علاقه‌ت رو انتخاب کن</h2>
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/images/rhinoceros.png" alt="" />
+              <div
+                class="swiper-slide"
+                data-charmotion="selectedhappyhip"
+                data-charmini="happyhip"
+              >
+                <img src="assets/images/characters/happyhip.png" alt="" />
                 <p>هپی‌هیپ</p>
               </div>
-              <div class="swiper-slide">
-                <img src="assets/images/dolphin.png" alt="" />
+              <div
+                class="swiper-slide"
+                data-charmotion="selecteddolphin"
+                data-charmini="dolphin"
+              >
+                <img src="assets/images/characters/dolphin.png" alt="" />
                 <p>دلفی خانم</p>
               </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Elephant.png" alt="" />
+              <div
+                class="swiper-slide"
+                data-charmotion="selectedelephant"
+                data-charmini="elephant"
+              >
+                <img src="assets/images/characters/elephant.png" alt="" />
                 <p>ناخدا فسقل</p>
               </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Hedgehog.png" alt="" />
+              <div
+                class="swiper-slide"
+                data-charmotion="selectedjutu"
+                data-charmini="jutu"
+              >
+                <img src="assets/images/characters/jutu.png" alt="" />
                 <p>جوتو</p>
               </div>
-              <div class="swiper-slide">
-                <img src="assets/images/parrot.png" alt="" />
+              <div
+                class="swiper-slide"
+                data-charmotion="selectedtutu"
+                data-charmini="tutu"
+              >
+                <img src="assets/images/characters/tutu.png" alt="" />
                 <p>طوطو</p>
               </div>
             </div>
@@ -135,9 +155,10 @@
     <!-- step5 -->
     <section id="step5">
       <div class="swiper partySwiper">
+        <img src="" alt="" class="submit_character_imgmini" />
         <div class="swiper-wrapper">
           <div class="swiper-slide slide1">
-            <div id="slider1_motion"></div>
+            <div id="slide1_elephant" class="slide_motion"></div>
             <div class="content">
               <h2 class="title">ناخدا فسقل جان</h2>
               <p class="caption">
@@ -147,6 +168,7 @@
             </div>
           </div>
           <div class="swiper-slide slide2">
+            <div id="slide2_dolfin" class="slide_motion"></div>
             <div class="content">
               <h2 class="title">دلفی خانم مهربون</h2>
               <p class="caption">
@@ -157,6 +179,7 @@
             </div>
           </div>
           <div class="swiper-slide slide3">
+            <div id="slide3_happyhip" class="slide_motion"></div>
             <div class="content">
               <h2 class="title">هپی‌هیپ جان</h2>
               <p class="caption">
@@ -166,6 +189,7 @@
             </div>
           </div>
           <div class="swiper-slide slide4">
+            <div id="slide4_jutu" class="slide_motion"></div>
             <div class="content">
               <h2 class="title">جوتو جانم!</h2>
               <p class="caption">
@@ -176,6 +200,7 @@
             </div>
           </div>
           <div class="swiper-slide slide5">
+            <div id="slide5_tutu" class="slide_motion"></div>
             <div class="content">
               <h2 class="title">طوطو خان</h2>
               <p class="caption">
@@ -185,17 +210,16 @@
               </p>
             </div>
           </div>
-          <div class="swiper-slide slide6">
+          <div class="swiper-slide slide6" id="last_slide">
             <div class="content">
               <p class="caption">
                 خب مثل اینکه صدای کشتی مهمون‌ها داره میاد… بریم که آبمیوه‌ها رو
                 جمع کنیم
               </p>
-              <img
-                src="assets/images/chosen_animal_img.png"
-                alt=""
-                class="chosen_animal_img"
-              />
+              <div class="selected_char" id=""></div>
+              <!-- <img src="" alt="" class="submit_character_imglarge" /> -->
+
+              <!-- <div id="selectedjutu"></div> -->
             </div>
           </div>
         </div>
@@ -205,9 +229,11 @@
         <div class="swiper-button-prev">
           <img src="./assets/images/arrow_left2.png" alt="" />
         </div>
-        <div class="swiper-pagination"><span>1</span> <span>2</span></div>
+        <div class="swiper-pagination"></div>
         <button class="btn next_level">بعدی</button>
-        <button class="btn start_game">شروع بازی</button>
+        <button class="btn start_game">
+          <a href="./game/index.html">شروع بازی</a>
+        </button>
       </div>
     </section>
 
