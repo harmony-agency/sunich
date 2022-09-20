@@ -142,11 +142,14 @@ section {
   border: none;
   width: 425px;
   height: 54px;
-  margin: 0 auto 87px;
+  margin: 0 auto 10px;
   color: #fff;
   outline: none;
   text-align: center;
   text-align-last: center;
+}
+#otpBtn {
+  margin: 80px auto 0;
 }
 #mobile::placeholder {
   color: #fff;
@@ -198,6 +201,10 @@ section#step3 {
   position: relative;
   display: none;
 }
+#step2,
+#step3 {
+  display: none;
+}
 #toti_talk {
   position: absolute;
   top: 0;
@@ -239,6 +246,28 @@ section#step3 {
   font-weight: 400;
   font-size: 18px;
   margin: 0 auto 49px;
+}
+
+#editMobile {
+  margin: 15px;
+  color: #d10000;
+  cursor: pointer;
+}
+#sendAgain {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px 0;
+  cursor: pointer;
+}
+#smsTimer {
+  margin-top: 10px;
+  text-align: center;
+}
+#phone-error, #confirm-error {
+  color: red;
+  display: inherit;
 }
 
 /* =================================== step3  ====================================== */
@@ -320,9 +349,9 @@ section#step3 {
   height: 43px;
   color: #fff;
   font-weight: 400;
-font-size: 26px;
+  font-size: 26px;
 }
-.swiper-pagination{
+.swiper-pagination {
   top: 5%;
   bottom: unset;
   height: fit-content;

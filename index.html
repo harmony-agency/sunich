@@ -36,14 +36,18 @@
           <div class="content">
             <h2>به مهمونی جزیره شاد سن ایچ خوش اومدی!</h2>
             <p>برای ورود به مهمونی‌مون شماره‌ت رو وارد کن!</p>
-            <input
-              type="tel"
-              id="mobile"
-              name="mobile"
-              class="input-sunich"
-              placeholder="09 - - - - - - - - -"
-            />
-            <button class="btn btn-sunich-g otp">ادامه</button>
+            <form action="" id="subscribers">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="input-sunich"
+                placeholder="09 - - - - - - - - -"
+              />
+              <button type="submit" class="btn btn-sunich-g" id="otpBtn">
+                ادامه
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -56,17 +60,24 @@
           <div class="content">
             <h2>کد تایید رو بزن!</h2>
             <p>
-              یه کد تایید برات فرستادیم؛ اون رو وارد کن که ناخدا فسقل و بقیه
-              دوستات منتظرتند!
+              یه کد تایید برای <span class="enteredPhone"></span> فرستادیم؛ اون
+              رو وارد کن که ناخدا فسقل و بقیه دوستات منتظرتند!
             </p>
-            <input
-              type="tel"
-              id="mobile"
-              name="mobile"
-              class="input-sunich"
-              placeholder="---"
-            />
-            <button class="btn btn-sunich-g otp-validate">ادامه</button>
+            <form action="" id="subscribers_confirm">
+              <input
+                type="tel"
+                name="confirm"
+                id="confirm"
+                class="input-sunich"
+                placeholder="---"
+              />
+              <p id="smsTimer">02:01</p>
+              <div id="sendAgain">ارسال مجدد</div>
+              <div id="editMobile">اصلاح شماره همراه</div>
+              <button id="otpValidBtn" class="btn btn-sunich-g">ادامه</button>
+            </form>
+            <div class="result"></div>
+            <div class="errorValidate"></div>
           </div>
         </div>
       </div>

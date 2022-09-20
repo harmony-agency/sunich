@@ -22,7 +22,6 @@ document.body.onload = function () {
   preloadMain();
 };
 
-
 $(".otp").click(() => {
   $("#step1").hide();
   $("#step2").fadeIn();
@@ -98,10 +97,10 @@ const partySwiper = new Swiper(".partySwiper", {
     },
   },
 });
-partySwiper.on('slidePrevTransitionEnd', function () {
+partySwiper.on("slidePrevTransitionEnd", function () {
   $(".next_level").fadeIn();
 });
-partySwiper.on('reachEnd', function () {
+partySwiper.on("reachEnd", function () {
   $(".next_level").fadeOut();
 });
 $(".next_level").click(() => {
@@ -238,11 +237,178 @@ lottie.loadAnimation({
   path: "assets/anime/selected_char/selected_happyhip/data.json", // the path to the animation json
 });
 
-// $(".slide6.swiper-slide-active") {
+/*===================================== subscribers validation =====================================*/
+$(document).ready(function () {
+  $("#subscribers").validate({
+    // initialize the plugin
+    rules: {
+      phone: {
+        required: true,
+        minlength: 11,
+        maxlength: 11,
+      },
+    },
+    messages: {
+      phone: {
+        required: "لطفا شماره تماس خود را وارد کنید",
+        minlength: "شماره تماس وارد شده معتبر نیست",
+        maxlength: "شماره تماس وارد شده معتبر نیست",
+      },
+    },
+    submitHandler: function () {
+      form_otp();
+      timerSendSms();
+    },
+  });
+  $("#subscribers_confirm").validate({
+    // initialize the plugin
+    rules: {
+      confirm: {
+        required: true,
+        minlength: 3,
+        maxlength: 4,
+      },
+    },
+    messages: {
+      confirm: {
+        required: "لطفا  کد ارسال شده  را وارد کنید",
+        minlength: " کد وارد شده معتبر نیست",
+        maxlength: " کد وارد شده معتبر نیست",
+      },
+    },
+    submitHandler: function () {
+      form_submit();
+    },
+  });
+});
 
-// }
+/*===================================== form_otp =====================================*/
+function form_otp() {
+  var formDataOtp = {
+    phone: persianToEnglish($("#subscribers #phone").val()),
+  };
+  $.ajax({
+    type: "POST",
+    url: "panel/otp.php",
+    data: formDataOtp,
+    dataType: "json",
+    encode: true,
+  }).done(function (data) {
+    if (data["success"] == true) {
+      $(".errorValidate").hide();
+      $("#step1").hide();
+      $("#step2").fadeIn();
+      $(".enteredPhone").html($("#subscribers #phone").val());
+    } else {
+      $(".errorValidate").show();
+      $(".errorValidate").html(data["message"]);
+    }
+  });
+}
 
-// if ($(".slide6").hasClass("swiper-slide-active")) {
-//   $(".next_level").fadeOut();
-//   alert("sdsad");
-// }
+/*===================================== timerSendSms =====================================*/
+function timerSendSms() {
+  $("#sendAgain").hide();
+  var timer2 = "2:01";
+  $("#smsTimer").show();
+
+  var interval = setInterval(function () {
+    var timer = timer2.split(":");
+    //by parsing integer, I avoid all extra string processing
+    var minutes = parseInt(timer[0], 10);
+    var seconds = parseInt(timer[1], 10);
+    --seconds;
+    minutes = seconds < 0 ? --minutes : minutes;
+    if (minutes < 1) {
+      clearInterval(interval);
+      $("#smsTimer").hide();
+      $("#sendAgain").show();
+      clearInterval(interval);
+      $("#editMobile").show();
+    }
+
+    seconds = seconds < 0 ? 59 : seconds;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    //minutes = (minutes < 10) ?  minutes : minutes;
+    $("#smsTimer").html(minutes + ":" + seconds);
+    timer2 = minutes + ":" + seconds;
+  }, 1000);
+}
+
+/*===================================== form_submit =====================================*/
+function form_submit() {
+  var formDataSubscriber = {
+    phone: persianToEnglish($("#subscribers #phone").val()),
+    confirm: persianToEnglish($("#subscribers_confirm #confirm").val()),
+    utm_source: sessionStorage.getItem("utm_source"),
+    utm_campaign: sessionStorage.getItem("utm_medium"),
+    utm_medium: sessionStorage.getItem("utm_campaign"),
+    utm_term: sessionStorage.getItem("utm_term"),
+    utm_content: sessionStorage.getItem("utm_content"),
+    referrer: document.referrer,
+  };
+  $.ajax({
+    type: "POST",
+    url: "panel/process.php",
+    data: formDataSubscriber,
+    dataType: "json",
+    encode: true,
+  }).done(function (data) {
+    if (data["success"] == true) {
+      $(".errorValidate").hide();
+      $("#step2").fadeOut();
+      $("#step3").fadeIn();
+    } else {
+      $(".errorValidate").show();
+      $(".errorValidate").html(data["message"]);
+    }
+  });
+}
+/*===================================== Send Sms Again =====================================*/
+$("#sendAgain").click(function () {
+  form_otp();
+  timerSendSms();
+});
+
+/*===================================== edit phone number =====================================*/
+$("#editMobile").click(function () {
+  $("#step2").hide();
+  $("#step1").fadeIn();
+  // $("#mobile").focus();
+});
+
+var utm_source = jQuery.QueryString["utm_source"];
+var utm_medium = jQuery.QueryString["utm_medium"];
+var utm_campaign = jQuery.QueryString["utm_campaign"];
+var utm_term = jQuery.QueryString["utm_term"];
+var utm_content = jQuery.QueryString["utm_content"];
+if (location.search != "") {
+  // query string exists
+  sessionStorage.setItem("utm_source", utm_source);
+  sessionStorage.setItem("utm_medium", utm_medium);
+  sessionStorage.setItem("utm_campaign", utm_campaign);
+  sessionStorage.setItem("utm_term", utm_term);
+  sessionStorage.setItem("utm_content", utm_content);
+}
+/*===================================== persianNumbers =====================================*/
+var persianNumbers = [
+    /۰/g,
+    /۱/g,
+    /۲/g,
+    /۳/g,
+    /۴/g,
+    /۵/g,
+    /۶/g,
+    /۷/g,
+    /۸/g,
+    /۹/g,
+  ],
+  arabicNumbers = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g],
+  persianToEnglish = function (str) {
+    if (typeof str === "string") {
+      for (var i = 0; i < 10; i++) {
+        str = str.replace(persianNumbers[i], i).replace(arabicNumbers[i], i);
+      }
+    }
+    return str;
+  };
