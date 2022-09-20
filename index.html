@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
-    <div class="preload" style="display: none">
+    <div class="preload">
       <div class="container">
         <div class="content">
           <div class="image_box">
@@ -25,18 +25,19 @@
       </div>
     </div>
 
-    <section id="steps_form" style="display: none">
+    <section id="steps_form">
       <button
         type="button"
         class="btn btn-primary"
         data-bs-toggle="modal"
-        data-bs-target="#leaderboard_modal"
+        data-bs-target="#leaderboard"
+        style="display: none"
       >
         Open first modal
       </button>
       <div id="toti_talk"></div>
       <!-- step1 -->
-      <div id="step1" class="steps" style="display: none">
+      <div id="step1" class="steps">
         <div class="container">
           <div class="logo_box">
             <img src="assets/images/logo.png" class="sunich_logo" alt="" />
@@ -61,7 +62,7 @@
         </div>
       </div>
       <!-- step2 -->
-      <div id="step2" class="steps" style="display: none">
+      <div id="step2" class="steps">
         <div class="container">
           <div class="logo_box">
             <img src="assets/images/logo.png" class="sunich_logo" alt="" />
@@ -92,7 +93,7 @@
         </div>
       </div>
       <!-- step3 -->
-      <div id="step3" class="steps" style="display: none">
+      <div id="step3" class="steps">
         <div class="container">
           <div class="logo_box">
             <img src="assets/images/logo.png" class="sunich_logo" alt="" />
@@ -278,17 +279,8 @@
       </div>
     </section>
 
-    <section id="step6">
-      <div class="container"></div>
-    </section>
-
     <!-- leaderboard modal -->
-    <div
-      class="modal fade"
-      id="leaderboard_modal"
-      aria-hidden="true"
-      tabindex="-1"
-    >
+    <div class="modal fade" id="leaderboard" aria-hidden="true" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <!-- Modal body -->
@@ -404,7 +396,7 @@
               type="button"
               class="btn game_again"
               data-bs-toggle="modal"
-              data-bs-target="#game_again"
+              data-bs-target="#invitation"
               data-bs-dismiss="modal"
               aria-label="Close"
             >
@@ -415,29 +407,28 @@
       </div>
     </div>
 
-    <div class="modal fade" id="game_again" aria-hidden="true" tabindex="-1">
+    <!-- invitation modal -->
+    <div class="modal fade" id="invitation" aria-hidden="true" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body share_box">
             <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
             <div class="heart"></div>
             <p class="caption">
               برای اینکه بیشتر بازی کنی، کافیه یکی از دوستات رو به بازی معرفی
               کنی تا بتونی بی‌نهایت بازی کنی
             </p>
             <p class="invite">دعوت از دوستان</p>
-            <button
-            class="btn social_box"
-          >
-          <a href="">1</a>
-          <a href="">2</a>
-          <a href="">3</a>
-          </button>
+            <button class="btn social_box">
+              <a href="">1</a>
+              <a href="">2</a>
+              <a href="">3</a>
+            </button>
           </div>
         </div>
       </div>
