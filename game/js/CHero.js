@@ -25,8 +25,10 @@ function CHero(iX,iY,oParentContainer){
         _oContainer.y = iY;
         _oParentContainer.addChild(_oContainer);
         
+        var character = sessionStorage.getItem('character');
+
         var oData = {   
-                        images: [s_oSpriteLibrary.getSprite("hero")], 
+                        images: [s_oSpriteLibrary.getSprite(character)], 
                         // width, height & registration point of each sprite
                         frames: {width: 334, height: 289,regX:167,regY:289}, 
                         animations: {idle:0,catch_good:[1,5,"idle"],walk:[6,24],catch_bad:[25,29,"idle"]}

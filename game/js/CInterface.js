@@ -13,7 +13,10 @@ function CInterface(){
     var _oContainerScore;
     var _oContainerBestScore;
     var _oRollingScore;
+    var _oRollingHealth;
     var _oTextTime;
+    var _oTextHealth;
+
     var _oTextScore;
     var _oTextBestScore;
 
@@ -86,7 +89,7 @@ function CInterface(){
                     84, 30, 160, 40, 
                     40, "left", "#fff", FONT, 1,
                     0, 0,
-                    formatTime(TIME_LEVEL),
+                    HEALTH,
                     true, true, false,
                     false );
 
@@ -149,6 +152,9 @@ function CInterface(){
         
         
         _oRollingScore = new CRollingScore();
+
+        _oRollingHealth = new CRollingHealth();
+
         
         
         if(!s_bMobile) {
@@ -214,19 +220,23 @@ function CInterface(){
     };
     
     this.reset = function(iScore){
-        this.refreshTime(TIME_LEVEL);
+        this.refreshTime(HEALTH);
         this.refreshScore(iScore);
         _oGUIExpandible.reset();
     };
 
     this.refreshTime = function(iTime){
-        _oTextTime.refreshText(formatTime(iTime));
+        _oTextTime.refreshText(iTime);
     };
     
     this.refreshScore = function(iScore){
         _oRollingScore.rolling(_oTextScore.getText(), null, iScore);
     };
     
+    this.refreshHealth = function(_iHealth){
+        _oRollingHealth.rolling(_oTextTime.getText(), null, _iHealth);
+    };
+
     this.refreshBestScore = function(){
         _oTextBestScore.refreshText(s_iBestScore);
     };

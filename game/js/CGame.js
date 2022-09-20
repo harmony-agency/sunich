@@ -7,6 +7,7 @@ function CGame(){
     var _iTimeElapsLogo;
     var _iTimeElapsSpawn;
     var _iTimeElaps;
+    var _iHealth;
     var _iCurSpawnTime;
     var _aItems;
     var _aItemsToRemove;
@@ -91,7 +92,8 @@ function CGame(){
         _bKeyDown = false;
         _iTimeElapsLogo = 0;
         _iTimeElapsSpawn = 0;
-        _iTimeElaps = TIME_LEVEL;
+        // _iTimeElaps = TIME_LEVEL;
+        _iHealth = HEALTH;
         _iScore = 0;
         _iCurSpawnTime = START_SPAWN_ITEM_TIME;
         _aItemsToRemove = new Array();
@@ -190,11 +192,18 @@ function CGame(){
     };
     
     this._onExitFromHelp = function(){
-        if(_iTimeElaps < TIME_LEVEL){
+
+        if(_iHealth < HEALTH){
             _oInterface.collapseGUIButtons();
         }else{
             this.prepareStartLevel();
         }
+
+        // if(_iTimeElaps < TIME_LEVEL){
+        //     _oInterface.collapseGUIButtons();
+        // }else{
+        //     this.prepareStartLevel();
+        // }
     };
             
     this.prepareStartLevel = function(){
@@ -353,6 +362,15 @@ function CGame(){
         }
         _oInterface.refreshScore(_iScore);
     };
+
+    this._refreshHealth= function(_iHealth){
+
+        if(_iHealth < 0){
+            _iHealth = 0;
+        }
+        _oInterface._refreshHealth(_iHealth);
+
+    };
     
     this._checkCollision = function(){
         var oRectHero = _oHero.getRectCollision();
@@ -367,7 +385,9 @@ function CGame(){
                if(_aItems[i].getType() === MALUS_ID){
                    playSound("catch_malus",1,false);
                    _oHero.collectBad();
+                   _iHealth = _iHealth -1;
                    iAmount = -MALUS_POINTS;
+                   this._refreshHealth(_iHealth);
                }else{
                    playSound("catch_item",1,false);
                    _oHero.collectGood();
@@ -378,6 +398,7 @@ function CGame(){
                
                new CScoreText(iAmount,_aItems[i].getX(),_aItems[i].getY(),_oContainerFg);
                this._refreshScore(iAmount);
+
            }
        }
        
@@ -448,14 +469,13 @@ function CGame(){
         _aItemsToRemove = new Array();
         
         //REFRESH GAME TIME
-        _iTimeElaps -= s_iTimeElaps;
         
-        if(_iTimeElaps < 0){
-            _iTimeElaps = 0;
+        if(_iHealth == 0){
+            _iHealth = 0;
             this.gameOver();
         }
         
-        _oInterface.refreshTime(_iTimeElaps);
+        // _oInterface._refreshHealth(_iHealth);
     };
 
     s_oGame = this;

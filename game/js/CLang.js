@@ -1,4 +1,4 @@
-var TEXT_GAMEOVER   = "وقت تمام شد";
+var TEXT_GAMEOVER   = "سه تا جونت تموم شد";
 var TEXT_SCORE      = "امتیاز شما";
 var TEXT_BEST_SCORE = " بهترین امتیاز شما";
 var TEXT_ARE_YOU_SURE = "مطمئنی؟";

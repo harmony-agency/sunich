@@ -173,6 +173,8 @@ lottie.loadAnimation({
 });
 
 $(".submit_character").click(() => {
+  let characterSelected = $(".characterSwiper .swiper-slide-active").data('character');
+  sessionStorage.setItem('character', characterSelected);
   $("#steps_form").hide();
   $("#step4").fadeIn();
 

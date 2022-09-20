@@ -27,6 +27,7 @@
     <script type="text/javascript" src="js/CLang.js"></script>
     <script type="text/javascript" src="js/CPreloader.js"></script>
     <script type="text/javascript" src="js/CRollingScore.js"></script>
+    <script type="text/javascript" src="js/CRollingHealth.js"></script>
     <script type="text/javascript" src="js/CTextButton.js"></script>
     <script type="text/javascript" src="js/CToggle.js"></script>
     <script type="text/javascript" src="js/CGfxButton.js"></script>
@@ -60,8 +61,9 @@
       $(document).ready(function () {
         var oMain = new CMain({
           time_level: 60000, //TIME IN MILLISECONDS OF THE GAME
+          health: 3, //Health Hero
           item_point: 10, //POINTS TO INCREASE WHEN PLAYER CATCH AN ITEM
-          malus_point: 5, //POINTS TO DECREASE WHEN PLAYER CATCH A MALUS
+          malus_point: 1, //POINTS TO DECREASE WHEN PLAYER CATCH A MALUS
           hero_acceleration: 5, //PLAYER ACCELERATION WHEN MOVING RIGHT/LEFT
           hero_friction: 0.7, //HERO FRICTION WHEN CHANGE DIRECTION
           max_hero_speed: 20, //MAX HERO SPEED
@@ -71,35 +73,35 @@
         });
 
         $(oMain).on("start_session", function (evt) {
-          if (getParamValue("ctl-arcade") === "true") {
+          if (getParamValue("sunich_kids") === "true") {
             parent.__ctlArcadeStartSession();
           }
           //...ADD YOUR CODE HERE EVENTUALLY
         });
 
         $(oMain).on("end_session", function (evt) {
-          if (getParamValue("ctl-arcade") === "true") {
+          if (getParamValue("sunich_kids") === "true") {
             parent.__ctlArcadeEndSession();
           }
           //...ADD YOUR CODE HERE EVENTUALLY
         });
 
         $(oMain).on("save_score", function (evt, iScore) {
-          if (getParamValue("ctl-arcade") === "true") {
+          if (getParamValue("sunich_kids") === "true") {
             parent.__ctlArcadeSaveScore({ score: iScore });
           }
           //...ADD YOUR CODE HERE EVENTUALLY
         });
 
         $(oMain).on("show_interlevel_ad", function (evt) {
-          if (getParamValue("ctl-arcade") === "true") {
+          if (getParamValue("sunich_kids") === "true") {
             parent.__ctlArcadeShowInterlevelAD();
           }
           //...ADD YOUR CODE HERE EVENTUALLY
         });
 
         $(oMain).on("share_event", function (evt, iScore) {
-          if (getParamValue("ctl-arcade") === "true") {
+          if (getParamValue("sunich_kids") === "true") {
             parent.__ctlArcadeShareEvent({
               img: TEXT_SHARE_IMAGE,
               title: TEXT_SHARE_TITLE,

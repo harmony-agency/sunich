@@ -20,7 +20,8 @@ function CMain(oData){
             s_oStage.enableMouseOver(20);  
         }
 		
-        s_iPrevTime = new Date().getTime();
+        // s_iPrevTime = new Date().getTime();
+
 
 	createjs.Ticker.addEventListener("tick", this._update);
         createjs.Ticker.framerate = FPS;
@@ -137,6 +138,11 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("fireplace","./sprites/fireplace.png");
         s_oSpriteLibrary.addSprite("bg_game_mask","./sprites/bg_game_mask.png");
         s_oSpriteLibrary.addSprite("hero","./sprites/hero.png");
+        s_oSpriteLibrary.addSprite("rhinoceros","./sprites/rhinoceros.png");
+        s_oSpriteLibrary.addSprite("dolphin","./sprites/dolphin.png");
+        s_oSpriteLibrary.addSprite("elephant","./sprites/elephant.png");
+        s_oSpriteLibrary.addSprite("hedgehog","./sprites/hedgehog.png");
+        s_oSpriteLibrary.addSprite("parrot","./sprites/parrot.png");
         s_oSpriteLibrary.addSprite("logo_game","./sprites/logo_game.png");
         s_oSpriteLibrary.addSprite("but_left","./sprites/but_left.png");
         s_oSpriteLibrary.addSprite("but_right","./sprites/but_right.png");
@@ -238,6 +244,7 @@ function CMain(oData){
         if(_bUpdate === false){
                 return;
         }
+
         var iCurTime = new Date().getTime();
         s_iTimeElaps = iCurTime - s_iPrevTime;
         s_iCntTime += s_iTimeElaps;
@@ -258,6 +265,26 @@ function CMain(oData){
         s_oStage.update(event);
        
     };
+
+    // this._updateHealth = function(event){
+    //     if(_bUpdate === false){
+    //             return;
+    //     }
+    //     var iCurHealth = HEALTH;
+    //     s_iHelath = iCurHealth - 1;
+
+    //     iCurHealth = s_iHelath;
+
+
+        
+    //     if(_iState === STATE_GAME){
+    //         _oGame.update();
+    //     }
+
+    //     s_oStage.update(event);
+       
+    // };
+
     
     s_oMain = this;
     
@@ -268,7 +295,8 @@ function CMain(oData){
     HERO_FRICTION = oData.hero_friction;
     MAX_HERO_SPEED = oData.max_hero_speed;
     MALUS_PERC = oData.malus_percentage;
-    TIME_LEVEL = oData.time_level;
+    // TIME_LEVEL = oData.time_level;
+    HEALTH = oData.health;
     ITEM_POINTS = oData.item_point;
     MALUS_POINTS = oData.malus_point;
     ENABLE_FULLSCREEN = oData.fullscreen;
@@ -281,6 +309,7 @@ var s_bMobile;
 var s_bAudioActive = true;
 var s_iCntTime = 0;
 var s_iTimeElaps = 0;
+var s_iHelath = 0;
 var s_iPrevTime = 0;
 var s_iCntFps = 0;
 var s_iCurFps = 0;
