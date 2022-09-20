@@ -2,10 +2,10 @@
 
 
 $servername = "localhost";
-$username = "pharmaseri_seradmin";
-$password = "gFQ6r77e0";
-$dbname="pharmaseri_ser1";
-$LandingName="pharmaceris";
+$username = "";
+$password = "";
+$dbname="";
+$LandingName="sunichkids";
 
 
 try {

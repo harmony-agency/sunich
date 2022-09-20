@@ -78,6 +78,10 @@ const partySwiper = new Swiper(".partySwiper", {
   slidesPerView: 1,
   grabCursor: true,
   centeredSlides: true,
+  effect: "fade",
+  keyboard: {
+    enabled: true,
+  },
   // loop: true,
   // autoplay: {
   //   delay: 2000,
@@ -86,10 +90,9 @@ const partySwiper = new Swiper(".partySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    // clickable: true,
     renderBullet: function (index, className) {
       return (
         '<span class="' + className + '">' + pagination_num[index] + "</span>"
@@ -99,10 +102,27 @@ const partySwiper = new Swiper(".partySwiper", {
 });
 partySwiper.on("slidePrevTransitionEnd", function () {
   $(".next_level").fadeIn();
+  $(".swiper-button-next").fadeIn();
+  $(".start_game").css({ left: "37%", right: "unset", margin: "0 auto" });
+  $(".swiper-pagination-bullet-active").next().css({ opacity: "0.5" });
+});
+if (window.matchMedia("(max-width: 768px)").matches) {
+  partySwiper.on("slidePrevTransitionEnd", function () {
+    $(".next_level").fadeIn();
+    $(".swiper-button-next").fadeIn();
+    $(".start_game").css({ left: "3%", right: "unset", margin: "0 auto" });
+    $(".swiper-pagination-bullet-active").next().css({ opacity: "0.5" });
+  });
+}
+partySwiper.on("slideNextTransitionStart", function () {
+  $(".swiper-pagination-bullet-active").prev().css({ opacity: "1" });
 });
 partySwiper.on("reachEnd", function () {
   $(".next_level").fadeOut();
+  $(".swiper-button-next").fadeOut();
+  $(".start_game").css({ left: "0", right: "0", margin: "0 auto" });
 });
+
 $(".next_level").click(() => {
   partySwiper.slideNext();
 });
@@ -173,8 +193,10 @@ lottie.loadAnimation({
 });
 
 $(".submit_character").click(() => {
-  let characterSelected = $(".characterSwiper .swiper-slide-active").data('character');
-  sessionStorage.setItem('character', characterSelected);
+  let characterSelected = $(".characterSwiper .swiper-slide-active").data(
+    "character"
+  );
+  sessionStorage.setItem("character", characterSelected);
   $("#steps_form").hide();
   $("#step4").fadeIn();
 
@@ -186,7 +208,7 @@ $(".submit_character").click(() => {
   var charmini = $(".swiper-slide.swiper-slide-active").data("charmini");
   $(".submit_character_imgmini").attr(
     "src",
-    "assets/images/characters/" + charmini + ".png"
+    "assets/images/charactersMini/" + charmini + ".png"
   );
   $(".submit_character_imglarge").attr(
     "src",
@@ -280,6 +302,7 @@ $(document).ready(function () {
     },
     submitHandler: function () {
       form_submit();
+      console.log("dsd");
     },
   });
 });
@@ -379,19 +402,6 @@ $("#editMobile").click(function () {
   // $("#mobile").focus();
 });
 
-var utm_source = jQuery.QueryString["utm_source"];
-var utm_medium = jQuery.QueryString["utm_medium"];
-var utm_campaign = jQuery.QueryString["utm_campaign"];
-var utm_term = jQuery.QueryString["utm_term"];
-var utm_content = jQuery.QueryString["utm_content"];
-if (location.search != "") {
-  // query string exists
-  sessionStorage.setItem("utm_source", utm_source);
-  sessionStorage.setItem("utm_medium", utm_medium);
-  sessionStorage.setItem("utm_campaign", utm_campaign);
-  sessionStorage.setItem("utm_term", utm_term);
-  sessionStorage.setItem("utm_content", utm_content);
-}
 /*===================================== persianNumbers =====================================*/
 var persianNumbers = [
     /۰/g,
@@ -414,3 +424,4 @@ var persianNumbers = [
     }
     return str;
   };
+

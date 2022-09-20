@@ -31,6 +31,26 @@ a {
   text-decoration: none;
   color: unset;
 }
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+} */
+/* input:-internal-autofill-selected {
+  appearance: menulist-button; 
+  background-image: none !important; 
+  background-color: #ededed !important; 
+  color: fieldtext !important; 
+} */
+/* input:-internal-autofill-selected {
+  background: url(../images/input_bg.png) transparent !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-color: unset !important;
+} */
+
 /* =============== swiper  ======================== */
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -235,6 +255,7 @@ section#step3 {
   font-size: 24px;
   color: #000000;
   margin: 0 auto 21px;
+  direction: rtl;
 }
 .steps p {
   font-weight: 400;
@@ -265,7 +286,8 @@ section#step3 {
   margin-top: 10px;
   text-align: center;
 }
-#phone-error, #confirm-error {
+#phone-error,
+#confirm-error {
   color: red;
   display: inherit;
 }
@@ -350,11 +372,22 @@ section#step3 {
   color: #fff;
   font-weight: 400;
   font-size: 26px;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
 }
 .swiper-pagination {
   top: 5%;
   bottom: unset;
   height: fit-content;
+  width: fit-content;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background-image: url(../images/pagination_dot.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* =================================== step4  ====================================== */
 #step4 {
@@ -443,8 +476,8 @@ section#step3 {
   bottom: 10%;
 }
 #slide3_happyhip.slide_motion {
-  max-width: 80%;
-  top: 10%;
+  max-width: 65%;
+  top: 20%;
   bottom: unset;
 }
 #slide4_jutu.slide_motion {
@@ -503,7 +536,7 @@ section#step3 {
 .partySwiper .swiper-slide .content {
   max-width: 327px;
   margin: 15px auto 0;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .partySwiper .swiper-slide.slide6 .content {
   text-align: center;
@@ -535,6 +568,9 @@ section#step3 {
   bottom: 7%;
   right: 37%;
 }
+.next_level:hover {
+  color: #000;
+}
 .start_game {
   background: url(../images/btn_light_green.png);
   background-size: contain;
@@ -548,9 +584,30 @@ section#step3 {
   bottom: 7%;
   left: 37%;
 }
-.start_game:hover {
+.slide2 .start_game {
+  background: url(../images/startbtn_slide2.png);
+  background-repeat: no-repeat;
+}
+.slide3 .start_game {
+  background: url(../images/startbtn_slide3.png);
+  background-repeat: no-repeat;
+}
+.slide4 .start_game {
+  background: url(../images/startbtn_slide4.png);
+  background-repeat: no-repeat;
+}
+.slide5 .start_game {
+  background: url(../images/startbtn_slide5.png);
+  background-repeat: no-repeat;
+}
+.slide6 .start_game {
+  background: url(../images/btn_yellow.png);
+  background-repeat: no-repeat;
+}
+.start_game:hover a {
   color: #fff;
 }
+
 .swiper-pagination-progressbar-fill {
   background: #ffc62d !important;
 }
@@ -574,4 +631,233 @@ section#step3 {
   margin: 0 auto;
   max-width: 25%;
   bottom: 10%;
+}
+
+/* ===================================  leaderboard modal  ====================================== */
+.modal-dialog {
+  width: 330px;
+}
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+.leaderboard_box {
+  background-image: url(../images/leaderboard_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  padding: 74px 28px 17px 18px;
+  height: 562px;
+  position: relative;
+}
+.leaderboard_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.leaderboard_header .right .title_score {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 0 16px;
+}
+.leaderboard_header .right .final_score {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: -1px -1px 0 #e12a1b, 1px -1px 0 #e12a1b, -1px 1px 0 #e12a1b,
+    1px 1px 0 #e12a1b;
+  letter-spacing: 3px;
+}
+.table_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.table_header .right span {
+  font-weight: 300;
+  font-size: 12px;
+}
+.table_header .right span:first-child {
+  margin-left: 23px;
+}
+.table_content {
+  height: 300px;
+  overflow-y: scroll;
+  direction: rtl;
+  overflow-x: hidden;
+  padding-left: 14px;
+  --scrollbarBG: #fff2af;
+  --thumbBG: #ffd602;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.table_content::-webkit-scrollbar {
+  width: 6px;
+}
+.table_content::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.table_content::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 36px;
+}
+.rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 14px;
+}
+.rows .row_bg {
+  background: rgba(255, 214, 2, 0.29);
+  border-radius: 24px;
+  width: 226px;
+  height: 32px;
+  text-align: right;
+  position: relative;
+  padding-right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rows .row_bg .user_score {
+  color: #5f5757;
+  font-weight: 700;
+  font-size: 14px;
+}
+.score_bg {
+  background-image: url(../images/score_bg.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -2%;
+  top: -10%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.score_bg span {
+  color: #fff;
+}
+/* Track  */
+::-webkit-scrollbar-track {
+  background: #ffd602;
+  border-radius: 36px;
+  width: 6px;
+  max-height: 283px;
+}
+/* Handle  */
+::-webkit-scrollbar-thumb {
+  background: #fff2af;
+  border-radius: 36px;
+  width: 6px;
+}
+.game_again {
+  background-image: url(../images/btn_yellow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -5%;
+  z-index: 100;
+  color: #000000;
+  font-weight: 400;
+  font-size: 26px;
+  text-align: center;
+  width: 167px;
+  height: 66px;
+}
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: #5f5757;
+  font-weight: 700;
+  font-size: 14px;
+}
+.rows:nth-child(1) .rank {
+  background-image: url(../images/gold.png);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 12px;
+}
+.rows:nth-child(2) .rank {
+  background-image: url(../images/silver.png);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 12px;
+}
+.rows:nth-child(3) .rank {
+  background-image: url(../images/bronze.png);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* ===================================  share_box modal  ====================================== */
+.share_box {
+  background-image: url(../images/share_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  padding: 60px 20px 53px;
+  height: 370px;
+  position: relative;
+}
+.share_box .caption {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin: 0 auto 25px;
+  text-align: center;
+  text-align-last: center;
+}
+.share_box .invite {
+  color: #e42c27;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+  text-align-last: center;
+}
+.share_box .social_box {
+  background-image: url(../images/btn_yellow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -5%;
+  z-index: 100;
+  text-align: center;
+  width: 227px;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px;
+}
+.share_box .social_box  a {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.btn-close{
+  filter: invert(85%) sepia(49%) saturate(3390%) hue-rotate(0deg) brightness(106%) contrast(102%);
+}
+.btn-close:focus {
+  box-shadow: none;
 }

@@ -27,7 +27,7 @@ if(isset($username))  {
 
                     try {
                         
-                      $sql = "INSERT INTO subscribers (comment, phone , utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
+                      $sql = "INSERT INTO subscribers ( phone ,confirm, utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
                                 VALUES ('$phone' , '$confirm' , '$utm_source' , '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
                                 // use exec() because no results are returned
                                 $pdo->exec($sql);
@@ -63,7 +63,7 @@ if(isset($phone))  {
            
                                if($verify_code ==  $confirm) {
 
-                                $sql = "INSERT INTO comments ( phone, confirm , utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
+                                $sql = "INSERT INTO subscribers ( phone, confirm , utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
                                 VALUES ('$phone', $confirm , '$utm_source' ,  '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
                                 // use exec() because no results are returned
                                 $pdo->exec($sql);

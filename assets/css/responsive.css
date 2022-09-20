@@ -154,14 +154,17 @@
   }
   .partySwiper .swiper-slide .content {
     max-width: 241px;
-    padding-top: 70px;
+    padding-top: 90px;
+  }
+  .partySwiper .swiper-slide.slide6 .content {
+    padding-top: 134px;
   }
   .slide_motion {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 100%;
     bottom: 10%;
   }
   #slide3_happyhip.slide_motion {
@@ -176,5 +179,27 @@
   #slide5_tutu.slide_motion {
     max-width: 90%;
     bottom: 5%;
+  }
+  .swiper-pagination {
+    left: 3% !important;
+    top: 3%;
+    right: unset;
+    margin: unset;
+    text-align: center;
+    width: fit-content !important;
+  }
+  .swiper-pagination-bullet {
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    width: 35px;
+    height: 35px;
+  }
+  .submit_character_imgmini {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    z-index: 10;
+    max-width: 15%;
   }
 }
