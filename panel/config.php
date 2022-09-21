@@ -2,9 +2,9 @@
 
 
 $servername = "localhost";
-$username = "";
-$password = "";
-$dbname="";
+$username = "vmagzir_sunich_kids";
+$password = "vZDIh{3E.rEj";
+$dbname="vmagzir_sunich_kids";
 $LandingName="sunichkids";
 
 

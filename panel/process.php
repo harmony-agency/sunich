@@ -14,7 +14,6 @@ function validate_number($mobile_number){
     }
 
 $phone = $_POST['phone'];
-$confirm = $_POST['confirm'];
 $utm_source = $_POST['utm_source'];
 $utm_campaign = $_POST['utm_campaign'];
 $utm_medium = $_POST['utm_medium'];
@@ -27,8 +26,8 @@ if(isset($username))  {
 
                     try {
                         
-                      $sql = "INSERT INTO subscribers ( phone ,confirm, utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
-                                VALUES ('$phone' , '$confirm' , '$utm_source' , '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
+                      $sql = "INSERT INTO subscribers ( phone , utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
+                                VALUES ('$phone' , '$utm_source' , '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
                                 // use exec() because no results are returned
                                 $pdo->exec($sql);
                                  $insert_id = $pdo->lastInsertId();
@@ -55,7 +54,7 @@ if(isset($phone))  {
          
                     try {
                         
-                              $sql_select = "SELECT code FROM otp WHERE mobile = $phone";
+                              $sql_select = "SELECT confirm FROM otp WHERE mobile = $phone";
                   
                               $verify_code = $pdo->query($sql_select)->fetchColumn();
                               $data['message'] = $verify_code ;
@@ -63,8 +62,8 @@ if(isset($phone))  {
            
                                if($verify_code ==  $confirm) {
 
-                                $sql = "INSERT INTO subscribers ( phone, confirm , utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
-                                VALUES ('$phone', $confirm , '$utm_source' ,  '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
+                                $sql = "INSERT INTO subscribers ( phone, utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
+                                VALUES ('$phone', '$utm_source' ,  '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
                                 // use exec() because no results are returned
                                 $pdo->exec($sql);
                                 

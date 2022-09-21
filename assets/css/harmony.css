@@ -1,10 +1,6 @@
-@font-face {
-  font-family: "IRANSansDN";
-  src: url("/assets/fonts/IRANSansDN.woff2") format("woff2"),
-    url("/assets/fonts/IRANSansDN.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import "../css/fontawesome/css/all.min.css";
+@import "../fonts/iranSans.css";
+
 .btn-check:focus + .btn,
 .btn:focus {
   box-shadow: none;
@@ -14,7 +10,7 @@
   z-index: 10;
 }
 body {
-  font-family: "IRANSansDN", Arial, Helvetica, sans-serif;
+  font-family: iranSansDN;
   /* direction: rtl;
   text-align: right; */
   overflow-x: hidden;
@@ -171,10 +167,6 @@ section {
 #otpBtn {
   margin: 80px auto 0;
 }
-#mobile::placeholder {
-  color: #fff;
-  opacity: 0.7;
-}
 .characterSelect {
   display: flex;
   align-content: center;
@@ -267,6 +259,7 @@ section#step3 {
   font-weight: 400;
   font-size: 18px;
   margin: 0 auto 49px;
+  direction: rtl;
 }
 
 #editMobile {
@@ -534,12 +527,16 @@ section#step3 {
   text-align-last: center;
 }
 .partySwiper .swiper-slide .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 13%;
   max-width: 327px;
   margin: 15px auto 0;
-  padding-top: 100px;
 }
 .partySwiper .swiper-slide.slide6 .content {
   text-align: center;
+  top: 22%;
 }
 .partySwiper .swiper-button-next {
   top: unset;
@@ -629,8 +626,8 @@ section#step3 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 25%;
-  bottom: 10%;
+  max-width: 30%;
+  bottom: 0;
 }
 
 /* ===================================  leaderboard modal  ====================================== */
@@ -808,10 +805,9 @@ section#step3 {
 .share_box {
   background-image: url(../images/share_bg.png);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: auto;
-  padding: 60px 20px 53px;
-  height: 370px;
+  padding: 90px 20px 53px;
+  height: 355px;
   position: relative;
 }
 .share_box .caption {
@@ -831,9 +827,9 @@ section#step3 {
   text-align-last: center;
 }
 .share_box .social_box {
-  background-image: url(../images/btn_yellow.png);
+  background-image: url(../images/social_btn.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   left: 0;
   right: 0;
@@ -842,22 +838,70 @@ section#step3 {
   z-index: 100;
   text-align: center;
   width: 227px;
-  height: 87px;
+  height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 26px;
 }
-.share_box .social_box  a {
+.share_box .social_box a {
   width: 40px;
   height: 40px;
   text-align: center;
   background-color: #fff;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
-.btn-close{
-  filter: invert(85%) sepia(49%) saturate(3390%) hue-rotate(0deg) brightness(106%) contrast(102%);
+.share_box .social_box a:hover {
+  color: #000;
+}
+.btn-close {
+  background-image: none !important;
+  color: #ffd602;
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  font-size: 24px;
+  opacity: 1;
 }
 .btn-close:focus {
   box-shadow: none;
+}
+.btn-close:hover {
+  color: #ffd602;
+}
+.heart_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto 32px;
+}
+.heart_box i {
+  color: #ffd602;
+  font-size: 26px;
+}
+.img_heart_box {
+  position: relative;
+  width: 80px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+}
+.img_heart_box img {
+  position: absolute;
+}
+.img_heart_box img:first-child {
+  left: 0;
+}
+.img_heart_box img:nth-child(2) {
+  left: 20px;
+}
+.img_heart_box img:nth-child(3) {
+  left: 40px;
+}
+.clipboard {
+  cursor: pointer;
 }

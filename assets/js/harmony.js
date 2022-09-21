@@ -22,17 +22,7 @@ document.body.onload = function () {
   preloadMain();
 };
 
-$(".otp").click(() => {
-  $("#step1").hide();
-  $("#step2").fadeIn();
-});
-
-$(".otp-validate").click(() => {
-  $("#step2").hide();
-  $("#step3").fadeIn();
-});
-
-/* =================================== characterSwiper  ====================================== */
+/* =================================== character Swiper  ====================================== */
 const characterSwiper = new Swiper(".characterSwiper", {
   slidesPerView: 6,
   grabCursor: true,
@@ -71,7 +61,7 @@ $(".ready_togo").click(() => {
   $("#step5").fadeIn();
 });
 
-/* =================================== partySwiper  ====================================== */
+/* =================================== party Swiper  ====================================== */
 var pagination_num = ["1", "2", "3", "4", "5", "6"];
 
 const partySwiper = new Swiper(".partySwiper", {
@@ -83,9 +73,9 @@ const partySwiper = new Swiper(".partySwiper", {
     enabled: true,
   },
   // loop: true,
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -121,6 +111,47 @@ partySwiper.on("reachEnd", function () {
   $(".next_level").fadeOut();
   $(".swiper-button-next").fadeOut();
   $(".start_game").css({ left: "0", right: "0", margin: "0 auto" });
+  /* =================================== selected_elephant  ====================================== */
+  lottie.loadAnimation({
+    container: document.getElementById("selectedelephant"), // the dom element that will contain the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/anime/selected_char/selected_elephant/data.json", // the path to the animation json
+  });
+  /* =================================== selected_tutu  ====================================== */
+  lottie.loadAnimation({
+    container: document.getElementById("selectedtutu"), // the dom element that will contain the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/anime/selected_char/selected_tutu/data.json", // the path to the animation json
+  });
+  /* =================================== selected_jutu  ====================================== */
+  lottie.loadAnimation({
+    container: document.getElementById("selectedjutu"), // the dom element that will contain the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/anime/selected_char/selected_jutu/data.json", // the path to the animation json
+  });
+
+  /* =================================== selected_dolphin  ====================================== */
+  lottie.loadAnimation({
+    container: document.getElementById("selecteddolphin"), // the dom element that will contain the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/anime/selected_char/selected_dolphin/data.json", // the path to the animation json
+  });
+  /* =================================== selected_happyhip  ====================================== */
+  lottie.loadAnimation({
+    container: document.getElementById("selectedhappyhip"), // the dom element that will contain the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/anime/selected_char/selected_happyhip/data.json", // the path to the animation json
+  });
 });
 
 $(".next_level").click(() => {
@@ -159,13 +190,13 @@ lottie.loadAnimation({
   autoplay: true,
   path: "assets/anime/swiper/slide1_elephant/data.json", // the path to the animation json
 });
-/* =================================== slide2_dolfin  ====================================== */
+/* =================================== slide2_dolphin  ====================================== */
 lottie.loadAnimation({
-  container: document.getElementById("slide2_dolfin"), // the dom element that will contain the animation
+  container: document.getElementById("slide2_dolphin"), // the dom element that will contain the animation
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "assets/anime/swiper/slide2_dolfin/data.json", // the path to the animation json
+  path: "assets/anime/swiper/slide2_dolphin/data.json", // the path to the animation json
 });
 /* =================================== slide3_happyhip  ====================================== */
 lottie.loadAnimation({
@@ -190,75 +221,6 @@ lottie.loadAnimation({
   loop: true,
   autoplay: true,
   path: "assets/anime/swiper/slide5_tutu/data.json", // the path to the animation json
-});
-
-$(".submit_character").click(() => {
-  let characterSelected = $(".characterSwiper .swiper-slide-active").data(
-    "character"
-  );
-  sessionStorage.setItem("character", characterSelected);
-  $("#steps_form").hide();
-  $("#step4").fadeIn();
-
-  // selected character motion in last slide
-  var charmotion = $(".swiper-slide.swiper-slide-active").data("charmotion");
-  $(".selected_char").attr("id", charmotion);
-
-  // selected character image in each slide
-  var charmini = $(".swiper-slide.swiper-slide-active").data("charmini");
-  $(".submit_character_imgmini").attr(
-    "src",
-    "assets/images/charactersMini/" + charmini + ".png"
-  );
-  $(".submit_character_imglarge").attr(
-    "src",
-    "assets/images/characters/" + charmini + ".png"
-  );
-
-  // for test
-  // console.log(charmotion);
-  // alert(charmini);
-});
-
-/* =================================== selected_tutu  ====================================== */
-lottie.loadAnimation({
-  container: document.getElementById("selectedtutu"), // the dom element that will contain the animation
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "assets/anime/selected_char/selected_tutu/data.json", // the path to the animation json
-});
-/* =================================== selected_jutu  ====================================== */
-lottie.loadAnimation({
-  container: document.getElementById("selectedjutu"), // the dom element that will contain the animation
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "assets/anime/selected_char/selected_jutu/data.json", // the path to the animation json
-});
-/* =================================== selected_elephant  ====================================== */
-lottie.loadAnimation({
-  container: document.getElementById("selectedelephant"), // the dom element that will contain the animation
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "assets/anime/selected_char/selected_elephant/data.json", // the path to the animation json
-});
-/* =================================== selected_dolfin  ====================================== */
-lottie.loadAnimation({
-  container: document.getElementById("selecteddolfin"), // the dom element that will contain the animation
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "assets/anime/selected_char/selected_dolfin/data.json", // the path to the animation json
-});
-/* =================================== selected_happyhip  ====================================== */
-lottie.loadAnimation({
-  container: document.getElementById("selectedhappyhip"), // the dom element that will contain the animation
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "assets/anime/selected_char/selected_happyhip/data.json", // the path to the animation json
 });
 
 /*===================================== subscribers validation =====================================*/
@@ -302,7 +264,6 @@ $(document).ready(function () {
     },
     submitHandler: function () {
       form_submit();
-      console.log("dsd");
     },
   });
 });
@@ -324,9 +285,11 @@ function form_otp() {
       $("#step1").hide();
       $("#step2").fadeIn();
       $(".enteredPhone").html($("#subscribers #phone").val());
+      console.log("1");
     } else {
       $(".errorValidate").show();
       $(".errorValidate").html(data["message"]);
+      console.log("2");
     }
   });
 }
@@ -399,7 +362,35 @@ $("#sendAgain").click(function () {
 $("#editMobile").click(function () {
   $("#step2").hide();
   $("#step1").fadeIn();
-  // $("#mobile").focus();
+});
+
+/*===================================== submit_character =====================================*/
+$(".submit_character").click(() => {
+  let characterSelected = $(".characterSwiper .swiper-slide-active").data(
+    "character"
+  );
+  sessionStorage.setItem("character", characterSelected);
+  $("#steps_form").hide();
+  $("#step4").fadeIn();
+
+  // selected character motion in last slide
+  var charmotion = $(".swiper-slide.swiper-slide-active").data("charmotion");
+  $(".selected_char").attr("id", charmotion);
+
+  // selected character image in each slide
+  var charmini = $(".swiper-slide.swiper-slide-active").data("charmini");
+  $(".submit_character_imgmini").attr(
+    "src",
+    "assets/images/charactersMini/" + charmini + ".png"
+  );
+  $(".leaderboard_img").attr(
+    "src",
+    "assets/images/charactersMini/" + charmini + ".png"
+  );
+  $(".submit_character_imglarge").attr(
+    "src",
+    "assets/images/characters/" + charmini + ".png"
+  );
 });
 
 /*===================================== persianNumbers =====================================*/
@@ -425,3 +416,12 @@ var persianNumbers = [
     return str;
   };
 
+/*===================================== clipboard =====================================*/
+var clipboard = new ClipboardJS(".clipboard");
+clipboard.on("success", function (e) {
+  $(".copyMsg").text("لینک کپی شد");
+
+  setTimeout(function () {
+    $(".copyMsg").empty()();
+  }, 2500);
+});

@@ -154,10 +154,6 @@
   }
   .partySwiper .swiper-slide .content {
     max-width: 241px;
-    padding-top: 90px;
-  }
-  .partySwiper .swiper-slide.slide6 .content {
-    padding-top: 134px;
   }
   .slide_motion {
     position: absolute;

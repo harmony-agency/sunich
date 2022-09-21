@@ -1,0 +1,15 @@
+/* font-weight: 300 */
+@font-face {
+  font-family: iranSansDN;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./IRANSansDN.woff") format("woff");
+}
+
+/* font-weight normal */
+@font-face {
+  font-family: iranSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url("IRANSansDN.woff2") format("woff2");
+}

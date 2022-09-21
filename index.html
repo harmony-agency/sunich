@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="icon" href="assets/favicon.ico" />
   </head>
   <body>
     <div class="preload">
@@ -26,15 +27,6 @@
     </div>
 
     <section id="steps_form">
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#leaderboard"
-        style="display: none"
-      >
-        Open first modal
-      </button>
       <div id="toti_talk"></div>
       <!-- step1 -->
       <div id="step1" class="steps">
@@ -174,7 +166,6 @@
             سن‌ایچ شرکت داده میشه
           </p>
         </div>
-
         <button class="btn ready_togo">بعدی</button>
       </div>
     </section>
@@ -198,7 +189,7 @@
             </button>
           </div>
           <div class="swiper-slide slide2">
-            <div id="slide2_dolfin" class="slide_motion"></div>
+            <div id="slide2_dolphin" class="slide_motion"></div>
             <div class="content">
               <h2 class="title">دلفی خانم مهربون</h2>
               <p class="caption">
@@ -258,13 +249,18 @@
                 خب مثل اینکه صدای کشتی مهمون‌ها داره میاد… بریم که آبمیوه‌ها رو
                 جمع کنیم
               </p>
-              <div class="selected_char" id=""></div>
-              <!-- <img src="" alt="" class="submit_character_imglarge" /> -->
-
-              <!-- <div id="selectedjutu"></div> -->
             </div>
+            <div class="selected_char" id=""></div>
             <button class="btn start_game">
               <a href="./game/index.html">شروع بازی</a>
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#leaderboard"
+            >
+              Open modal
             </button>
           </div>
         </div>
@@ -287,11 +283,7 @@
           <div class="modal-body leaderboard_box">
             <div class="leaderboard_header">
               <div class="left">
-                <img
-                  src="assets/images/charactersMini/elephant.png"
-                  class="leaderboard_img"
-                  alt=""
-                />
+                <img src="" alt="" class="leaderboard_img" />
               </div>
               <div class="right">
                 <span class="title_score">امتیاز شما</span>
@@ -417,17 +409,45 @@
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-            ></button>
-            <div class="heart"></div>
+            >
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="heart_box">
+              <div class="img_heart_box">
+                <img src="assets/images/white_heart.png" alt="" />
+                <img src="assets/images/white_heart.png" alt="" />
+                <img src="assets/images/white_heart.png" alt="" />
+              </div>
+              <i class="fas fa-arrow-alt-right"></i>
+              <img src="assets/images/unlimited_heart.png" alt="" />
+            </div>
             <p class="caption">
               برای اینکه بیشتر بازی کنی، کافیه یکی از دوستات رو به بازی معرفی
               کنی تا بتونی بی‌نهایت بازی کنی
             </p>
             <p class="invite">دعوت از دوستان</p>
             <button class="btn social_box">
-              <a href="">1</a>
-              <a href="">2</a>
-              <a href="">3</a>
+              <input
+                type="hidden"
+                id="copyLink"
+                value="<?php echo $actual_link; ?>"
+              />
+              <a class="clipboard" data-clipboard-target="#copyLink">
+                <i class="fa-light fa-share-nodes"></i>
+              </a>
+              <a
+                href="whatsapp://send?text=<?php echo $actual_link; ?>&amp;text=سن ایچ کیدز"
+                target="_blank"
+                rel="noindex,nofollow"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://t.me/share/url?url=https://<?php echo $actual_link; ?>&amp;text=سن ایچ کیدز"
+                target="_blank"
+                rel="noindex,nofollow"
+              >
+                <img src="assets/images/telegram_icon.png" alt="" />
+              </a>
             </button>
           </div>
         </div>
@@ -439,6 +459,7 @@
     <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/lottie.min.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
     <script src="assets/js/harmony.js"></script>
   </body>
 </html>

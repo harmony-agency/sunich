@@ -14,7 +14,7 @@ function validate_number($mobile_number){
 }
     
     
-function verifySMS($mobile,$token){
+function verifySMS($phone,$token){
 
   $apiKey = '34766A373652457777676B464E2F344E6B653172564559504C7A356F643744654E454B4558564B554B68633D';
         $url = "https://api.kavenegar.com/v1/$apiKey/verify/lookup.json";
@@ -22,9 +22,9 @@ function verifySMS($mobile,$token){
       $curl = curl_init();
       
       $fields = array(
-          'receptor' => $mobile,
+          'receptor' => $phone,
           'token' => $token,
-          'template' => 'sunichkids'
+          'template' => 'pharmaceris'
       );
       
       
@@ -92,29 +92,29 @@ if(isset($name) && isset($phone)  && !isset($user_id)  )  {
 
                   try {
 
-                    $sql_select = "SELECT count FROM otp WHERE mobile = $phone";
+                    $sql_select = "SELECT count FROM otp WHERE phone = $phone";
                 
                     $records = $pdo->query($sql_select)->fetchColumn();
                     
                     if($records < 5) {
                         $data['success'] = true;
 
-                        $code = generateNumericOTP(4);
+                        $confirm = generateNumericOTP(4);
                         $count = 1 ;
-                        verifySMS($phone,$code);
+                        verifySMS($phone,$confirm);
 
                       if  ($records > 0) {
                         $count = $count + $records;
-                        $sql_update = "UPDATE  otp  SET count = '$count' , code = '$code' WHERE mobile = $phone";
+                        $sql_update = "UPDATE  otp  SET count = '$count' , confirm = '$confirm' WHERE phone = $phone";
                         // use exec() because no results are returned
                         $pdo->exec($sql_update);
-                        $data['message'] =  "Success Update,$code";
+                        $data['message'] =  "Success Update,$confirm";
 
                       }else{
 
-                        $sql_insert = "INSERT INTO otp (mobile, code, count)
+                        $sql_insert = "INSERT INTO otp (phone, confirm, count)
 
-                        VALUES ('$phone', '$code', '$count')";
+                        VALUES ('$phone', '$confirm', '$count')";
 
                         // use exec() because no results are returned
 

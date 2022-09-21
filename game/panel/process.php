@@ -13,14 +13,14 @@ if(preg_match('/^[0-9]9[0-9]*$/', $mobile_number)) {
 }
 
 
-    $mobile = $_POST['mobile'];
+    $phone = $_POST['phone'];
     $score = $_POST["score"];
 
-    if(isset($mobile))  { 
+    if(isset($phone))  { 
 
-            if($mobile!='' )
+            if($phone!='' )
             {
-                if(validate_number($mobile) == false) 
+                if(validate_number($phone) == false) 
 
                 {
                     $data['message'] = 'لطفا شماره تماس معتبر وارد کنید.';
@@ -31,7 +31,7 @@ if(preg_match('/^[0-9]9[0-9]*$/', $mobile_number)) {
                     try {
 
                                 $data['success'] = true;
-                                $sql = "UPDATE `users` SET `score` = $score  WHERE `users`.`mobile` = $mobile;";
+                                $sql = "UPDATE `users` SET `score` = $score  WHERE `users`.`phone` = $phone;";
                                 // use exec() because no results are returned
                                 $pdo->exec($sql);
                                 $data['message'] = "امتیاز با موفقیت ثبت شد";
