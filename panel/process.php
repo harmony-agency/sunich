@@ -13,7 +13,7 @@ function validate_number($mobile_number){
         }
     }
 
-$phone = $_POST['phone'];
+$username = $_POST['phone'];
 $utm_source = $_POST['utm_source'];
 $utm_campaign = $_POST['utm_campaign'];
 $utm_medium = $_POST['utm_medium'];
@@ -27,15 +27,15 @@ if(isset($username))  {
                     try {
                         
                       $sql = "INSERT INTO subscribers ( phone , utm_source ,  utm_medium , utm_campaign , utm_term , utm_content , referrer)
-                                VALUES ('$phone' , '$utm_source' , '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
+                                VALUES ('$username' , '$utm_source' , '$utm_medium' , '$utm_campaign' , '$utm_term' , '$utm_content', '$referrer')";
                                 // use exec() because no results are returned
                                 $pdo->exec($sql);
-                                 $insert_id = $pdo->lastInsertId();
+                                //  $insert_id = $pdo->lastInsertId();
                                 $data['success'] = true;
-                                $data['message'] = "<h2 class='success'>نظر شما با موفقیت ثبت شد</h2>";
-                                  $data['comment_id'] = $insert_id;
+                                  $data['username'] = $username;
+                                //   expire after 30 days
+                                  setcookie("username", $username, time()+30*24*60*60);
 
-                         
                         } 
                  catch(PDOException $e) {
                                 $data['message'] =  $sql . "<br>" . $e->getMessage();

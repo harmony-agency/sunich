@@ -368,7 +368,7 @@ function CGame(){
         if(_iHealth < 0){
             _iHealth = 0;
         }
-        _oInterface._refreshHealth(_iHealth);
+        _oInterface.refreshHealth(_iHealth);
 
     };
     

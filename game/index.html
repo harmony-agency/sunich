@@ -91,6 +91,18 @@
             parent.__ctlArcadeSaveScore({ score: iScore });
           }
           //...ADD YOUR CODE HERE EVENTUALLY
+          var formDataScore = {
+            score: iScore,
+          };
+          $.ajax({
+            type: "POST",
+            url: "panel/score.php",
+            data: formDataScore,
+            dataType: "json",
+            encode: true,
+          }).done(function (data) {
+            console.log(data);
+          });
         });
 
         $(oMain).on("show_interlevel_ad", function (evt) {
