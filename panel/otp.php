@@ -14,7 +14,7 @@ function validate_number($mobile_number){
 }
     
     
-function verifySMS($phone,$token){
+function verifySMS($mobile,$token){
 
   $apiKey = '34766A373652457777676B464E2F344E6B653172564559504C7A356F643744654E454B4558564B554B68633D';
         $url = "https://api.kavenegar.com/v1/$apiKey/verify/lookup.json";
@@ -22,7 +22,7 @@ function verifySMS($phone,$token){
       $curl = curl_init();
       
       $fields = array(
-          'receptor' => $phone,
+          'receptor' => $mobile,
           'token' => $token,
           'template' => 'pharmaceris'
       );
@@ -67,21 +67,17 @@ function generateNumericOTP($n) {
 
 $data = [];
 
-$name = strval($_POST['name']);
+
+
+$mobile =strval($_POST['mobile']);
 
 
 
-$phone =strval($_POST['phone']);
-
-
-
-
-
-if(isset($name) && isset($phone)  && !isset($user_id)  )  {   
+if(isset($mobile))  {   
     
     
 
-                if(validate_number($phone) == false) 
+                if(validate_number($mobile) == false) 
                 {
 
                     $data['message'] = 'لطفا شماره تماس معتبر وارد کنید.';
@@ -92,7 +88,7 @@ if(isset($name) && isset($phone)  && !isset($user_id)  )  {
 
                   try {
 
-                    $sql_select = "SELECT count FROM otp WHERE phone = $phone";
+                    $sql_select = "SELECT count FROM otp WHERE mobile = $mobile";
                 
                     $records = $pdo->query($sql_select)->fetchColumn();
                     
@@ -101,20 +97,20 @@ if(isset($name) && isset($phone)  && !isset($user_id)  )  {
 
                         $confirm = generateNumericOTP(4);
                         $count = 1 ;
-                        verifySMS($phone,$confirm);
+                        verifySMS($mobile,$confirm);
 
                       if  ($records > 0) {
                         $count = $count + $records;
-                        $sql_update = "UPDATE  otp  SET count = '$count' , confirm = '$confirm' WHERE phone = $phone";
+                        $sql_update = "UPDATE  otp  SET count = '$count' , confirm = '$confirm' WHERE mobile = $mobile";
                         // use exec() because no results are returned
                         $pdo->exec($sql_update);
                         $data['message'] =  "Success Update,$confirm";
 
                       }else{
 
-                        $sql_insert = "INSERT INTO otp (phone, confirm, count)
+                        $sql_insert = "INSERT INTO otp (mobile, confirm, count)
 
-                        VALUES ('$phone', '$confirm', '$count')";
+                        VALUES ('$mobile', '$confirm', '$count')";
 
                         // use exec() because no results are returned
 

@@ -346,7 +346,7 @@ function CGame(){
         if(_iScore > s_iBestScore){
             s_iBestScore = _iScore;
             
-            _oInterface.refreshBestScore();
+            // _oInterface.refreshBestScore();
         }
         
         _oGameOverPanel.show(_iScore);

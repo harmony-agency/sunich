@@ -90,9 +90,23 @@
           if (getParamValue("sunich_kids") === "true") {
             parent.__ctlArcadeSaveScore({ score: iScore });
           }
+          let userScore;
+          let BestScore = localStorage.getItem(
+            PREFIX_LOCAL_STORAGE + "_best_score"
+          );
+
+          if (iScore > BestScore) {
+            userScore = iScore;
+
+            // _oInterface.refreshBestScore();
+          } else {
+            userScore = BestScore;
+          }
+
           //...ADD YOUR CODE HERE EVENTUALLY
           var formDataScore = {
-            score: iScore,
+            score: userScore,
+            username: localStorage.getItem("username"),
           };
           $.ajax({
             type: "POST",

@@ -78,7 +78,7 @@ function CHero(iX,iY,oParentContainer){
         }else if(_oHero.currentAnimation !== "walk"){
             _oHero.framerate = 30;
             _oHero.gotoAndPlay("walk");
-            _oContainer.scaleX = -1;
+            _oContainer.scaleX = 1;
         }
     };
 

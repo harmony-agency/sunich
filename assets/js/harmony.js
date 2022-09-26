@@ -1,3 +1,9 @@
+const username =  localStorage.getItem('username');
+
+if(username){
+          $("#step1").hide();
+      $("#step3").fadeIn();
+}
 var i = 0;
 function preloadMain() {
   if (i == 0) {
@@ -271,7 +277,7 @@ $(document).ready(function () {
 /*===================================== form_otp =====================================*/
 function form_otp() {
   var formDataOtp = {
-    phone: persianToEnglish($("#subscribers #phone").val()),
+    mobile: persianToEnglish($("#subscribers #mobile").val()),
   };
   $.ajax({
     type: "POST",
@@ -281,15 +287,14 @@ function form_otp() {
     encode: true,
   }).done(function (data) {
     if (data["success"] == true) {
-      $(".errorValidate").hide();
+      $(".errorValidateOtp").hide();
       $("#step1").hide();
       $("#step2").fadeIn();
-      $(".enteredPhone").html($("#subscribers #phone").val());
+      $(".enteredPhone").html($("#subscribers #mobile").val());
       console.log("1");
     } else {
-      $(".errorValidate").show();
-      $(".errorValidate").html(data["message"]);
-      console.log("2");
+      $(".errorValidateOtp").show();
+      $(".errorValidateOtp").html(data["message"]);
     }
   });
 }
@@ -326,7 +331,7 @@ function timerSendSms() {
 /*===================================== form_submit =====================================*/
 function form_submit() {
   var formDataSubscriber = {
-    phone: persianToEnglish($("#subscribers #phone").val()),
+    mobile: persianToEnglish($("#subscribers #mobile").val()),
     confirm: persianToEnglish($("#subscribers_confirm #confirm").val()),
     utm_source: sessionStorage.getItem("utm_source"),
     utm_campaign: sessionStorage.getItem("utm_medium"),
@@ -346,6 +351,8 @@ function form_submit() {
       $(".errorValidate").hide();
       $("#step2").fadeOut();
       $("#step3").fadeIn();
+      localStorage.setItem('username', data["username"] );
+
     } else {
       $(".errorValidate").show();
       $(".errorValidate").html(data["message"]);
@@ -370,27 +377,32 @@ $(".submit_character").click(() => {
     "character"
   );
   sessionStorage.setItem("character", characterSelected);
-  $("#steps_form").hide();
-  $("#step4").fadeIn();
-
-  // selected character motion in last slide
-  var charmotion = $(".swiper-slide.swiper-slide-active").data("charmotion");
-  $(".selected_char").attr("id", charmotion);
-
-  // selected character image in each slide
-  var charmini = $(".swiper-slide.swiper-slide-active").data("charmini");
-  $(".submit_character_imgmini").attr(
-    "src",
-    "assets/images/charactersMini/" + charmini + ".png"
-  );
-  $(".leaderboard_img").attr(
-    "src",
-    "assets/images/charactersMini/" + charmini + ".png"
-  );
-  $(".submit_character_imglarge").attr(
-    "src",
-    "assets/images/characters/" + charmini + ".png"
-  );
+  
+    if(username){
+            window.location.replace("./game/");
+    }else{
+      $("#steps_form").hide();
+      $("#step4").fadeIn();
+    
+      // selected character motion in last slide
+      var charmotion = $(".swiper-slide.swiper-slide-active").data("charmotion");
+      $(".selected_char").attr("id", charmotion);
+    
+      // selected character image in each slide
+      var charmini = $(".swiper-slide.swiper-slide-active").data("charmini");
+      $(".submit_character_imgmini").attr(
+        "src",
+        "assets/images/charactersMini/" + charmini + ".png"
+      );
+      $(".leaderboard_img").attr(
+        "src",
+        "assets/images/charactersMini/" + charmini + ".png"
+      );
+      $(".submit_character_imglarge").attr(
+        "src",
+        "assets/images/characters/" + charmini + ".png"
+      );
+    }
 });
 
 /*===================================== persianNumbers =====================================*/

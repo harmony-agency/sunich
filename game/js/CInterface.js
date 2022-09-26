@@ -237,9 +237,9 @@ function CInterface(){
         _oRollingHealth.rolling(_oTextTime.getText(), null, _iHealth);
     };
 
-    this.refreshBestScore = function(){
-        _oTextBestScore.refreshText(s_iBestScore);
-    };
+    // this.refreshBestScore = function(){
+    //     _oTextBestScore.refreshText(s_iBestScore);
+    // };
     
     this.collapseGUIButtons = function(){
         _oGUIExpandible._onMenu();

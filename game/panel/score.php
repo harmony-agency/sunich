@@ -3,18 +3,9 @@ include "../../panel/config.php";
 $data = [];
 
 $score = $_POST["score"];
+$username = $_POST["username"];
 
-
-// Verifying whether a cookie is set or not
-if(isset($_COOKIE["username"])){
-    $username =  $_COOKIE["username"];
-} else{
-    echo "Not Set Username";
-    die();
-}
-
-
-if(isset($score))  { 
+if(isset($score) && isset($username))  { 
 
         if($score!='' )
         {
@@ -23,11 +14,22 @@ if(isset($score))  {
      
                 try {
 
-                            $data['success'] = true;
-                            $sql = "UPDATE `subscribers` SET `score` = $score  WHERE `phone` = $username ;";
-                            // use exec() because no results are returned
-                            $pdo->exec($sql);
-                            $data['message'] = "امتیاز با موفقیت ثبت شد";
+                        $sql_select = "SELECT limited FROM otp WHERE username = $username";
+                                
+                        $limited = $pdo->query($sql_select)->fetchColumn();
+                        $limited = $limited +1 ;
+                            if($limited < 4){
+                                
+                               $sql = "UPDATE `users` SET `score` = $score AND `limited`= $limited WHERE `username` = $username ;";
+                                // use exec() because no results are returned
+                                $pdo->exec($sql);
+                                $data['success'] = true;
+                                $data['message'] = "امتیاز با موفقیت ثبت شد";
+                             }else{
+                                   $data['success'] = false;
+                                $data['message'] = "شما 3 بار بازی کردید";
+                             }
+ 
                        
                        
                     } 
