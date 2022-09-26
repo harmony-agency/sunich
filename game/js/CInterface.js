@@ -11,7 +11,7 @@ function CInterface(){
     var _oGUIExpandible;
     var _oContainerTime;
     var _oContainerScore;
-    var _oContainerBestScore;
+    // var _oContainerScore;
     var _oRollingScore;
     var _oRollingHealth;
     var _oTextTime;
@@ -43,7 +43,7 @@ function CInterface(){
         _oContainerScore.addChild(oBgScore);
         
         _oTextScore = new CTLText(_oContainerScore, 
-                    84, 24, 160, 54, 
+                    34, 34, 20, 54, 
                     54, "left", "#fff", FONT, 1,
                     0, 0,
                     "0",
@@ -53,41 +53,41 @@ function CInterface(){
         
         
         //BEST SCORE CONTAINER
-        _pStartPosBestScore = {x:10,y:oSpriteBg.height+10};
-        _oContainerBestScore = new createjs.Container();
-        _oContainerBestScore.x = _pStartPosBestScore.x;
-        _oContainerBestScore.y = _pStartPosBestScore.y;
-        s_oStage.addChild(_oContainerBestScore);
+        // _pStartPosBestScore = {x:10,y:oSpriteBg.height+10};
+        // _oContainerScore = new createjs.Container();
+        // _oContainerScore.x = _pStartPosBestScore.x;
+        // _oContainerScore.y = _pStartPosBestScore.y;
+        // s_oStage.addChild(_oContainerScore);
         
-        var oSpriteBg = s_oSpriteLibrary.getSprite("best_score_panel");
-        var oBgScore = createBitmap(oSpriteBg);
-        _oContainerBestScore.addChild(oBgScore);
+        // var oSpriteBg = s_oSpriteLibrary.getSprite("best_score_panel");
+        // var oBgScore = createBitmap(oSpriteBg);
+        // _oContainerScore.addChild(oBgScore);
         
-        _oTextBestScore = new CTLText(_oContainerBestScore, 
-                    84, 24, 160, 54, 
-                    54, "left", "#fff", FONT, 1,
-                    0, 0,
-                    "0",
-                    true, true, false,
-                    false );
+        // _oTextBestScore = new CTLText(_oContainerScore, 
+        //             84, 24, 160, 54, 
+        //             54, "left", "#fff", FONT, 1,
+        //             0, 0,
+        //             "0",
+        //             true, true, false,
+        //             false );
                     
 
         
         
         
-        //TIME CONTAINER
-        _pStartPosTime = {x:10,y:_oContainerBestScore.y + oSpriteBg.height};
+        //Helth CONTAINER
+        _pStartPosTime = {x:10,y:_oContainerScore.y + oSpriteBg.height};
         _oContainerTime = new createjs.Container();
         _oContainerTime.x = _pStartPosTime.x;
         _oContainerTime.y = _pStartPosTime.y;
         s_oStage.addChild(_oContainerTime);
         
-        var oBgTime = createBitmap(s_oSpriteLibrary.getSprite("time_panel"));
+        var oBgTime = createBitmap(s_oSpriteLibrary.getSprite("health_panel"));
         _oContainerTime.addChild(oBgTime);
         
         _oTextTime = new CTLText(_oContainerTime, 
-                    84, 30, 160, 40, 
-                    40, "left", "#fff", FONT, 1,
+                    34, 30, 160, 40, 
+                    60, "left", "#fff", FONT, 1,
                     0, 0,
                     HEALTH,
                     true, true, false,
@@ -210,8 +210,8 @@ function CInterface(){
         _oContainerScore.x = _pStartPosScore.x + s_iOffsetX;
         _oContainerScore.y = _pStartPosScore.y + s_iOffsetY;
         
-        _oContainerBestScore.x = _pStartPosBestScore.x + s_iOffsetX;
-        _oContainerBestScore.y = _pStartPosBestScore.y + s_iOffsetY;
+        // _oContainerScore.x = _pStartPosBestScore.x + s_iOffsetX;
+        // _oContainerScore.y = _pStartPosBestScore.y + s_iOffsetY;
         
         if(s_bMobile){
             _oButLeft.setPosition(_pStartPosLeft.x + s_iOffsetX,_pStartPosLeft.y - s_iOffsetY);

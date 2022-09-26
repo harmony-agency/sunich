@@ -149,9 +149,9 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("but_settings","./sprites/but_settings.png");
         s_oSpriteLibrary.addSprite("logo_menu","./sprites/logo_menu.png");
         s_oSpriteLibrary.addSprite("items","./sprites/items.png");
-        s_oSpriteLibrary.addSprite("time_panel","./sprites/time_panel.png");
+        s_oSpriteLibrary.addSprite("health_panel","./sprites/health_panel.png");
         s_oSpriteLibrary.addSprite("score_panel","./sprites/score_panel.png");
-        s_oSpriteLibrary.addSprite("best_score_panel","./sprites/best_score_panel.png");
+        // s_oSpriteLibrary.addSprite("best_score_panel","./sprites/best_score_panel.png");
         s_oSpriteLibrary.addSprite("keyboard_left","./sprites/keyboard_left.png");
         s_oSpriteLibrary.addSprite("keyboard_right","./sprites/keyboard_right.png");
         s_oSpriteLibrary.addSprite("but_help","./sprites/but_help.png");
