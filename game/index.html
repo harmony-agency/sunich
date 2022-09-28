@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/ios_fullscreen.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -45,6 +47,9 @@
     <script type="text/javascript" src="js/CScoreText.js"></script>
     <script type="text/javascript" src="js/CReadyGoAnim.js"></script>
     <script type="text/javascript" src="js/CCTLText.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js">
+      ">
+    </script>
   </head>
   <body ondragstart="return false;" ondrop="return false;">
     <div
@@ -115,6 +120,8 @@
             dataType: "json",
             encode: true,
           }).done(function (data) {
+            $("#leaderboard").modal("show");
+
             console.log(data);
           });
         });
@@ -164,5 +171,129 @@
         display: none;
       "
     ></div>
+
+    <!-- leaderboard modal -->
+    <div class="modal fade" id="leaderboard" aria-hidden="true" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal body -->
+          <div class="modal-body leaderboard_box">
+            <div class="leaderboard_header">
+              <div class="left">
+                <img src="" alt="" class="leaderboard_img" />
+              </div>
+              <div class="right">
+                <span class="title_score">امتیاز شما</span>
+                <span class="final_score">۳۷۴</span>
+              </div>
+            </div>
+            <div class="leaderboard_content">
+              <div class="table_header">
+                <div class="left">
+                  <span>امتیاز</span>
+                </div>
+                <div class="right">
+                  <span>رتبه</span>
+                  <span>کد کاربر</span>
+                </div>
+              </div>
+              <div class="table_content">
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rows">
+                  <div class="rank">1</div>
+                  <div class="row_bg">
+                    <span class="user_score">۵۹۸</span>
+                    <div class="score_bg">
+                      <span>۵۰۰</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn game_again"
+              data-bs-toggle="modal"
+              data-bs-target="#invitation"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              بازی دوباره
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

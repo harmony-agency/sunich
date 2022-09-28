@@ -34,7 +34,7 @@ function CEndPanel(){
         
        
         _oBg = createBitmap(s_oSpriteLibrary.getSprite("bg_game"));
-        //_oContainer.addChild(_oBg);
+        _oContainer.addChild(_oBg);
         
         _oContainerPanel = new createjs.Container();
         _oContainerPanel.x = CANVAS_WIDTH/2;
@@ -56,7 +56,7 @@ function CEndPanel(){
 
         _oBestText = new CTLText(_oContainerPanel, 
                     oSpriteBg.width/2-250, oSpriteBg.height/2-20, 500, 50, 
-                    50, "center", "#fff", FONT, 1,
+                    50, "center", "#000", FONT, 1,
                     0, 0,
                     TEXT_BEST_SCORE,
                     true, true, false,
@@ -66,7 +66,7 @@ function CEndPanel(){
         
         _oTotScoreText = new CTLText(_oContainerPanel, 
                     oSpriteBg.width/2-250, oSpriteBg.height/2+50, 500, 50, 
-                    50, "center", "#fff", FONT, 1,
+                    50, "center", "#000", FONT, 1,
                     0, 0,
                     TEXT_SCORE,
                     true, true, false,
@@ -74,8 +74,8 @@ function CEndPanel(){
                     
 
         
-        _oButHome = new CGfxButton(oSpriteBg.width/2 - 250,oSpriteBg.height/2 + 180,s_oSpriteLibrary.getSprite("but_home"),_oContainerPanel);
-        _oButHome.addEventListener(ON_MOUSE_UP,this._onHome,this);
+        // _oButHome = new CGfxButton(oSpriteBg.width/2 - 250,oSpriteBg.height/2 + 180,s_oSpriteLibrary.getSprite("but_home"),_oContainerPanel);
+        // _oButHome.addEventListener(ON_MOUSE_UP,this._onHome,this);
         
         _oButRestart = new CGfxButton(oSpriteBg.width/2 + 250,oSpriteBg.height/2+180,s_oSpriteLibrary.getSprite("but_restart"),_oContainerPanel);
         _oButRestart.addEventListener(ON_MOUSE_UP,this._onRestart,this);

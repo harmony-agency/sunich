@@ -120,12 +120,16 @@ function CMain(oData){
         s_oSpriteLibrary.init( this._onImagesLoaded,this._onAllImagesLoaded, this );
 
         s_oSpriteLibrary.addSprite("but_play","./sprites/but_play.png");
-        s_oSpriteLibrary.addSprite("but_home","./sprites/but_home.png");
+        // s_oSpriteLibrary.addSprite("but_home","./sprites/but_home.png");
         s_oSpriteLibrary.addSprite("but_restart","./sprites/but_restart.png");
         s_oSpriteLibrary.addSprite("but_start","./sprites/but_start.png");
         s_oSpriteLibrary.addSprite("msg_box","./sprites/msg_box.png");
         s_oSpriteLibrary.addSprite("bg_menu","./sprites/bg_menu.jpg");
         s_oSpriteLibrary.addSprite("bg_game","./sprites/bg_game.jpg");
+        s_oSpriteLibrary.addSprite("bg_game_elephant","./sprites/bg_game_elephant.jpg");
+        s_oSpriteLibrary.addSprite("bg_game_rhinoceros","./sprites/bg_game_rhinoceros.jpg");
+        s_oSpriteLibrary.addSprite("bg_game_hedgehog","./sprites/bg_game_hedgehog.jpg");
+        s_oSpriteLibrary.addSprite("bg_game_parrot","./sprites/bg_game_parrot.jpg");
         s_oSpriteLibrary.addSprite("but_exit","./sprites/but_exit.png");
         s_oSpriteLibrary.addSprite("audio_icon","./sprites/audio_icon.png");   
         s_oSpriteLibrary.addSprite("but_credits","./sprites/but_credits.png");
@@ -135,8 +139,8 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("but_yes","./sprites/but_yes.png");
         s_oSpriteLibrary.addSprite("but_next","./sprites/but_next.png");
         s_oSpriteLibrary.addSprite("hand_swipe","./sprites/hand_swipe.png");
-        s_oSpriteLibrary.addSprite("fireplace","./sprites/fireplace.png");
-        s_oSpriteLibrary.addSprite("bg_game_mask","./sprites/bg_game_mask.png");
+        // s_oSpriteLibrary.addSprite("fireplace","./sprites/fireplace.png");
+        // s_oSpriteLibrary.addSprite("bg_game_mask","./sprites/bg_game_mask.png");
         s_oSpriteLibrary.addSprite("hero","./sprites/hero.png");
         s_oSpriteLibrary.addSprite("rhinoceros","./sprites/rhinoceros.png");
         s_oSpriteLibrary.addSprite("dolphin","./sprites/dolphin.png");
@@ -156,9 +160,9 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("keyboard_right","./sprites/keyboard_right.png");
         s_oSpriteLibrary.addSprite("but_help","./sprites/but_help.png");
 
-        for(var i=0;i<27;i++){
-            s_oSpriteLibrary.addSprite("tree_"+i,"./sprites/tree/tree_"+i+".png");
-        }
+        // for(var i=0;i<27;i++){
+        //     s_oSpriteLibrary.addSprite("tree_"+i,"./sprites/tree/tree_"+i+".png");
+        // }
         
         RESOURCE_TO_LOAD += s_oSpriteLibrary.getNumSprites();
         s_oSpriteLibrary.loadSprites();

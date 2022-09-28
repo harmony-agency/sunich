@@ -113,45 +113,46 @@ function CGame(){
     this._initBg = function(){
         _oContainerBg = new createjs.Container();
         s_oStage.addChild(_oContainerBg);
-        
-         var oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_game'));
+        var character = sessionStorage.getItem('character');
+
+         var oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_game_'+character));
         _oContainerBg.addChild(oBg); 
         
         
         //FIREPLACE
-        var oData = {   
-                        framerate:30,
-                        images: [s_oSpriteLibrary.getSprite("fireplace")], 
-                        // width, height & registration point of each sprite
-                        frames: {width:392 , height: 340}, 
-                        animations: {static:0,anim:[0,24]}
-                   };
+        // var oData = {   
+        //                 framerate:30,
+        //                 images: [s_oSpriteLibrary.getSprite("fireplace")], 
+        //                 // width, height & registration point of each sprite
+        //                 frames: {width:392 , height: 340}, 
+        //                 animations: {static:0,anim:[0,24]}
+        //            };
                    
-        var oSpriteSheet = new createjs.SpriteSheet(oData);
-        var oFirePlace = createSprite(oSpriteSheet,"anim",0,0,392,340);
-        oFirePlace.x = 460;
-        oFirePlace.y = 1152;
-        _oContainerBg.addChild(oFirePlace);
+        // var oSpriteSheet = new createjs.SpriteSheet(oData);
+        // var oFirePlace = createSprite(oSpriteSheet,"anim",0,0,392,340);
+        // oFirePlace.x = 460;
+        // oFirePlace.y = 1152;
+        // _oContainerBg.addChild(oFirePlace);
         
         
         //XMAS TREE
-        var aSprites = new Array();
-        for(var k=0;k<27;k++){
-            aSprites.push(s_oSpriteLibrary.getSprite("tree_"+k));
-        }
-        var oData = {   
-                        framerate:30,
-                        images: aSprites, 
-                        // width, height & registration point of each sprite
-                        frames: {width:412 , height: 749}, 
-                        animations: {static:0,anim:[0,26]}
-                   };
+        // var aSprites = new Array();
+        // for(var k=0;k<27;k++){
+        //     aSprites.push(s_oSpriteLibrary.getSprite("tree_"+k));
+        // }
+        // var oData = {   
+        //                 framerate:30,
+        //                 images: aSprites, 
+        //                 // width, height & registration point of each sprite
+        //                 frames: {width:412 , height: 749}, 
+        //                 animations: {static:0,anim:[0,26]}
+        //            };
                    
-        var oSpriteSheetTree = new createjs.SpriteSheet(oData);
-        var oTree = createSprite(oSpriteSheetTree,"anim",0,0,412,749);
-        oTree.x = 1078;
-        oTree.y = 700;
-        _oContainerBg.addChild(oTree);
+        // var oSpriteSheetTree = new createjs.SpriteSheet(oData);
+        // var oTree = createSprite(oSpriteSheetTree,"anim",0,0,412,749);
+        // oTree.x = 1078;
+        // oTree.y = 700;
+        // _oContainerBg.addChild(oTree);
     };
     
     this._initHero = function(){
@@ -169,8 +170,8 @@ function CGame(){
         _oContainerFg = new createjs.Container();
         s_oStage.addChild(_oContainerFg);
         
-        var oFg = createBitmap(s_oSpriteLibrary.getSprite("bg_game_mask"));
-        _oContainerFg.addChild(oFg);
+        // var oFg = createBitmap(s_oSpriteLibrary.getSprite("bg_game_mask"));
+        // _oContainerFg.addChild(oFg);
         
         var oData = {   
                         framerate:10,
